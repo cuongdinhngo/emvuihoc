@@ -105,12 +105,16 @@
               <h2 class="text-2xl font-bold text-gray-900 mb-4">
                 {{ t('puzzle.completed') }}
               </h2>
-              <div class="w-64 h-48 mx-auto rounded-lg overflow-hidden border-4 border-green-500 shadow-lg">
+              <div class="w-64 h-48 mx-auto rounded-lg overflow-hidden border-4 shadow-lg">
                 <img 
-                  src="/puzzles/pokemon.webp" 
+                  v-if="isClient"
+                  :src="`/puzzles/${currentImage}`" 
                   alt="Completed Puzzle"
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-contain"
                 />
+                <div v-else class="w-full h-full bg-gray-200 flex items-center justify-center">
+                  <div class="text-gray-500">Loading...</div>
+                </div>
               </div>
             </div>
             
@@ -141,7 +145,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from '#imports'
 import { DIFFICULTY_LEVELS, DIFFICULTY_PIECES_REQUIRED } from '~/constants/difficulty'
@@ -150,6 +154,22 @@ const router = useRouter()
 
 // i18n
 const { t } = useI18n()
+
+// Available puzzle images
+const puzzleImages = [
+  'doremon.webp',
+  'elsa.webp', 
+  'frozen.webp',
+  'nobita.webp',
+  'pikachu.webp',
+  'pokemon-2.webp',
+  'pokemon.webp',
+  'xuka.webp'
+]
+
+// Randomly select a puzzle image
+const currentImage = ref('pokemon.webp') // Default fallback
+const isClient = ref(false)
 
 // Puzzle state
 const totalPieces = ref(DIFFICULTY_PIECES_REQUIRED[DIFFICULTY_LEVELS.EASY]) // Default to easy level
@@ -175,7 +195,7 @@ const puzzleContainerStyle = computed(() => {
 
 const puzzleBackgroundStyle = computed(() => {
   return {
-    backgroundImage: 'url(/puzzles/pokemon.webp)',
+    backgroundImage: `url(/puzzles/${currentImage.value})`,
     backgroundSize: 'contain', // Show full image instead of cropping
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -250,9 +270,9 @@ const checkPuzzleCompletion = () => {
 }
 
 const getPieceImageStyle = (piece: number, slotIndex: number) => {
-  // For 6 pieces in a 2x3 grid
-  const cols = 3
-  const rows = 2
+  // Dynamic grid calculation based on total pieces
+  const cols = Math.ceil(Math.sqrt(totalPieces.value))
+  const rows = Math.ceil(totalPieces.value / cols)
   
   // Calculate which row and column this piece should be in (0-based)
   const pieceRow = Math.floor((piece - 1) / cols)
@@ -262,10 +282,14 @@ const getPieceImageStyle = (piece: number, slotIndex: number) => {
   const pieceWidth = 64 // w-16 = 64px
   const pieceHeight = 64 // h-16 = 64px
   
+  // Calculate total image size dynamically
+  const totalWidth = cols * pieceWidth
+  const totalHeight = rows * pieceHeight
+  
   return {
-    backgroundImage: 'url(/puzzles/pokemon.webp)',
-    backgroundSize: '192px 128px', // 3 * 64px = 192px, 2 * 64px = 128px
-    backgroundPosition: `-${pieceCol * 64}px -${pieceRow * 64}px`,
+    backgroundImage: `url(/puzzles/${currentImage.value})`,
+    backgroundSize: `${totalWidth}px ${totalHeight}px`,
+    backgroundPosition: `-${pieceCol * pieceWidth}px -${pieceRow * pieceHeight}px`,
     backgroundRepeat: 'no-repeat',
     backgroundColor: '#f3f4f6' // Fallback color
   }
@@ -290,6 +314,12 @@ const { data: savedProgress } = await useAsyncData(
     server: false
   }
 )
+
+// Select random image on client side
+onMounted(() => {
+  isClient.value = true
+  currentImage.value = puzzleImages[Math.floor(Math.random() * puzzleImages.length)]
+})
 
 // Update puzzle state when data loads
 watch(savedProgress, (progress) => {
@@ -385,6 +415,9 @@ const dropPiece = (event: DragEvent, slotIndex: number) => {
 }
 
 const playAgain = () => {
+  // Select a new random image
+  currentImage.value = puzzleImages[Math.floor(Math.random() * puzzleImages.length)]
+  
   // Reset puzzle using the correct number of pieces
   puzzleSlots.value = Array.from({ length: totalPieces.value }, (_, i) => ({ id: i, piece: null }))
   availablePieces.value = Array.from({ length: totalPieces.value }, (_, i) => i + 1)

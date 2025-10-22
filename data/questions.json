@@ -1,0 +1,490 @@
+{
+  "subjects": {
+    "lich-su": {
+      "name": "Lịch sử",
+      "icon": "🏛️",
+      "color": "bg-blue-100 text-blue-600",
+      "difficulties": {
+        "dễ": [
+          {
+            "id": "ls-easy-1",
+            "type": "mcq",
+            "question": "Ai là vị vua đầu tiên của Việt Nam?",
+            "options": ["Lý Thái Tổ", "Lê Lợi", "Quang Trung", "Hùng Vương"],
+            "correct": 3,
+            "explanation": "Hùng Vương là vị vua đầu tiên của Việt Nam theo truyền thuyết.",
+            "points": 1
+          },
+          {
+            "id": "ls-easy-2",
+            "type": "true-false",
+            "question": "Việt Nam giành độc lập vào năm 1945.",
+            "correct": true,
+            "explanation": "Đúng, Việt Nam tuyên bố độc lập vào ngày 2/9/1945.",
+            "points": 1
+          },
+          {
+            "id": "ls-easy-3",
+            "type": "mcq",
+            "question": "Thủ đô của Việt Nam là gì?",
+            "options": ["Hồ Chí Minh", "Hà Nội", "Đà Nẵng", "Huế"],
+            "correct": 1,
+            "explanation": "Hà Nội là thủ đô của Việt Nam.",
+            "points": 1
+          },
+          {
+            "id": "ls-easy-4",
+            "type": "mcq",
+            "question": "Ai là người sáng lập ra Đảng Cộng sản Việt Nam?",
+            "options": ["Hồ Chí Minh", "Phan Bội Châu", "Nguyễn Ái Quốc", "Cả A và C"],
+            "correct": 3,
+            "explanation": "Hồ Chí Minh (tên thật là Nguyễn Ái Quốc) là người sáng lập Đảng Cộng sản Việt Nam.",
+            "points": 1
+          },
+          {
+            "id": "ls-easy-5",
+            "type": "true-false",
+            "question": "Nguyễn Huệ (Quang Trung) đánh bại quân Thanh năm 1789.",
+            "correct": true,
+            "explanation": "Đúng, Nguyễn Huệ đã đánh bại quân Thanh trong trận Ngọc Hồi - Đống Đa.",
+            "points": 1
+          }
+        ],
+        "trung bình": [
+          {
+            "id": "ls-medium-1",
+            "type": "mcq",
+            "question": "Triều đại nào kéo dài lâu nhất trong lịch sử Việt Nam?",
+            "options": ["Nhà Lý", "Nhà Trần", "Nhà Lê", "Nhà Nguyễn"],
+            "correct": 2,
+            "explanation": "Nhà Lê kéo dài từ 1428-1789, là triều đại kéo dài nhất.",
+            "points": 2
+          },
+          {
+            "id": "ls-medium-2",
+            "type": "mcq",
+            "question": "Ai là người lãnh đạo cuộc khởi nghĩa Lam Sơn?",
+            "options": ["Lê Lợi", "Nguyễn Trãi", "Lý Thường Kiệt", "Trần Hưng Đạo"],
+            "correct": 0,
+            "explanation": "Lê Lợi là người lãnh đạo cuộc khởi nghĩa Lam Sơn chống quân Minh.",
+            "points": 2
+          },
+          {
+            "id": "ls-medium-3",
+            "type": "true-false",
+            "question": "Nhà Lý được thành lập năm 1009.",
+            "correct": true,
+            "explanation": "Đúng, nhà Lý được thành lập năm 1009 bởi Lý Thái Tổ.",
+            "points": 2
+          },
+          {
+            "id": "ls-medium-4",
+            "type": "mcq",
+            "question": "Ai là tác giả của 'Bình Ngô đại cáo'?",
+            "options": ["Lê Lợi", "Nguyễn Trãi", "Lý Thường Kiệt", "Trần Hưng Đạo"],
+            "correct": 1,
+            "explanation": "Nguyễn Trãi là tác giả của 'Bình Ngô đại cáo' - bản tuyên ngôn độc lập đầu tiên của Việt Nam.",
+            "points": 2
+          }
+        ],
+        "khó": [
+          {
+            "id": "ls-hard-1",
+            "type": "mcq",
+            "question": "Năm nào diễn ra trận Bạch Đằng lần thứ ba?",
+            "options": ["938", "981", "1288", "1427"],
+            "correct": 2,
+            "explanation": "Trận Bạch Đằng lần thứ ba diễn ra năm 1288, do Trần Hưng Đạo chỉ huy đánh bại quân Nguyên.",
+            "points": 3
+          },
+          {
+            "id": "ls-hard-2",
+            "type": "mcq",
+            "question": "Ai là người sáng lập ra triều đại nhà Hậu Lê?",
+            "options": ["Lê Thái Tổ", "Lê Thánh Tông", "Lê Lợi", "Lê Hiển Tông"],
+            "correct": 2,
+            "explanation": "Lê Lợi (Lê Thái Tổ) là người sáng lập ra triều đại nhà Hậu Lê sau khi đánh đuổi quân Minh.",
+            "points": 3
+          },
+          {
+            "id": "ls-hard-3",
+            "type": "true-false",
+            "question": "Nhà Trần có 12 đời vua.",
+            "correct": true,
+            "explanation": "Đúng, nhà Trần có 12 đời vua từ Trần Thái Tông đến Trần Thiếu Đế.",
+            "points": 3
+          }
+        ]
+      }
+    },
+    "dia-ly": {
+      "name": "Địa lý",
+      "icon": "🌍",
+      "color": "bg-green-100 text-green-600",
+      "difficulties": {
+        "dễ": [
+          {
+            "id": "dl-easy-1",
+            "type": "mcq",
+            "question": "Việt Nam có bao nhiêu tỉnh thành?",
+            "options": ["58", "63", "64", "65"],
+            "correct": 1,
+            "explanation": "Việt Nam có 63 tỉnh thành (58 tỉnh và 5 thành phố trực thuộc trung ương).",
+            "points": 1
+          },
+          {
+            "id": "dl-easy-2",
+            "type": "true-false",
+            "question": "Sông Hồng chảy qua Hà Nội.",
+            "correct": true,
+            "explanation": "Đúng, sông Hồng là con sông chính chảy qua thủ đô Hà Nội.",
+            "points": 1
+          },
+          {
+            "id": "dl-easy-3",
+            "type": "mcq",
+            "question": "Đồng bằng nào lớn nhất Việt Nam?",
+            "options": ["Đồng bằng sông Hồng", "Đồng bằng sông Cửu Long", "Đồng bằng Thanh Hóa", "Đồng bằng Nghệ An"],
+            "correct": 1,
+            "explanation": "Đồng bằng sông Cửu Long (Đồng bằng Nam Bộ) là đồng bằng lớn nhất Việt Nam.",
+            "points": 1
+          },
+          {
+            "id": "dl-easy-4",
+            "type": "mcq",
+            "question": "Thành phố nào được gọi là 'Thành phố Hoa phượng đỏ'?",
+            "options": ["Hà Nội", "Hải Phòng", "Đà Nẵng", "Nha Trang"],
+            "correct": 1,
+            "explanation": "Hải Phòng được gọi là 'Thành phố Hoa phượng đỏ' vì có nhiều cây phượng đỏ.",
+            "points": 1
+          }
+        ],
+        "trung bình": [
+          {
+            "id": "dl-medium-1",
+            "type": "mcq",
+            "question": "Núi nào cao nhất Việt Nam?",
+            "options": ["Fansipan", "Pu Ta Leng", "Pu Si Lung", "Tà Chì Nhù"],
+            "correct": 0,
+            "explanation": "Fansipan (3.143m) là đỉnh núi cao nhất Việt Nam, thuộc dãy Hoàng Liên Sơn.",
+            "points": 2
+          },
+          {
+            "id": "dl-medium-2",
+            "type": "true-false",
+            "question": "Việt Nam có đường biên giới chung với 3 nước.",
+            "correct": true,
+            "explanation": "Đúng, Việt Nam có đường biên giới chung với Trung Quốc, Lào và Campuchia.",
+            "points": 2
+          },
+          {
+            "id": "dl-medium-3",
+            "type": "mcq",
+            "question": "Vịnh nào của Việt Nam được UNESCO công nhận là Di sản thế giới?",
+            "options": ["Vịnh Hạ Long", "Vịnh Nha Trang", "Vịnh Vân Phong", "Vịnh Cam Ranh"],
+            "correct": 0,
+            "explanation": "Vịnh Hạ Long được UNESCO công nhận là Di sản thế giới năm 1994.",
+            "points": 2
+          }
+        ],
+        "khó": [
+          {
+            "id": "dl-hard-1",
+            "type": "mcq",
+            "question": "Tỉnh nào có diện tích lớn nhất Việt Nam?",
+            "options": ["Nghệ An", "Gia Lai", "Đắk Lắk", "Kon Tum"],
+            "correct": 0,
+            "explanation": "Nghệ An có diện tích lớn nhất Việt Nam với 16.487 km².",
+            "points": 3
+          },
+          {
+            "id": "dl-hard-2",
+            "type": "mcq",
+            "question": "Sông nào dài nhất Việt Nam?",
+            "options": ["Sông Hồng", "Sông Đồng Nai", "Sông Cửu Long", "Sông Lam"],
+            "correct": 2,
+            "explanation": "Sông Cửu Long (Mekong) dài nhất Việt Nam với tổng chiều dài 4.350 km.",
+            "points": 3
+          }
+        ]
+      }
+    },
+    "khoa-hoc": {
+      "name": "Khoa học",
+      "icon": "🔬",
+      "color": "bg-purple-100 text-purple-600",
+      "difficulties": {
+        "dễ": [
+          {
+            "id": "kh-easy-1",
+            "type": "mcq",
+            "question": "Cây xanh quang hợp cần gì?",
+            "options": ["Nước và ánh sáng", "Khí oxy", "Khí cacbonic", "Cả A và C"],
+            "correct": 3,
+            "explanation": "Cây xanh quang hợp cần nước, ánh sáng và khí cacbonic.",
+            "points": 1
+          },
+          {
+            "id": "kh-easy-2",
+            "type": "true-false",
+            "question": "Mặt trời là một ngôi sao.",
+            "correct": true,
+            "explanation": "Đúng, Mặt trời là một ngôi sao trong hệ Mặt trời.",
+            "points": 1
+          },
+          {
+            "id": "kh-easy-3",
+            "type": "mcq",
+            "question": "Con gì có thể bay?",
+            "options": ["Chim", "Cá", "Rắn", "Ếch"],
+            "correct": 0,
+            "explanation": "Chim có thể bay nhờ có cánh và cấu trúc xương rỗng.",
+            "points": 1
+          },
+          {
+            "id": "kh-easy-4",
+            "type": "mcq",
+            "question": "Nước sôi ở nhiệt độ bao nhiêu độ C?",
+            "options": ["90°C", "100°C", "110°C", "120°C"],
+            "correct": 1,
+            "explanation": "Nước sôi ở 100°C ở điều kiện áp suất khí quyển tiêu chuẩn.",
+            "points": 1
+          }
+        ],
+        "trung bình": [
+          {
+            "id": "kh-medium-1",
+            "type": "true-false",
+            "question": "Trái đất quay quanh Mặt trời.",
+            "correct": true,
+            "explanation": "Đúng, Trái đất quay quanh Mặt trời theo quỹ đạo elip.",
+            "points": 2
+          },
+          {
+            "id": "kh-medium-2",
+            "type": "mcq",
+            "question": "Khí nào chiếm phần lớn trong khí quyển Trái đất?",
+            "options": ["Oxy", "Nitơ", "Cacbonic", "Argon"],
+            "correct": 1,
+            "explanation": "Nitơ chiếm khoảng 78% trong khí quyển Trái đất.",
+            "points": 2
+          },
+          {
+            "id": "kh-medium-3",
+            "type": "mcq",
+            "question": "Con vật nào có thể thay đổi màu sắc?",
+            "options": ["Tắc kè", "Rắn", "Ếch", "Cả A và C"],
+            "correct": 3,
+            "explanation": "Tắc kè và ếch có thể thay đổi màu sắc để ngụy trang.",
+            "points": 2
+          }
+        ],
+        "khó": [
+          {
+            "id": "kh-hard-1",
+            "type": "mcq",
+            "question": "Quá trình nào tạo ra oxy trong tự nhiên?",
+            "options": ["Hô hấp", "Quang hợp", "Đốt cháy", "Phân hủy"],
+            "correct": 1,
+            "explanation": "Quang hợp là quá trình cây xanh tạo ra oxy từ khí cacbonic và nước.",
+            "points": 3
+          },
+          {
+            "id": "kh-hard-2",
+            "type": "mcq",
+            "question": "Loài động vật nào có trí thông minh cao nhất?",
+            "options": ["Khỉ", "Cá heo", "Voi", "Tất cả đều đúng"],
+            "correct": 3,
+            "explanation": "Khỉ, cá heo và voi đều có trí thông minh cao, mỗi loài có khả năng đặc biệt riêng.",
+            "points": 3
+          }
+        ]
+      }
+    },
+    "dao-duc": {
+      "name": "Đạo đức",
+      "icon": "❤️",
+      "color": "bg-pink-100 text-pink-600",
+      "difficulties": {
+        "dễ": [
+          {
+            "id": "dd-easy-1",
+            "type": "mcq",
+            "question": "Khi gặp người già, em nên làm gì?",
+            "options": ["Nhường chỗ", "Bỏ qua", "Cười", "Chạy đi"],
+            "correct": 0,
+            "explanation": "Em nên nhường chỗ cho người già để thể hiện lòng kính trọng.",
+            "points": 1
+          },
+          {
+            "id": "dd-easy-2",
+            "type": "true-false",
+            "question": "Nói dối là hành vi tốt.",
+            "correct": false,
+            "explanation": "Nói dối là hành vi không tốt, em nên luôn nói thật.",
+            "points": 1
+          },
+          {
+            "id": "dd-easy-3",
+            "type": "mcq",
+            "question": "Khi làm sai, em nên làm gì?",
+            "options": ["Giấu diếm", "Xin lỗi", "Đổ lỗi", "Bỏ qua"],
+            "correct": 1,
+            "explanation": "Khi làm sai, em nên xin lỗi và sửa chữa lỗi lầm.",
+            "points": 1
+          },
+          {
+            "id": "dd-easy-4",
+            "type": "mcq",
+            "question": "Em nên giúp đỡ ai?",
+            "options": ["Bạn bè", "Gia đình", "Người cần giúp", "Tất cả đều đúng"],
+            "correct": 3,
+            "explanation": "Em nên giúp đỡ tất cả mọi người khi có thể, đặc biệt là bạn bè, gia đình và người cần giúp.",
+            "points": 1
+          }
+        ],
+        "trung bình": [
+          {
+            "id": "dd-medium-1",
+            "type": "mcq",
+            "question": "Khi thấy bạn bị bắt nạt, em nên làm gì?",
+            "options": ["Bỏ qua", "Báo với thầy cô", "Tham gia bắt nạt", "Cười"],
+            "correct": 1,
+            "explanation": "Em nên báo với thầy cô để giúp bạn và ngăn chặn hành vi bắt nạt.",
+            "points": 2
+          },
+          {
+            "id": "dd-medium-2",
+            "type": "true-false",
+            "question": "Giúp đỡ người khác là việc làm tốt.",
+            "correct": true,
+            "explanation": "Đúng, giúp đỡ người khác là việc làm tốt và đáng khen ngợi.",
+            "points": 2
+          },
+          {
+            "id": "dd-medium-3",
+            "type": "mcq",
+            "question": "Khi có xung đột với bạn, em nên làm gì?",
+            "options": ["Đánh nhau", "Nói chuyện để giải quyết", "Bỏ qua", "Tức giận"],
+            "correct": 1,
+            "explanation": "Em nên nói chuyện để tìm cách giải quyết xung đột một cách hòa bình.",
+            "points": 2
+          }
+        ],
+        "khó": [
+          {
+            "id": "dd-hard-1",
+            "type": "mcq",
+            "question": "Điều gì quan trọng nhất trong tình bạn?",
+            "options": ["Tin tưởng", "Chia sẻ", "Tha thứ", "Tất cả đều đúng"],
+            "correct": 3,
+            "explanation": "Tin tưởng, chia sẻ và tha thứ đều là những yếu tố quan trọng trong tình bạn.",
+            "points": 3
+          },
+          {
+            "id": "dd-hard-2",
+            "type": "mcq",
+            "question": "Khi thấy người khác gặp khó khăn, em nên:",
+            "options": ["Bỏ qua", "Giúp đỡ nếu có thể", "Cười", "Chạy đi"],
+            "correct": 1,
+            "explanation": "Em nên giúp đỡ người khác khi họ gặp khó khăn, nếu có thể.",
+            "points": 3
+          }
+        ]
+      }
+    },
+    "suc-khoe": {
+      "name": "Sức khỏe",
+      "icon": "🏥",
+      "color": "bg-red-100 text-red-600",
+      "difficulties": {
+        "dễ": [
+          {
+            "id": "sk-easy-1",
+            "type": "mcq",
+            "question": "Em nên rửa tay khi nào?",
+            "options": ["Trước khi ăn", "Sau khi đi vệ sinh", "Cả A và B", "Không cần"],
+            "correct": 2,
+            "explanation": "Em nên rửa tay trước khi ăn và sau khi đi vệ sinh để giữ vệ sinh.",
+            "points": 1
+          },
+          {
+            "id": "sk-easy-2",
+            "type": "true-false",
+            "question": "Ăn nhiều rau xanh tốt cho sức khỏe.",
+            "correct": true,
+            "explanation": "Đúng, rau xanh chứa nhiều vitamin và chất xơ tốt cho sức khỏe.",
+            "points": 1
+          },
+          {
+            "id": "sk-easy-3",
+            "type": "mcq",
+            "question": "Em nên ngủ bao nhiêu giờ mỗi đêm?",
+            "options": ["6-7 giờ", "8-9 giờ", "10-11 giờ", "12 giờ"],
+            "correct": 1,
+            "explanation": "Trẻ em nên ngủ 8-9 giờ mỗi đêm để cơ thể phát triển tốt.",
+            "points": 1
+          },
+          {
+            "id": "sk-easy-4",
+            "type": "mcq",
+            "question": "Tập thể dục có lợi ích gì?",
+            "options": ["Tăng cường sức khỏe", "Giúp ngủ ngon", "Cả A và B", "Không có lợi ích"],
+            "correct": 2,
+            "explanation": "Tập thể dục giúp tăng cường sức khỏe và giúp ngủ ngon hơn.",
+            "points": 1
+          }
+        ],
+        "trung bình": [
+          {
+            "id": "sk-medium-1",
+            "type": "true-false",
+            "question": "Uống đủ nước mỗi ngày rất quan trọng.",
+            "correct": true,
+            "explanation": "Đúng, uống đủ nước giúp cơ thể hoạt động tốt và khỏe mạnh.",
+            "points": 2
+          },
+          {
+            "id": "sk-medium-2",
+            "type": "mcq",
+            "question": "Khi bị sốt, em nên làm gì?",
+            "options": ["Tự uống thuốc", "Báo với người lớn", "Bỏ qua", "Tắm nước lạnh"],
+            "correct": 1,
+            "explanation": "Khi bị sốt, em nên báo với người lớn để được chăm sóc đúng cách.",
+            "points": 2
+          },
+          {
+            "id": "sk-medium-3",
+            "type": "mcq",
+            "question": "Thức ăn nào tốt cho sức khỏe?",
+            "options": ["Rau xanh", "Trái cây", "Cả A và B", "Kẹo ngọt"],
+            "correct": 2,
+            "explanation": "Rau xanh và trái cây đều tốt cho sức khỏe vì chứa nhiều vitamin.",
+            "points": 2
+          }
+        ],
+        "khó": [
+          {
+            "id": "sk-hard-1",
+            "type": "mcq",
+            "question": "Vitamin nào giúp tăng cường hệ miễn dịch?",
+            "options": ["Vitamin A", "Vitamin C", "Vitamin D", "Tất cả đều đúng"],
+            "correct": 3,
+            "explanation": "Vitamin A, C và D đều giúp tăng cường hệ miễn dịch của cơ thể.",
+            "points": 3
+          },
+          {
+            "id": "sk-hard-2",
+            "type": "mcq",
+            "question": "Tại sao cần rửa tay thường xuyên?",
+            "options": ["Ngăn ngừa bệnh", "Giữ vệ sinh", "Cả A và B", "Không cần thiết"],
+            "correct": 2,
+            "explanation": "Rửa tay thường xuyên giúp ngăn ngừa bệnh và giữ vệ sinh cá nhân.",
+            "points": 3
+          }
+        ]
+      }
+    }
+  }
+}
+

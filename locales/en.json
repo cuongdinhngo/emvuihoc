@@ -1,0 +1,69 @@
+{
+  "app": {
+    "title": "Fun Learning",
+    "welcome": "Welcome to Fun Learning!",
+    "subtitle": "Learn through exciting puzzle games!",
+    "loading": "Loading...",
+    "back": "Back",
+    "play_again": "Play Again",
+    "go_home": "Go Home"
+  },
+  "levels": {
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "easy_desc": "Basic questions",
+    "medium_desc": "Advanced questions", 
+    "hard_desc": "Challenging questions",
+    "pieces_required": "puzzle pieces required"
+  },
+  "subjects": {
+    "select_subject": "Choose Subject",
+    "history": "History",
+    "geography": "Geography",
+    "science": "Science", 
+    "ethics": "Ethics",
+    "health": "Health",
+    "questions_count": "questions"
+  },
+  "game": {
+    "question": "Question",
+    "of": "of",
+    "select_level": "Select Level",
+    "start_game": "Start Game",
+    "answer": "Answer",
+    "processing": "Processing...",
+    "checking": "Checking your answer...",
+    "correct": "Correct!",
+    "incorrect": "Not quite right!",
+    "next_question": "Next Question",
+    "completed": "Completed!",
+    "congratulations": "Congratulations! You've completed it!",
+    "score": "You answered correctly",
+    "puzzle_piece": "You've earned 1 puzzle piece!",
+    "puzzle_complete": "You've successfully assembled all puzzle pieces!",
+    "puzzle_start": "Start Puzzle Assembly!",
+    "puzzle_progress": "Puzzle Progress",
+    "pieces_collected": "pieces placed"
+  },
+  "puzzle": {
+    "title": "Puzzle Assembly",
+    "instructions": "Assemble the puzzle pieces to complete the picture!",
+    "drag_drop": "Drag and drop puzzle pieces to the correct positions",
+    "available_pieces": "Available Pieces",
+    "position": "Position",
+    "completed": "Excellent! You've completed it!",
+    "success": "You've successfully assembled all puzzle pieces!"
+  },
+  "ui": {
+    "level": "Level",
+    "pieces": "Pieces", 
+    "true": "True",
+    "false": "False",
+    "loading_questions": "Loading questions...",
+    "processing": "Processing...",
+    "submit": "Submit",
+    "select_answer": "Select Answer",
+    "drag_pieces": "Drag Pieces"
+  }
+}

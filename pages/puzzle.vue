@@ -108,7 +108,7 @@
               <div class="w-64 h-48 mx-auto rounded-lg overflow-hidden border-4 shadow-lg">
                 <img 
                   v-if="isClient"
-                  :src="`/puzzles/${currentImage}`" 
+                  :src="currentImageUrl" 
                   alt="Completed Puzzle"
                   class="w-full h-full object-contain"
                 />
@@ -151,9 +151,13 @@ import { useI18n } from '#imports'
 import { DIFFICULTY_LEVELS, DIFFICULTY_PIECES_REQUIRED } from '~/constants/difficulty'
 
 const router = useRouter()
+const { $config } = useNuxtApp()
 
 // i18n
 const { t } = useI18n()
+
+// Get base URL for assets
+const baseURL = $config.app.baseURL || '/'
 
 // Available puzzle images
 const puzzleImages = [
@@ -170,6 +174,9 @@ const puzzleImages = [
 // Randomly select a puzzle image
 const currentImage = ref('pokemon.webp') // Default fallback
 const isClient = ref(false)
+
+// Computed property for full image URL
+const currentImageUrl = computed(() => `${baseURL}puzzles/${currentImage.value}`)
 
 // Puzzle state
 const totalPieces = ref(DIFFICULTY_PIECES_REQUIRED[DIFFICULTY_LEVELS.EASY]) // Default to easy level
@@ -195,7 +202,7 @@ const puzzleContainerStyle = computed(() => {
 
 const puzzleBackgroundStyle = computed(() => {
   return {
-    backgroundImage: `url(/puzzles/${currentImage.value})`,
+    backgroundImage: `url(${currentImageUrl.value})`,
     backgroundSize: 'contain', // Show full image instead of cropping
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
@@ -287,7 +294,7 @@ const getPieceImageStyle = (piece: number, slotIndex: number) => {
   const totalHeight = rows * pieceHeight
   
   return {
-    backgroundImage: `url(/puzzles/${currentImage.value})`,
+    backgroundImage: `url(${currentImageUrl.value})`,
     backgroundSize: `${totalWidth}px ${totalHeight}px`,
     backgroundPosition: `-${pieceCol * pieceWidth}px -${pieceRow * pieceHeight}px`,
     backgroundRepeat: 'no-repeat',

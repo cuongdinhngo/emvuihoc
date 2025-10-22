@@ -290,7 +290,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useQuestions, type Question } from '~/composables/useQuestions'
 import { DIFFICULTY_LEVELS, DIFFICULTY_QUESTION_COUNTS } from '~/constants/difficulty'
@@ -326,6 +326,32 @@ const { getRandomQuestions, getQuestionsBySubject } = useQuestions()
 
 // Get current level from localStorage
 const currentLevel = ref(DIFFICULTY_LEVELS.EASY)
+
+// Load the selected level from localStorage
+const { data: savedLevel } = await useAsyncData(
+  'selected-level',
+  async () => {
+    if (typeof window !== 'undefined') {
+      const savedProgress = localStorage.getItem('vui-hoc-progress')
+      if (savedProgress) {
+        const parsed = JSON.parse(savedProgress)
+        return parsed.currentLevel || DIFFICULTY_LEVELS.EASY
+      }
+    }
+    return DIFFICULTY_LEVELS.EASY
+  },
+  {
+    default: () => DIFFICULTY_LEVELS.EASY,
+    server: false
+  }
+)
+
+// Update currentLevel when savedLevel loads
+watch(savedLevel, (level) => {
+  if (level) {
+    currentLevel.value = level
+  }
+}, { immediate: true })
 
 // Use useAsyncData to load questions with consistent selection
 const { data: questions, status, error, refresh } = await useAsyncData(

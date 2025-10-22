@@ -30,6 +30,37 @@
           </div>
         </div>
 
+        <!-- Completed Subject Results -->
+        <div v-else-if="isSubjectCompleted" class="question-card mb-6">
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-lg bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center text-2xl">
+              ✅
+            </div>
+            <h2 class="text-xl font-bold text-gray-900 mb-4">
+              {{ t('ui.completed') }}
+            </h2>
+            <p class="text-gray-600 mb-6">
+              {{ t('game.score') }} {{ previousScore }}/{{ questions?.length || 0 }} {{ t('game.question') }}
+            </p>
+            <div class="mb-6">
+              <div class="w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-xl">
+                🧩
+              </div>
+              <p class="text-sm font-semibold text-gray-700">
+                {{ t('game.puzzle_piece') }}
+              </p>
+            </div>
+            <div class="space-y-3">
+              <button @click="restartSubject" class="btn-primary w-full">
+                {{ t('app.play_again') }}
+              </button>
+              <button @click="goBack" class="btn-secondary w-full">
+                {{ t('app.go_home') }}
+              </button>
+            </div>
+          </div>
+        </div>
+
         <!-- Question Card -->
         <div v-else-if="!gameCompleted && currentQuestionData" class="question-card mb-6">
           <div class="text-center mb-6">
@@ -193,12 +224,22 @@
               {{ t('game.score') }} {{ correctAnswers }}/{{ questions?.length || 0 }} {{ t('game.question') }}
             </p>
             <div v-if="correctAnswers === (questions?.length || 0)" class="mb-6">
-              <div class="w-16 h-16 mx-auto mb-4 rounded-lg bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-2xl">
-                🧩
+              <div v-if="!hasAlreadyReceivedReward" class="mb-6">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-lg bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-2xl">
+                  🧩
+                </div>
+                <p class="text-lg font-semibold text-gray-900">
+                  {{ t('game.puzzle_piece') }}
+                </p>
               </div>
-              <p class="text-lg font-semibold text-gray-900">
-                {{ t('game.puzzle_piece') }}
-              </p>
+              <div v-else class="mb-6">
+                <div class="w-16 h-16 mx-auto mb-4 rounded-lg bg-gray-300 flex items-center justify-center text-2xl">
+                  ✅
+                </div>
+                <p class="text-lg font-semibold text-gray-600">
+                  Bạn đã nhận mảnh ghép cho môn học này rồi!
+                </p>
+              </div>
             </div>
             <div v-else class="mb-6">
               <p class="text-lg font-semibold text-gray-600">
@@ -235,7 +276,7 @@
         </div>
 
         <!-- Progress Bar -->
-        <div class="mt-6">
+        <div v-if="!isSubjectCompleted" class="mt-6">
           <div class="bg-gray-200 rounded-full h-3">
             <div 
               class="bg-gradient-to-r from-blue-500 to-purple-600 h-3 rounded-full transition-all duration-500"
@@ -273,23 +314,65 @@ const correctAnswers = ref(0)
 const showResult = ref(false)
 const isProcessing = ref(false)
 const showCorrectAnswer = ref(false)
+const isSubjectCompleted = ref(false)
+const previousScore = ref(0)
 
 // Get subject info from question bank
 const { getSubjectInfo } = useQuestions()
 const subjectInfo = getSubjectInfo(sectorId, subjectId)
 
 // Get questions from the composable
-const { getRandomQuestions } = useQuestions()
+const { getRandomQuestions, getQuestionsBySubject } = useQuestions()
 
 // Get current level from localStorage
 const currentLevel = ref(DIFFICULTY_LEVELS.EASY)
 
-// Use useAsyncData to load questions
+// Use useAsyncData to load questions with consistent selection
 const { data: questions, status, error, refresh } = await useAsyncData(
   `questions-${sectorId}-${subjectId}`,
   async () => {
-    const questionCount = DIFFICULTY_QUESTION_COUNTS[currentLevel.value] || DIFFICULTY_QUESTION_COUNTS[DIFFICULTY_LEVELS.EASY]
-    return getRandomQuestions(sectorId, subjectId, currentLevel.value, questionCount)
+    // Check if we have stored questions for this subject
+    if (typeof window !== 'undefined') {
+      const savedProgress = localStorage.getItem('vui-hoc-progress')
+      const progress = savedProgress ? JSON.parse(savedProgress) : {}
+      const fullSubjectKey = `${sectorId}-${subjectId}`
+      
+      // Check if subject is already completed
+      if (progress[fullSubjectKey]?.completed) {
+        isSubjectCompleted.value = true
+        previousScore.value = progress[fullSubjectKey].questionsCompleted || 0
+        console.log('Subject already completed with score:', previousScore.value)
+        return progress[fullSubjectKey].selectedQuestions || []
+      }
+      
+      // If we have stored questions, use them
+      if (progress[fullSubjectKey]?.selectedQuestions) {
+        console.log('Using stored questions for', fullSubjectKey)
+        return progress[fullSubjectKey].selectedQuestions
+      }
+    }
+    
+    // If no stored questions, get all available questions and randomly select 3
+    const allQuestions = getQuestionsBySubject(sectorId, subjectId, currentLevel.value)
+    const questionCount = 3 // Always use 3 questions
+    const selectedQuestions = allQuestions.sort(() => 0.5 - Math.random()).slice(0, questionCount)
+    
+    // Store the selected questions for consistency
+    if (typeof window !== 'undefined') {
+      const savedProgress = localStorage.getItem('vui-hoc-progress')
+      const progress = savedProgress ? JSON.parse(savedProgress) : {}
+      const fullSubjectKey = `${sectorId}-${subjectId}`
+      
+      if (!progress[fullSubjectKey]) {
+        progress[fullSubjectKey] = { completed: false, pieces: 0, questionsCompleted: 0 }
+      }
+      
+      progress[fullSubjectKey].selectedQuestions = selectedQuestions
+      localStorage.setItem('vui-hoc-progress', JSON.stringify(progress))
+      console.log('Stored new questions for', fullSubjectKey)
+    }
+    
+    return selectedQuestions
   },
   {
     default: () => [],
@@ -299,6 +382,17 @@ const { data: questions, status, error, refresh } = await useAsyncData(
 
 
 const currentQuestionData = computed(() => questions.value?.[currentQuestion.value])
+
+// Check if player has already received reward for this subject
+const hasAlreadyReceivedReward = computed(() => {
+  if (typeof window === 'undefined') return false
+  
+  const savedProgress = localStorage.getItem('vui-hoc-progress')
+  const progress = savedProgress ? JSON.parse(savedProgress) : {}
+  const fullSubjectKey = `${sectorId}-${subjectId}`
+  
+  return progress[fullSubjectKey]?.hasReceivedReward || false
+})
 
 // Methods
 const selectAnswer = (answer: any) => {
@@ -335,12 +429,16 @@ const submitAnswer = () => {
         showCorrectAnswer.value = false
         isProcessing.value = false
       } else {
-        // Game completed - only award piece if all answers were correct
+        // Game completed - only award piece if all answers were correct AND haven't received reward before
         gameCompleted.value = true
         console.log('Game completed. Correct answers:', correctAnswers.value, 'Total questions:', questions.value?.length)
         if (correctAnswers.value === (questions.value?.length || 0)) {
-          console.log('All answers correct - awarding puzzle piece')
-          awardPuzzlePiece()
+          if (!hasAlreadyReceivedReward.value) {
+            console.log('All answers correct - awarding puzzle piece')
+            awardPuzzlePiece()
+          } else {
+            console.log('All answers correct but already received reward - no new puzzle piece')
+          }
         } else {
           console.log('Not all answers correct - no puzzle piece')
         }
@@ -377,17 +475,25 @@ const awardPuzzlePiece = () => {
     // Mark this subject as completed
     const fullSubjectKey = `${sectorId}-${subjectId}`
     if (!progress[fullSubjectKey]) {
-      progress[fullSubjectKey] = { completed: false, pieces: 0, questionsCompleted: 0 }
+      progress[fullSubjectKey] = { completed: false, pieces: 0, questionsCompleted: 0, hasReceivedReward: false }
     }
     
-    // Always award piece when completing all questions correctly
-    progress[fullSubjectKey].completed = true
-    progress[fullSubjectKey].pieces = (progress[fullSubjectKey].pieces || 0) + 1
-    progress.collectedPieces = (progress.collectedPieces || 0) + 1
-    
-    localStorage.setItem('vui-hoc-progress', JSON.stringify(progress))
-    console.log('Puzzle piece awarded! Total pieces:', progress.collectedPieces)
+    // Double-check: Only award piece if they haven't received a reward for this subject before
+    if (!progress[fullSubjectKey].hasReceivedReward) {
+      progress[fullSubjectKey].completed = true
+      progress[fullSubjectKey].pieces = (progress[fullSubjectKey].pieces || 0) + 1
+      progress[fullSubjectKey].hasReceivedReward = true
+      progress.collectedPieces = (progress.collectedPieces || 0) + 1
+      
+      localStorage.setItem('vui-hoc-progress', JSON.stringify(progress))
+      console.log('Puzzle piece awarded! Total pieces:', progress.collectedPieces)
+      return true // Successfully awarded
+    } else {
+      console.log('No puzzle piece awarded - already received reward for this subject')
+      return false // No piece awarded
+    }
   }
+  return false
 }
 
 const playAgain = async () => {
@@ -398,8 +504,34 @@ const playAgain = async () => {
   showResult.value = false
   isProcessing.value = false
   showCorrectAnswer.value = false
-  // Refresh questions
-  await refresh()
+  // Don't refresh questions - keep the same questions for consistency
+}
+
+const restartSubject = async () => {
+  // Clear the completed status and restart the game (but keep hasReceivedReward flag)
+  if (typeof window !== 'undefined') {
+    const savedProgress = localStorage.getItem('vui-hoc-progress')
+    const progress = savedProgress ? JSON.parse(savedProgress) : {}
+    const fullSubjectKey = `${sectorId}-${subjectId}`
+    
+    if (progress[fullSubjectKey]) {
+      progress[fullSubjectKey].completed = false
+      progress[fullSubjectKey].questionsCompleted = 0
+      // Keep hasReceivedReward flag - don't reset it
+      localStorage.setItem('vui-hoc-progress', JSON.stringify(progress))
+    }
+  }
+  
+  // Reset game state
+  isSubjectCompleted.value = false
+  previousScore.value = 0
+  currentQuestion.value = 0
+  selectedAnswer.value = null
+  gameCompleted.value = false
+  correctAnswers.value = 0
+  showResult.value = false
+  isProcessing.value = false
+  showCorrectAnswer.value = false
 }
 
 const goBack = () => {

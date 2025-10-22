@@ -40,6 +40,7 @@
             v-for="subject in subjects" 
             :key="subject.id"
             class="game-card subject-card cursor-pointer"
+            :class="{ 'border-green-400 bg-green-50': isSubjectCompleted(subject.id) }"
             @click="selectSubject(subject.id)"
           >
             <div class="text-center">
@@ -49,7 +50,12 @@
               </div>
               <h4 class="font-semibold text-sm">{{ subject.name }}</h4>
               <div class="text-xs text-gray-500 mt-1">
-                {{ getSubjectProgress(subject.id) }}/{{ getTotalQuestions(subject.id) }} {{ t('subjects.questions_count') }}
+                <div v-if="isSubjectCompleted(subject.id)" class="text-green-600 font-semibold">
+                  ✅ {{ t('ui.completed') }}
+                </div>
+                <div v-else>
+                  {{ getSubjectProgress(subject.id) }}/{{ getTotalQuestions(subject.id) }} {{ t('subjects.questions_count') }}
+                </div>
               </div>
             </div>
           </div>
@@ -118,12 +124,16 @@ const selectSubject = (subjectId: string) => {
 }
 
 const getSubjectProgress = (subjectId: string) => {
-  return gameProgress.value[`${sectorId}-${subjectId}`]?.completed || 0
+  return gameProgress.value[`${sectorId}-${subjectId}`]?.questionsCompleted || 0
 }
 
 const getTotalQuestions = (subjectId: string) => {
   // Return different question counts based on level
-  return 3 // Default value for SSR
+  return DIFFICULTY_QUESTION_COUNTS[currentLevel.value as keyof typeof DIFFICULTY_QUESTION_COUNTS] || DIFFICULTY_QUESTION_COUNTS[DIFFICULTY_LEVELS.EASY]
+}
+
+const isSubjectCompleted = (subjectId: string) => {
+  return gameProgress.value[`${sectorId}-${subjectId}`]?.completed || false
 }
 
 const goBack = () => {

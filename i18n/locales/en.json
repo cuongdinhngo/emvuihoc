@@ -30,6 +30,7 @@
   },
   "sectors": {
     "select_sector": "Choose Learning Sector",
+    "select_subject": "Choose Subject",
     "subjects_count": "subjects"
   },
   "game": {
@@ -59,7 +60,8 @@
     "available_pieces": "Available Pieces",
     "position": "Position",
     "completed": "Excellent! You've completed it!",
-    "success": "You've successfully assembled all puzzle pieces!"
+    "success": "You've successfully assembled all puzzle pieces!",
+    "not_enough_pieces": "You need to collect enough puzzle pieces before you can start assembling!"
   },
   "ui": {
     "level": "Level",
@@ -71,6 +73,7 @@
     "processing": "Processing...",
     "submit": "Submit",
     "select_answer": "Select Answer",
-    "drag_pieces": "Drag Pieces"
+    "drag_pieces": "Drag Pieces",
+    "completed": "Done"
   }
 }

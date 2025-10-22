@@ -112,14 +112,14 @@
           <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">
             {{ t('game.puzzle_progress') }}
           </h3>
-          <div class="grid grid-cols-4 md:grid-cols-8 gap-2">
+          <div class="flex flex-wrap justify-center gap-2">
             <div 
               v-for="i in totalPieces" 
               :key="i"
-              class="aspect-square rounded-lg border-2 flex items-center justify-center"
+              class="w-12 h-12 rounded-lg border-2 flex items-center justify-center"
               :class="i <= collectedPieces ? 'bg-gradient-to-br from-yellow-400 to-orange-500 border-yellow-500' : 'bg-gray-200 border-gray-300'"
             >
-              <span v-if="i <= collectedPieces" class="text-white font-bold text-sm">
+              <span v-if="i <= collectedPieces" class="text-white font-bold text-lg">
                 {{ i }}
               </span>
             </div>

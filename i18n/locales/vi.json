@@ -30,6 +30,7 @@
   },
   "sectors": {
     "select_sector": "Chọn lĩnh vực học tập",
+    "select_subject": "Chọn môn học",
     "subjects_count": "môn học"
   },
   "game": {
@@ -59,7 +60,8 @@
     "available_pieces": "Mảnh ghép có sẵn",
     "position": "Vị trí",
     "completed": "Tuyệt vời! Bạn đã hoàn thành!",
-    "success": "Bạn đã ghép thành công tất cả các mảnh hình!"
+    "success": "Bạn đã ghép thành công tất cả các mảnh hình!",
+    "not_enough_pieces": "Bạn cần thu thập đủ mảnh ghép trước khi có thể ghép hình!"
   },
   "ui": {
     "level": "Cấp độ",
@@ -71,6 +73,7 @@
     "processing": "Đang xử lý...",
     "submit": "Trả lời",
     "select_answer": "Chọn đáp án",
-    "drag_pieces": "Kéo thả mảnh ghép"
+    "drag_pieces": "Kéo thả mảnh ghép",
+    "completed": "Hoàn thành"
   }
 }

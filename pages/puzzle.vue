@@ -40,21 +40,34 @@
 
         <!-- Puzzle Grid -->
         <div class="game-card mb-6">
-          <div class="grid grid-cols-4 gap-2 mb-6" style="aspect-ratio: 1;">
-            <div 
-              v-for="(slot, index) in puzzleSlots" 
-              :key="index"
-              class="border-2 border-dashed rounded-lg flex items-center justify-center min-h-20"
-              :class="slot.piece ? 'border-green-500 bg-green-50' : 'border-gray-300 bg-gray-50'"
-              @drop="dropPiece($event, index)"
-              @dragover.prevent
-              @dragenter.prevent
-            >
-              <div v-if="slot.piece" class="puzzle-piece w-full h-full flex items-center justify-center text-white font-bold">
-                {{ slot.piece }}
-              </div>
-              <div v-else class="text-gray-400 text-sm">
-                {{ t('puzzle.position') }} {{ index + 1 }}
+          <div class="text-center mb-4">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ t('puzzle.instructions') }}</h3>
+            <p class="text-sm text-gray-600">{{ t('puzzle.drag_drop') }}</p>
+          </div>
+          
+          <!-- Puzzle Board -->
+          <div class="puzzle-container mb-6 mx-auto" :style="puzzleContainerStyle">
+            <!-- Full background image -->
+            <div class="puzzle-background w-full h-full relative" :style="puzzleBackgroundStyle">
+              <!-- Hover areas for each piece -->
+              <div 
+                v-for="(slot, index) in puzzleSlots" 
+                :key="index"
+                class="puzzle-hover-area absolute"
+                :class="{
+                  'puzzle-hover-correct': slot.piece && isCorrectPosition(slot.piece, index),
+                  'puzzle-hover-wrong': slot.piece && !isCorrectPosition(slot.piece, index),
+                  'puzzle-hover-empty': !slot.piece
+                }"
+                :style="getHoverAreaStyle(index)"
+                @drop="dropPiece($event, index)"
+                @dragover.prevent
+                @dragenter.prevent
+              >
+                <!-- Show piece number in empty slots -->
+                <div v-if="!slot.piece" class="w-full h-full flex items-center justify-center text-gray-600 text-sm font-bold bg-white bg-opacity-80 rounded">
+                  {{ index + 1 }}
+                </div>
               </div>
             </div>
           </div>
@@ -65,31 +78,53 @@
           <h3 class="text-lg font-semibold text-gray-900 mb-4 text-center">
             {{ t('puzzle.available_pieces') }}
           </h3>
-          <div class="grid grid-cols-4 gap-3">
+          <div class="flex flex-wrap justify-center gap-3">
             <div 
               v-for="(piece, index) in availablePieces" 
               :key="index"
-              class="puzzle-piece aspect-square flex items-center justify-center text-white font-bold cursor-move"
-              draggable="true"
+              class="puzzle-piece w-16 h-16 rounded-lg border-2 transition-transform overflow-hidden"
+              :class="{
+                'border-yellow-500 cursor-move hover:scale-105': isPiecePlaced(piece) && isPieceCorrectlyPlaced(piece),
+                'border-red-500 cursor-not-allowed opacity-50': isPiecePlaced(piece) && !isPieceCorrectlyPlaced(piece),
+                'border-gray-300 cursor-move hover:scale-105': !isPiecePlaced(piece)
+              }"
+              :draggable="canDragPiece(piece)"
               @dragstart="dragStart($event, piece)"
             >
-              {{ piece }}
+              <div class="puzzle-piece-preview w-full h-full" :style="getPieceImageStyle(piece, piece - 1)">
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Completion Message -->
         <div v-if="puzzleCompleted" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center">
-            <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center text-4xl">
-              🎉
+          <div class="bg-white rounded-2xl p-8 max-w-2xl mx-4 text-center">
+            <!-- Full completed picture -->
+            <div class="mb-6">
+              <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                {{ t('puzzle.completed') }}
+              </h2>
+              <div class="w-64 h-48 mx-auto rounded-lg overflow-hidden border-4 border-green-500 shadow-lg">
+                <img 
+                  src="/puzzles/pokemon.webp" 
+                  alt="Completed Puzzle"
+                  class="w-full h-full object-cover"
+                />
+              </div>
             </div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">
-              {{ t('puzzle.completed') }}
-            </h2>
-            <p class="text-gray-600 mb-6">
-              {{ t('puzzle.success') }}
-            </p>
+            
+            <!-- Congratulations message below the picture -->
+            <div class="mb-6">
+              <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center text-2xl">
+                🎉
+              </div>
+              <p class="text-gray-600 text-lg">
+                {{ t('puzzle.success') }}
+              </p>
+            </div>
+            
+            <!-- Action buttons -->
             <div class="space-y-3">
               <button @click="playAgain" class="btn-primary w-full">
                 {{ t('app.play_again') }}
@@ -106,9 +141,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useI18n } from '#imports'
+import { DIFFICULTY_LEVELS, DIFFICULTY_PIECES_REQUIRED } from '~/constants/difficulty'
 
 const router = useRouter()
 
@@ -116,12 +152,129 @@ const router = useRouter()
 const { t } = useI18n()
 
 // Puzzle state
-const totalPieces = ref(12)
-const puzzleSlots = ref(Array.from({ length: 12 }, (_, i) => ({ id: i, piece: null as number | null })))
-const availablePieces = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+const totalPieces = ref(DIFFICULTY_PIECES_REQUIRED[DIFFICULTY_LEVELS.EASY]) // Default to easy level
+const puzzleSlots = ref(Array.from({ length: DIFFICULTY_PIECES_REQUIRED[DIFFICULTY_LEVELS.EASY] }, (_, i) => ({ id: i, piece: null as number | null })))
+const availablePieces = ref(Array.from({ length: DIFFICULTY_PIECES_REQUIRED[DIFFICULTY_LEVELS.EASY] }, (_, i) => i + 1))
+
+console.log('Initial available pieces:', availablePieces.value)
 const placedPieces = ref(0)
 const puzzleCompleted = ref(false)
 const draggedPiece = ref<number | null>(null)
+
+// Computed properties for puzzle logic
+const puzzleContainerStyle = computed(() => {
+  const cols = Math.ceil(Math.sqrt(totalPieces.value))
+  const rows = Math.ceil(totalPieces.value / cols)
+  const pieceSize = 100 // Size of each puzzle piece in pixels
+  return {
+    width: `${cols * pieceSize}px`,
+    height: `${rows * pieceSize}px`,
+    maxWidth: '100%'
+  }
+})
+
+const puzzleBackgroundStyle = computed(() => {
+  return {
+    backgroundImage: 'url(/puzzles/pokemon.webp)',
+    backgroundSize: 'contain', // Show full image instead of cropping
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    borderRadius: '8px',
+    backgroundColor: '#f3f4f6' // Fallback background
+  }
+})
+
+const getHoverAreaStyle = (index: number) => {
+  const cols = Math.ceil(Math.sqrt(totalPieces.value))
+  const rows = Math.ceil(totalPieces.value / cols)
+  const pieceWidth = 100 / cols // Percentage width
+  const pieceHeight = 100 / rows // Percentage height
+  
+  const row = Math.floor(index / cols)
+  const col = index % cols
+  
+  return {
+    width: `${pieceWidth}%`,
+    height: `${pieceHeight}%`,
+    left: `${col * pieceWidth}%`,
+    top: `${row * pieceHeight}%`,
+    border: '2px dashed #6b7280',
+    borderRadius: '4px'
+  }
+}
+
+const isCorrectPosition = (piece: number, slotIndex: number) => {
+  return piece === slotIndex + 1
+}
+
+const isPiecePlaced = (piece: number) => {
+  return puzzleSlots.value.some(slot => slot.piece === piece)
+}
+
+const isPieceCorrectlyPlaced = (piece: number) => {
+  const placedSlot = puzzleSlots.value.find(slot => slot.piece === piece)
+  if (!placedSlot) return false
+  
+  const slotIndex = puzzleSlots.value.indexOf(placedSlot)
+  return isCorrectPosition(piece, slotIndex)
+}
+
+const canDragPiece = (piece: number) => {
+  if (!isPiecePlaced(piece)) return true
+  return isPieceCorrectlyPlaced(piece)
+}
+
+const getSlotClass = (index: number) => {
+  const slot = puzzleSlots.value[index]
+  if (!slot) return 'puzzle-slot relative overflow-hidden border-2 border-dashed border-gray-300 bg-gray-100'
+  
+  if (slot.piece && !isCorrectPosition(slot.piece, index)) {
+    return 'puzzle-slot relative overflow-hidden border-2 border-red-500'
+  }
+  
+  if (slot.piece) {
+    return 'puzzle-slot relative overflow-hidden'
+  }
+  
+  return 'puzzle-slot relative overflow-hidden border-2 border-dashed border-gray-300 bg-gray-100'
+}
+
+const checkPuzzleCompletion = () => {
+  const allCorrect = puzzleSlots.value.every((slot, index) => 
+    slot.piece && isCorrectPosition(slot.piece, index)
+  )
+  
+  if (allCorrect && placedPieces.value === totalPieces.value) {
+    puzzleCompleted.value = true
+  }
+}
+
+const getPieceImageStyle = (piece: number, slotIndex: number) => {
+  // For 6 pieces in a 2x3 grid
+  const cols = 3
+  const rows = 2
+  
+  // Calculate which row and column this piece should be in (0-based)
+  const pieceRow = Math.floor((piece - 1) / cols)
+  const pieceCol = (piece - 1) % cols
+  
+  // Use fixed pixel values for better control
+  const pieceWidth = 64 // w-16 = 64px
+  const pieceHeight = 64 // h-16 = 64px
+  
+  return {
+    backgroundImage: 'url(/puzzles/pokemon.webp)',
+    backgroundSize: '192px 128px', // 3 * 64px = 192px, 2 * 64px = 128px
+    backgroundPosition: `-${pieceCol * 64}px -${pieceRow * 64}px`,
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: '#f3f4f6' // Fallback color
+  }
+}
+
+// Helper function to get required pieces for each level
+const getRequiredPieces = (level: string) => {
+  return DIFFICULTY_PIECES_REQUIRED[level as keyof typeof DIFFICULTY_PIECES_REQUIRED] || DIFFICULTY_PIECES_REQUIRED[DIFFICULTY_LEVELS.EASY]
+}
 
 // Load progress from localStorage using useAsyncData
 const { data: savedProgress } = await useAsyncData(
@@ -143,13 +296,27 @@ watch(savedProgress, (progress) => {
   if (progress) {
     const parsed = JSON.parse(progress)
     const collectedPieces = parsed.collectedPieces || 0
+    const currentLevel = parsed.currentLevel || 'easy'
     
-    // Only show pieces that have been collected
-    availablePieces.value = Array.from({ length: collectedPieces }, (_, i) => i + 1)
+    // Get required pieces for current level
+    const requiredPieces = getRequiredPieces(currentLevel)
+    totalPieces.value = requiredPieces
+    
+    // Update puzzle slots
+    puzzleSlots.value = Array.from({ length: requiredPieces }, (_, i) => ({ id: i, piece: null as number | null }))
+    
+    // Show all pieces that have been collected
+    const piecesToShow = Math.max(collectedPieces, requiredPieces) // Ensure we show at least the required pieces
+    availablePieces.value = Array.from({ length: piecesToShow }, (_, i) => i + 1)
+    
+    console.log('Available pieces:', availablePieces.value)
+    console.log('Collected pieces:', collectedPieces)
+    console.log('Required pieces:', requiredPieces)
+    console.log('Pieces to show:', piecesToShow)
     
     // If not enough pieces collected, redirect to main page
-    if (collectedPieces < totalPieces.value) {
-      alert(t('puzzle.not_enough_pieces', { total: totalPieces.value }))
+    if (collectedPieces < requiredPieces) {
+      alert(t('puzzle.not_enough_pieces'))
       router.push('/')
     }
   } else {
@@ -159,6 +326,21 @@ watch(savedProgress, (progress) => {
 
 // Methods
 const dragStart = (event: DragEvent, piece: number) => {
+  // Check if this piece is already placed in a slot
+  const placedSlot = puzzleSlots.value.find(slot => slot.piece === piece)
+  
+  if (placedSlot) {
+    // Check if it's in the correct position
+    const slotIndex = puzzleSlots.value.indexOf(placedSlot)
+    const isCorrect = isCorrectPosition(piece, slotIndex)
+    
+    // If it's wrong, prevent dragging
+    if (!isCorrect) {
+      event.preventDefault()
+      return
+    }
+  }
+  
   draggedPiece.value = piece
   if (event.dataTransfer) {
     event.dataTransfer.effectAllowed = 'move'
@@ -175,33 +357,37 @@ const dropPiece = (event: DragEvent, slotIndex: number) => {
   // If slot is already occupied, don't place piece
   if (slot?.piece) return
   
-  // Place the piece
-  if (slot && draggedPiece.value !== null) {
-    slot.piece = draggedPiece.value
-  }
+  // Check if the piece is in the correct position
+  const isCorrect = isCorrectPosition(draggedPiece.value, slotIndex)
   
-  // Remove piece from available pieces
-  const pieceIndex = availablePieces.value.indexOf(draggedPiece.value)
-  if (pieceIndex > -1) {
-    availablePieces.value.splice(pieceIndex, 1)
-  }
-  
-  placedPieces.value++
-  
-  // Check if puzzle is completed
-  if (placedPieces.value === totalPieces.value) {
-    setTimeout(() => {
-      puzzleCompleted.value = true
-    }, 500)
+  if (isCorrect) {
+    // Correct placement - place the piece and remove from available pieces
+    if (slot && draggedPiece.value !== null) {
+      slot.piece = draggedPiece.value
+    }
+    
+    // Remove piece from available pieces
+    const pieceIndex = availablePieces.value.indexOf(draggedPiece.value)
+    if (pieceIndex > -1) {
+      availablePieces.value.splice(pieceIndex, 1)
+    }
+    
+    placedPieces.value++
+    
+    // Check if puzzle is completed with proper validation
+    checkPuzzleCompletion()
+  } else {
+    // Wrong placement - don't place the piece, it stays in available pieces
+    // The piece automatically returns to available pieces since we don't remove it
   }
   
   draggedPiece.value = null
 }
 
 const playAgain = () => {
-  // Reset puzzle
-  puzzleSlots.value = Array.from({ length: 12 }, (_, i) => ({ id: i, piece: null }))
-  availablePieces.value = Array.from({ length: 12 }, (_, i) => i + 1)
+  // Reset puzzle using the correct number of pieces
+  puzzleSlots.value = Array.from({ length: totalPieces.value }, (_, i) => ({ id: i, piece: null }))
+  availablePieces.value = Array.from({ length: totalPieces.value }, (_, i) => i + 1)
   placedPieces.value = 0
   puzzleCompleted.value = false
   draggedPiece.value = null

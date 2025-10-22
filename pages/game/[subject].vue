@@ -321,6 +321,9 @@ const submitAnswer = () => {
       console.log('Wrong answer! Total correct:', correctAnswers.value)
     }
     
+    // Update progress after each question
+    updateProgress()
+    
     // Show correct answer for 1.5 seconds
     showCorrectAnswer.value = true
     
@@ -346,6 +349,25 @@ const submitAnswer = () => {
   }, 1000)
 }
 
+const updateProgress = () => {
+  // Update progress after each question
+  if (typeof window !== 'undefined') {
+    const savedProgress = localStorage.getItem('vui-hoc-progress')
+    const progress = savedProgress ? JSON.parse(savedProgress) : {}
+    
+    const fullSubjectKey = `${sectorId}-${subjectId}`
+    if (!progress[fullSubjectKey]) {
+      progress[fullSubjectKey] = { completed: false, pieces: 0, questionsCompleted: 0 }
+    }
+    
+    // Update questions completed count
+    progress[fullSubjectKey].questionsCompleted = currentQuestion.value + 1
+    
+    localStorage.setItem('vui-hoc-progress', JSON.stringify(progress))
+    console.log('Progress updated:', progress[fullSubjectKey].questionsCompleted, 'questions completed')
+  }
+}
+
 const awardPuzzlePiece = () => {
   // Update localStorage with new puzzle piece
   if (typeof window !== 'undefined') {
@@ -355,7 +377,7 @@ const awardPuzzlePiece = () => {
     // Mark this subject as completed
     const fullSubjectKey = `${sectorId}-${subjectId}`
     if (!progress[fullSubjectKey]) {
-      progress[fullSubjectKey] = { completed: false, pieces: 0 }
+      progress[fullSubjectKey] = { completed: false, pieces: 0, questionsCompleted: 0 }
     }
     
     // Always award piece when completing all questions correctly

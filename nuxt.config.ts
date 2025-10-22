@@ -10,6 +10,12 @@ export default defineNuxtConfig({
       routes: ['/']
     }
   },
+  experimental: {
+    payloadExtraction: false
+  },
+  build: {
+    analyze: false
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -21,6 +27,7 @@ export default defineNuxtConfig({
       { code: 'vi', file: 'vi.json' },
       { code: 'en', file: 'en.json' }
     ],
-    defaultLocale: 'vi'
+    defaultLocale: 'vi',
+    lazy: true
   },
 })

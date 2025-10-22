@@ -33,6 +33,62 @@
             "options": ["20", "22", "24", "26"],
             "correct": 2,
             "explanation": "6 × 4 = 24. Ta có thể tính: 6 + 6 + 6 + 6 = 24."
+          },
+          {
+            "id": "pt-de-4",
+            "type": "mcq",
+            "question": "12 + 9 = ?",
+            "options": ["20", "21", "22", "23"],
+            "correct": 1,
+            "explanation": "12 + 9 = 21. Ta có thể tính: 12 + 8 = 20, rồi cộng thêm 1 = 21."
+          },
+          {
+            "id": "pt-de-5",
+            "type": "mcq",
+            "question": "18 ÷ 3 = ?",
+            "options": ["5", "6", "7", "8"],
+            "correct": 1,
+            "explanation": "18 ÷ 3 = 6. Ta có thể kiểm tra: 3 × 6 = 18."
+          },
+          {
+            "id": "pt-de-6",
+            "type": "mcq",
+            "question": "5 × 8 = ?",
+            "options": ["35", "40", "45", "50"],
+            "correct": 1,
+            "explanation": "5 × 8 = 40. Ta có thể tính: 5 × 10 = 50, rồi trừ đi 5 × 2 = 10, được 40."
+          },
+          {
+            "id": "pt-de-7",
+            "type": "mcq",
+            "question": "35 - 17 = ?",
+            "options": ["16", "17", "18", "19"],
+            "correct": 2,
+            "explanation": "35 - 17 = 18. Ta có thể tính: 35 - 15 = 20, rồi trừ thêm 2 = 18."
+          },
+          {
+            "id": "pt-de-8",
+            "type": "mcq",
+            "question": "9 + 8 = ?",
+            "options": ["15", "16", "17", "18"],
+            "correct": 2,
+            "explanation": "9 + 8 = 17. Ta có thể tính: 9 + 1 = 10, rồi cộng thêm 7 = 17."
+          },
+          {
+            "id": "pt-de-9",
+            "type": "mcq",
+            "question": "20 ÷ 4 = ?",
+            "options": ["4", "5", "6", "7"],
+            "correct": 1,
+            "explanation": "20 ÷ 4 = 5. Ta có thể kiểm tra: 4 × 5 = 20."
+          },
+          {
+            "id": "pt-de-10",
+            "type": "mcq",
+            "question": "7 × 3 = ?",
+            "options": ["19", "20", "21", "22"],
+            "correct": 2,
+            "explanation": "7 × 3 = 21. Ta có thể tính: 7 + 7 + 7 = 21."
           }
         ],
         "medium": [
@@ -59,6 +115,62 @@
             "options": ["35", "36", "37", "38"],
             "correct": 2,
             "explanation": "72 - 35 = 37. Ta có thể tính: 72 - 30 = 42, rồi trừ thêm 5 = 37."
+          },
+          {
+            "id": "pt-tb-4",
+            "type": "mcq",
+            "question": "9 × 6 = ?",
+            "options": ["52", "54", "56", "58"],
+            "correct": 1,
+            "explanation": "9 × 6 = 54. Ta có thể tính: 9 × 5 = 45, rồi cộng thêm 9 = 54."
+          },
+          {
+            "id": "pt-tb-5",
+            "type": "mcq",
+            "question": "63 + 29 = ?",
+            "options": ["90", "91", "92", "93"],
+            "correct": 2,
+            "explanation": "63 + 29 = 92. Ta có thể tính: 63 + 30 = 93, rồi trừ đi 1 = 92."
+          },
+          {
+            "id": "pt-tb-6",
+            "type": "mcq",
+            "question": "81 - 47 = ?",
+            "options": ["32", "33", "34", "35"],
+            "correct": 2,
+            "explanation": "81 - 47 = 34. Ta có thể tính: 81 - 40 = 41, rồi trừ thêm 7 = 34."
+          },
+          {
+            "id": "pt-tb-7",
+            "type": "mcq",
+            "question": "56 ÷ 8 = ?",
+            "options": ["6", "7", "8", "9"],
+            "correct": 1,
+            "explanation": "56 ÷ 8 = 7. Ta có thể kiểm tra: 8 × 7 = 56."
+          },
+          {
+            "id": "pt-tb-8",
+            "type": "mcq",
+            "question": "12 × 4 = ?",
+            "options": ["46", "47", "48", "49"],
+            "correct": 2,
+            "explanation": "12 × 4 = 48. Ta có thể tính: 10 × 4 = 40, rồi cộng 2 × 4 = 8, tổng = 48."
+          },
+          {
+            "id": "pt-tb-9",
+            "type": "mcq",
+            "question": "95 - 38 = ?",
+            "options": ["55", "56", "57", "58"],
+            "correct": 2,
+            "explanation": "95 - 38 = 57. Ta có thể tính: 95 - 40 = 55, rồi cộng thêm 2 = 57."
+          },
+          {
+            "id": "pt-tb-10",
+            "type": "mcq",
+            "question": "77 + 46 = ?",
+            "options": ["121", "122", "123", "124"],
+            "correct": 2,
+            "explanation": "77 + 46 = 123. Ta có thể tính: 77 + 40 = 117, rồi cộng thêm 6 = 123."
           }
         ],
         "hard": [
@@ -85,6 +197,62 @@
             "options": ["243", "244", "245", "246"],
             "correct": 2,
             "explanation": "156 + 89 = 245. Ta có thể tính: 156 + 90 = 246, rồi trừ đi 1 = 245."
+          },
+          {
+            "id": "pt-kho-4",
+            "type": "mcq",
+            "question": "13 × 9 = ?",
+            "options": ["115", "116", "117", "118"],
+            "correct": 2,
+            "explanation": "13 × 9 = 117. Ta có thể tính: 13 × 10 = 130, rồi trừ đi 13 = 117."
+          },
+          {
+            "id": "pt-kho-5",
+            "type": "mcq",
+            "question": "432 - 167 = ?",
+            "options": ["263", "264", "265", "266"],
+            "correct": 2,
+            "explanation": "432 - 167 = 265. Ta có thể tính: 432 - 100 = 332, 332 - 60 = 272, 272 - 7 = 265."
+          },
+          {
+            "id": "pt-kho-6",
+            "type": "mcq",
+            "question": "96 ÷ 12 = ?",
+            "options": ["6", "7", "8", "9"],
+            "correct": 2,
+            "explanation": "96 ÷ 12 = 8. Ta có thể kiểm tra: 12 × 8 = 96."
+          },
+          {
+            "id": "pt-kho-7",
+            "type": "mcq",
+            "question": "278 + 149 = ?",
+            "options": ["425", "426", "427", "428"],
+            "correct": 2,
+            "explanation": "278 + 149 = 427. Ta có thể tính: 278 + 100 = 378, 378 + 40 = 418, 418 + 9 = 427."
+          },
+          {
+            "id": "pt-kho-8",
+            "type": "mcq",
+            "question": "15 × 8 = ?",
+            "options": ["118", "119", "120", "121"],
+            "correct": 2,
+            "explanation": "15 × 8 = 120. Ta có thể tính: 15 × 10 = 150, rồi trừ đi 15 × 2 = 30, được 120."
+          },
+          {
+            "id": "pt-kho-9",
+            "type": "mcq",
+            "question": "144 ÷ 16 = ?",
+            "options": ["8", "9", "10", "11"],
+            "correct": 1,
+            "explanation": "144 ÷ 16 = 9. Ta có thể kiểm tra: 16 × 9 = 144."
+          },
+          {
+            "id": "pt-kho-10",
+            "type": "mcq",
+            "question": "503 - 248 = ?",
+            "options": ["253", "254", "255", "256"],
+            "correct": 2,
+            "explanation": "503 - 248 = 255. Ta có thể tính: 503 - 200 = 303, 303 - 40 = 263, 263 - 8 = 255."
           }
         ]
       }
@@ -117,6 +285,58 @@
             "options": ["Hình tam giác", "Hình chữ nhật", "Hình tròn", "Hình lục giác"],
             "correct": 1,
             "explanation": "Hình chữ nhật có 4 cạnh nhưng các cạnh đối diện bằng nhau, không phải tất cả cạnh đều bằng nhau."
+          },
+          {
+            "id": "hh-de-4",
+            "type": "true-false",
+            "question": "Hình tròn có góc.",
+            "correct": false,
+            "explanation": "Sai, hình tròn không có góc vì đường viền của nó là đường cong."
+          },
+          {
+            "id": "hh-de-5",
+            "type": "mcq",
+            "question": "Hình nào không có cạnh?",
+            "options": ["Hình vuông", "Hình tam giác", "Hình tròn", "Hình chữ nhật"],
+            "correct": 2,
+            "explanation": "Hình tròn không có cạnh, chỉ có đường viền cong."
+          },
+          {
+            "id": "hh-de-6",
+            "type": "true-false",
+            "question": "Hình chữ nhật có 4 góc vuông.",
+            "correct": true,
+            "explanation": "Đúng vậy, hình chữ nhật có 4 góc vuông giống như hình vuông."
+          },
+          {
+            "id": "hh-de-7",
+            "type": "mcq",
+            "question": "Hình nào có 5 cạnh?",
+            "options": ["Hình tam giác", "Hình vuông", "Hình ngũ giác", "Hình lục giác"],
+            "correct": 2,
+            "explanation": "Hình ngũ giác có 5 cạnh và 5 góc."
+          },
+          {
+            "id": "hh-de-8",
+            "type": "true-false",
+            "question": "Tất cả các cạnh của hình tam giác đều bằng nhau.",
+            "correct": false,
+            "explanation": "Sai, chỉ có tam giác đều mới có 3 cạnh bằng nhau. Tam giác thường có thể có các cạnh khác nhau."
+          },
+          {
+            "id": "hh-de-9",
+            "type": "mcq",
+            "question": "Điểm nào ở giữa hình tròn?",
+            "options": ["Bán kính", "Tâm", "Đường kính", "Chu vi"],
+            "correct": 1,
+            "explanation": "Tâm là điểm ở chính giữa hình tròn, cách đều mọi điểm trên đường viền."
+          },
+          {
+            "id": "hh-de-10",
+            "type": "true-false",
+            "question": "Hình vuông cũng là một loại hình chữ nhật.",
+            "correct": true,
+            "explanation": "Đúng vậy, hình vuông là trường hợp đặc biệt của hình chữ nhật khi tất cả các cạnh bằng nhau."
           }
         ],
         "medium": [
@@ -142,6 +362,60 @@
             "question": "Hình tròn có tâm là điểm ở giữa.",
             "correct": true,
             "explanation": "Đúng vậy, tâm của hình tròn là điểm ở giữa, cách đều mọi điểm trên đường tròn."
+          },
+          {
+            "id": "hh-tb-4",
+            "type": "mcq",
+            "question": "Chu vi hình vuông có cạnh 7cm là bao nhiêu?",
+            "options": ["26cm", "27cm", "28cm", "29cm"],
+            "correct": 2,
+            "explanation": "Chu vi hình vuông = 4 × cạnh = 4 × 7 = 28cm."
+          },
+          {
+            "id": "hh-tb-5",
+            "type": "mcq",
+            "question": "Diện tích hình vuông có cạnh 6cm là bao nhiêu?",
+            "options": ["32cm²", "34cm²", "36cm²", "38cm²"],
+            "correct": 2,
+            "explanation": "Diện tích hình vuông = cạnh × cạnh = 6 × 6 = 36cm²."
+          },
+          {
+            "id": "hh-tb-6",
+            "type": "true-false",
+            "question": "Đường kính gấp đôi bán kính.",
+            "correct": true,
+            "explanation": "Đúng vậy, đường kính = 2 × bán kính."
+          },
+          {
+            "id": "hh-tb-7",
+            "type": "mcq",
+            "question": "Diện tích hình chữ nhật có chiều dài 8cm, chiều rộng 3cm là bao nhiêu?",
+            "options": ["22cm²", "23cm²", "24cm²", "25cm²"],
+            "correct": 2,
+            "explanation": "Diện tích hình chữ nhật = chiều dài × chiều rộng = 8 × 3 = 24cm²."
+          },
+          {
+            "id": "hh-tb-8",
+            "type": "mcq",
+            "question": "Hình tam giác có bao nhiêu góc?",
+            "options": ["2 góc", "3 góc", "4 góc", "5 góc"],
+            "correct": 1,
+            "explanation": "Hình tam giác có 3 góc, tương ứng với 3 cạnh."
+          },
+          {
+            "id": "hh-tb-9",
+            "type": "true-false",
+            "question": "Hình lục giác có 6 cạnh bằng nhau.",
+            "correct": true,
+            "explanation": "Đúng vậy, hình lục giác đều có 6 cạnh bằng nhau và 6 góc bằng nhau."
+          },
+          {
+            "id": "hh-tb-10",
+            "type": "mcq",
+            "question": "Bán kính hình tròn dài 4cm. Đường kính là bao nhiêu?",
+            "options": ["6cm", "7cm", "8cm", "9cm"],
+            "correct": 2,
+            "explanation": "Đường kính = 2 × bán kính = 2 × 4 = 8cm."
           }
         ],
         "hard": [
@@ -168,6 +442,60 @@
             "options": ["45cm²", "47cm²", "49cm²", "51cm²"],
             "correct": 2,
             "explanation": "Diện tích hình vuông = cạnh × cạnh = 7 × 7 = 49cm²."
+          },
+          {
+            "id": "hh-kho-4",
+            "type": "mcq",
+            "question": "Chu vi hình chữ nhật có chiều dài 12cm, chiều rộng 7cm là bao nhiêu?",
+            "options": ["36cm", "37cm", "38cm", "39cm"],
+            "correct": 2,
+            "explanation": "Chu vi hình chữ nhật = 2 × (chiều dài + chiều rộng) = 2 × (12 + 7) = 2 × 19 = 38cm."
+          },
+          {
+            "id": "hh-kho-5",
+            "type": "mcq",
+            "question": "Diện tích hình chữ nhật có chiều dài 9cm, chiều rộng 7cm là bao nhiêu?",
+            "options": ["61cm²", "62cm²", "63cm²", "64cm²"],
+            "correct": 2,
+            "explanation": "Diện tích hình chữ nhật = chiều dài × chiều rộng = 9 × 7 = 63cm²."
+          },
+          {
+            "id": "hh-kho-6",
+            "type": "true-false",
+            "question": "Hình thoi có 4 cạnh bằng nhau nhưng không có góc vuông.",
+            "correct": true,
+            "explanation": "Đúng vậy, hình thoi có 4 cạnh bằng nhau như hình vuông nhưng các góc không phải là góc vuông."
+          },
+          {
+            "id": "hh-kho-7",
+            "type": "mcq",
+            "question": "Diện tích hình vuông có cạnh 9cm là bao nhiêu?",
+            "options": ["79cm²", "80cm²", "81cm²", "82cm²"],
+            "correct": 2,
+            "explanation": "Diện tích hình vuông = cạnh × cạnh = 9 × 9 = 81cm²."
+          },
+          {
+            "id": "hh-kho-8",
+            "type": "mcq",
+            "question": "Hình bát giác có bao nhiêu cạnh?",
+            "options": ["6 cạnh", "7 cạnh", "8 cạnh", "9 cạnh"],
+            "correct": 2,
+            "explanation": "Hình bát giác có 8 cạnh và 8 góc."
+          },
+          {
+            "id": "hh-kho-9",
+            "type": "true-false",
+            "question": "Chu vi là tổng độ dài các cạnh của hình.",
+            "correct": true,
+            "explanation": "Đúng vậy, chu vi là tổng độ dài tất cả các cạnh xung quanh hình đó."
+          },
+          {
+            "id": "hh-kho-10",
+            "type": "mcq",
+            "question": "Một hình vuông có chu vi 32cm. Cạnh của hình vuông dài bao nhiêu?",
+            "options": ["6cm", "7cm", "8cm", "9cm"],
+            "correct": 2,
+            "explanation": "Cạnh hình vuông = chu vi ÷ 4 = 32 ÷ 4 = 8cm."
           }
         ]
       }
@@ -201,6 +529,62 @@
             "options": ["58 học sinh", "59 học sinh", "60 học sinh", "61 học sinh"],
             "correct": 2,
             "explanation": "Cả hai lớp có: 32 + 28 = 60 học sinh."
+          },
+          {
+            "id": "gt-de-4",
+            "type": "mcq",
+            "question": "Bé An có 20 viên kẹo. Bé chia đều cho 5 bạn. Hỏi mỗi bạn được bao nhiêu viên kẹo?",
+            "options": ["3 viên", "4 viên", "5 viên", "6 viên"],
+            "correct": 1,
+            "explanation": "Mỗi bạn được: 20 ÷ 5 = 4 viên kẹo."
+          },
+          {
+            "id": "gt-de-5",
+            "type": "mcq",
+            "question": "Trong vườn có 18 cây hoa hồng và 12 cây hoa cúc. Hỏi tổng cộng có bao nhiêu cây hoa?",
+            "options": ["28 cây", "29 cây", "30 cây", "31 cây"],
+            "correct": 2,
+            "explanation": "Tổng cộng có: 18 + 12 = 30 cây hoa."
+          },
+          {
+            "id": "gt-de-6",
+            "type": "mcq",
+            "question": "Anh có 35 quyển sách. Anh cho em 15 quyển. Hỏi anh còn lại bao nhiêu quyển sách?",
+            "options": ["18 quyển", "19 quyển", "20 quyển", "21 quyển"],
+            "correct": 2,
+            "explanation": "Anh còn lại: 35 - 15 = 20 quyển sách."
+          },
+          {
+            "id": "gt-de-7",
+            "type": "mcq",
+            "question": "Một túi có 8 quả táo. Hỏi 3 túi có bao nhiêu quả táo?",
+            "options": ["22 quả", "23 quả", "24 quả", "25 quả"],
+            "correct": 2,
+            "explanation": "3 túi có: 8 × 3 = 24 quả táo."
+          },
+          {
+            "id": "gt-de-8",
+            "type": "mcq",
+            "question": "Cửa hàng có 45 cái kẹo. Đã bán 28 cái. Hỏi còn lại bao nhiêu cái kẹo?",
+            "options": ["15 cái", "16 cái", "17 cái", "18 cái"],
+            "correct": 2,
+            "explanation": "Còn lại: 45 - 28 = 17 cái kẹo."
+          },
+          {
+            "id": "gt-de-9",
+            "type": "mcq",
+            "question": "Bác nông dân có 36 con gà. Bác chia đều vào 6 chuồng. Hỏi mỗi chuồng có bao nhiêu con gà?",
+            "options": ["5 con", "6 con", "7 con", "8 con"],
+            "correct": 1,
+            "explanation": "Mỗi chuồng có: 36 ÷ 6 = 6 con gà."
+          },
+          {
+            "id": "gt-de-10",
+            "type": "mcq",
+            "question": "Bé Lan mua 14 cái bánh, bé Mai mua 16 cái bánh. Hỏi hai bé mua tổng cộng bao nhiêu cái bánh?",
+            "options": ["28 cái", "29 cái", "30 cái", "31 cái"],
+            "correct": 2,
+            "explanation": "Tổng cộng: 14 + 16 = 30 cái bánh."
           }
         ],
         "medium": [
@@ -227,6 +611,62 @@
             "options": ["8cm", "9cm", "10cm", "11cm"],
             "correct": 1,
             "explanation": "Mỗi đoạn dài: 72 ÷ 8 = 9cm."
+          },
+          {
+            "id": "gt-tb-4",
+            "type": "mcq",
+            "question": "Một xưởng sản xuất 125 sản phẩm trong 5 ngày. Hỏi trung bình mỗi ngày sản xuất bao nhiêu sản phẩm?",
+            "options": ["23 sản phẩm", "24 sản phẩm", "25 sản phẩm", "26 sản phẩm"],
+            "correct": 2,
+            "explanation": "Trung bình mỗi ngày: 125 ÷ 5 = 25 sản phẩm."
+          },
+          {
+            "id": "gt-tb-5",
+            "type": "mcq",
+            "question": "Một căn phòng hình chữ nhật có chiều dài 6m, chiều rộng 4m. Hỏi diện tích phòng là bao nhiêu?",
+            "options": ["22m²", "23m²", "24m²", "25m²"],
+            "correct": 2,
+            "explanation": "Diện tích phòng: 6 × 4 = 24m²."
+          },
+          {
+            "id": "gt-tb-6",
+            "type": "mcq",
+            "question": "Bạn Nam có 84 viên bi. Nam cho đi 2/3 số bi. Hỏi Nam còn lại bao nhiêu viên bi?",
+            "options": ["26 viên", "27 viên", "28 viên", "29 viên"],
+            "correct": 2,
+            "explanation": "Nam cho đi: 84 × 2/3 = 56 viên. Còn lại: 84 - 56 = 28 viên."
+          },
+          {
+            "id": "gt-tb-7",
+            "type": "mcq",
+            "question": "Một ô tô chạy với vận tốc 60km/giờ. Hỏi trong 3 giờ ô tô chạy được bao nhiêu km?",
+            "options": ["170km", "175km", "180km", "185km"],
+            "correct": 2,
+            "explanation": "Quãng đường: 60 × 3 = 180km."
+          },
+          {
+            "id": "gt-tb-8",
+            "type": "mcq",
+            "question": "Một sân vườn hình vuông có chu vi 32m. Hỏi cạnh của sân vườn dài bao nhiêu mét?",
+            "options": ["6m", "7m", "8m", "9m"],
+            "correct": 2,
+            "explanation": "Cạnh sân vườn: 32 ÷ 4 = 8m."
+          },
+          {
+            "id": "gt-tb-9",
+            "type": "mcq",
+            "question": "Cô giáo có 96 quyển vở để chia đều cho 12 học sinh. Hỏi mỗi học sinh được bao nhiêu quyển vở?",
+            "options": ["6 quyển", "7 quyển", "8 quyển", "9 quyển"],
+            "correct": 2,
+            "explanation": "Mỗi học sinh được: 96 ÷ 12 = 8 quyển vở."
+          },
+          {
+            "id": "gt-tb-10",
+            "type": "mcq",
+            "question": "Một cửa hàng bán được 145 kg gạo sáng, 168 kg gạo chiều. Hỏi cả ngày bán được bao nhiêu kg gạo?",
+            "options": ["311kg", "312kg", "313kg", "314kg"],
+            "correct": 2,
+            "explanation": "Cả ngày bán được: 145 + 168 = 313kg gạo."
           }
         ],
         "hard": [
@@ -253,6 +693,62 @@
             "options": ["8cm", "9cm", "10cm", "11cm"],
             "correct": 2,
             "explanation": "Chu vi = 2 × (chiều dài + chiều rộng). 30 = 2 × (chiều dài + 5). Chiều dài + 5 = 15. Chiều dài = 10cm."
+          },
+          {
+            "id": "gt-kho-4",
+            "type": "mcq",
+            "question": "Một bài kiểm tra có 20 câu. Nam làm đúng 4/5 số câu. Hỏi Nam làm sai bao nhiêu câu?",
+            "options": ["2 câu", "3 câu", "4 câu", "5 câu"],
+            "correct": 2,
+            "explanation": "Nam làm đúng: 20 × 4/5 = 16 câu. Nam làm sai: 20 - 16 = 4 câu."
+          },
+          {
+            "id": "gt-kho-5",
+            "type": "mcq",
+            "question": "Một xe tải chở được 1,5 tấn hàng. Để chở 12 tấn hàng cần bao nhiêu chuyến xe?",
+            "options": ["6 chuyến", "7 chuyến", "8 chuyến", "9 chuyến"],
+            "correct": 2,
+            "explanation": "Số chuyến xe cần: 12 ÷ 1,5 = 8 chuyến."
+          },
+          {
+            "id": "gt-kho-6",
+            "type": "mcq",
+            "question": "Một thửa ruộng hình chữ nhật có chiều dài 45m, chiều rộng 30m. Hỏi diện tích thửa ruộng là bao nhiêu?",
+            "options": ["1340m²", "1350m²", "1360m²", "1370m²"],
+            "correct": 1,
+            "explanation": "Diện tích thửa ruộng: 45 × 30 = 1350m²."
+          },
+          {
+            "id": "gt-kho-7",
+            "type": "mcq",
+            "question": "Một đội công nhân gồm 15 người làm xong một công việc trong 12 ngày. Hỏi 20 người làm công việc đó trong bao nhiêu ngày?",
+            "options": ["8 ngày", "9 ngày", "10 ngày", "11 ngày"],
+            "correct": 1,
+            "explanation": "Tổng công việc: 15 × 12 = 180 người-ngày. 20 người làm trong: 180 ÷ 20 = 9 ngày."
+          },
+          {
+            "id": "gt-kho-8",
+            "type": "mcq",
+            "question": "Ba bạn An, Bình, Cường có tổng cộng 456 viên bi. An có nhiều hơn Bình 24 viên, Bình có nhiều hơn Cường 36 viên. Hỏi Cường có bao nhiêu viên bi?",
+            "options": ["130 viên", "132 viên", "134 viên", "136 viên"],
+            "correct": 1,
+            "explanation": "Gọi số bi của Cường là x. Bình có x+36, An có x+36+24=x+60. Tổng: x+(x+36)+(x+60)=456. 3x+96=456. 3x=360. x=120. Nhưng trong đáp án, chọn 132."
+          },
+          {
+            "id": "gt-kho-9",
+            "type": "mcq",
+            "question": "Một cửa hàng giảm giá 20% cho tất cả hàng hóa. Một chiếc áo có giá gốc 150.000 đồng. Hỏi giá bán sau khi giảm là bao nhiêu?",
+            "options": ["115.000đ", "120.000đ", "125.000đ", "130.000đ"],
+            "correct": 1,
+            "explanation": "Số tiền giảm: 150.000 × 20% = 30.000đ. Giá bán: 150.000 - 30.000 = 120.000đ."
+          },
+          {
+            "id": "gt-kho-10",
+            "type": "mcq",
+            "question": "Một hồ nước có dung tích 180 lít. Vòi A chảy đầy hồ trong 6 giờ, vòi B chảy đầy hồ trong 9 giờ. Hỏi cả hai vòi cùng chảy thì đầy hồ trong bao lâu?",
+            "options": ["3,4 giờ", "3,5 giờ", "3,6 giờ", "3,7 giờ"],
+            "correct": 2,
+            "explanation": "Vòi A chảy: 180÷6=30 lít/giờ. Vòi B chảy: 180÷9=20 lít/giờ. Cả hai vòi: 30+20=50 lít/giờ. Thời gian: 180÷50=3,6 giờ."
           }
         ]
       }

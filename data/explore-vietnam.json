@@ -32,6 +32,51 @@
             "options": ["Sông Hồng", "Sông Đồng Nai", "Sông Cửu Long", "Sông Mã"],
             "correct": 2,
             "explanation": "Sông Cửu Long (phần chảy qua Việt Nam) là hệ thống sông lớn nhất và dài nhất Việt Nam."
+          },
+          {
+            "id": "dl-de-5",
+            "type": "true-false",
+            "question": "Việt Nam có chung biên giới với Trung Quốc.",
+            "correct": true,
+            "explanation": "Đúng, Việt Nam có chung biên giới với Trung Quốc ở phía Bắc."
+          },
+          {
+            "id": "dl-de-6",
+            "type": "mcq",
+            "question": "Biển nào bao quanh Việt Nam ở phía Đông?",
+            "options": ["Biển Đông", "Biển Tây", "Biển Nam", "Biển Bắc"],
+            "correct": 0,
+            "explanation": "Biển Đông (hay Biển Đông Nam Á) bao quanh Việt Nam ở phía Đông."
+          },
+          {
+            "id": "dl-de-7",
+            "type": "true-false",
+            "question": "Việt Nam có khí hậu nhiệt đới.",
+            "correct": true,
+            "explanation": "Đúng, Việt Nam có khí hậu nhiệt đới gió mùa."
+          },
+          {
+            "id": "dl-de-8",
+            "type": "mcq",
+            "question": "Đồng bằng nào lớn nhất Việt Nam?",
+            "options": ["Đồng bằng sông Hồng", "Đồng bằng sông Cửu Long", "Đồng bằng Thanh Hóa", "Đồng bằng Nghệ An"],
+            "correct": 1,
+            "explanation": "Đồng bằng sông Cửu Long (Đồng bằng Nam Bộ) là đồng bằng lớn nhất Việt Nam."
+          },
+          {
+            "id": "dl-de-9",
+            "type": "true-false",
+            "question": "Việt Nam có 4 mùa trong năm.",
+            "correct": false,
+            "explanation": "Việt Nam có 2 mùa chính: mùa mưa và mùa khô, do khí hậu nhiệt đới gió mùa."
+          },
+          {
+            "id": "dl-de-10",
+            "type": "mcq",
+            "question": "Thành phố nào đông dân nhất Việt Nam?",
+            "options": ["Hà Nội", "Đà Nẵng", "Hồ Chí Minh", "Cần Thơ"],
+            "correct": 2,
+            "explanation": "Thành phố Hồ Chí Minh là thành phố đông dân nhất Việt Nam."
           }
         ],
         "medium": [
@@ -57,6 +102,59 @@
             "options": ["Quảng Ninh", "Khánh Hòa", "Kiên Giang", "Bà Rịa - Vũng Tàu"],
             "correct": 2,
             "explanation": "Kiên Giang là tỉnh có nhiều đảo nhất Việt Nam, nổi bật là quần đảo Bà Lụa, Nam Du và Phú Quốc."
+          },
+          {
+            "id": "dl-tb-4",
+            "type": "mcq",
+            "question": "Dãy núi nào chạy dọc theo biên giới Việt Nam - Lào?",
+            "options": ["Trường Sơn", "Hoàng Liên Sơn", "Đông Triều", "Bạch Mã"],
+            "correct": 0,
+            "explanation": "Dãy Trường Sơn chạy dọc theo biên giới Việt Nam - Lào và Việt Nam - Campuchia."
+          },
+          {
+            "id": "dl-tb-5",
+            "type": "true-false",
+            "question": "Việt Nam có 3 vùng khí hậu chính.",
+            "correct": true,
+            "explanation": "Đúng, Việt Nam có 3 vùng khí hậu: Bắc Bộ, Trung Bộ và Nam Bộ."
+          },
+          {
+            "id": "dl-tb-6",
+            "type": "mcq",
+            "question": "Sông nào chảy qua Hà Nội?",
+            "options": ["Sông Hồng", "Sông Đà", "Sông Lô", "Sông Thái Bình"],
+            "correct": 0,
+            "explanation": "Sông Hồng chảy qua Hà Nội và là con sông quan trọng nhất của miền Bắc."
+          },
+          {
+            "id": "dl-tb-7",
+            "type": "true-false",
+            "question": "Việt Nam có đường bờ biển dài nhất Đông Nam Á.",
+            "correct": false,
+            "explanation": "Indonesia có đường bờ biển dài nhất Đông Nam Á, Việt Nam đứng thứ 2."
+          },
+          {
+            "id": "dl-tb-8",
+            "type": "mcq",
+            "question": "Vịnh nào được UNESCO công nhận là Di sản thế giới?",
+            "options": ["Vịnh Hạ Long", "Vịnh Nha Trang", "Vịnh Cam Ranh", "Vịnh Vân Phong"],
+            "correct": 0,
+            "explanation": "Vịnh Hạ Long được UNESCO công nhận là Di sản thế giới năm 1994."
+          },
+          {
+            "id": "dl-tb-9",
+            "type": "true-false",
+            "question": "Việt Nam có chung biên giới với 3 nước.",
+            "correct": true,
+            "explanation": "Đúng, Việt Nam có chung biên giới với Trung Quốc, Lào và Campuchia."
+          },
+          {
+            "id": "dl-tb-10",
+            "type": "mcq",
+            "question": "Đồng bằng nào có diện tích lớn thứ hai Việt Nam?",
+            "options": ["Đồng bằng sông Hồng", "Đồng bằng sông Cửu Long", "Đồng bằng Thanh Hóa", "Đồng bằng Nghệ An"],
+            "correct": 0,
+            "explanation": "Đồng bằng sông Hồng (Đồng bằng Bắc Bộ) có diện tích lớn thứ hai sau Đồng bằng sông Cửu Long."
           }
         ],
         "hard": [
@@ -87,6 +185,59 @@
             ],
             "correct": 0,
             "explanation": "Vùng kinh tế trọng điểm phía Nam bao gồm TP.HCM, Đồng Nai, Bình Dương, Bà Rịa - Vũng Tàu, Long An, Tiền Giang, Tây Ninh."
+          },
+          {
+            "id": "dl-kho-4",
+            "type": "mcq",
+            "question": "Dãy núi nào có độ cao trung bình cao nhất Việt Nam?",
+            "options": ["Hoàng Liên Sơn", "Trường Sơn", "Đông Triều", "Bạch Mã"],
+            "correct": 0,
+            "explanation": "Dãy Hoàng Liên Sơn có độ cao trung bình cao nhất với đỉnh Fansipan 3.143m."
+          },
+          {
+            "id": "dl-kho-5",
+            "type": "true-false",
+            "question": "Việt Nam có 4 vùng kinh tế trọng điểm.",
+            "correct": false,
+            "explanation": "Việt Nam có 3 vùng kinh tế trọng điểm: phía Bắc, miền Trung và phía Nam."
+          },
+          {
+            "id": "dl-kho-6",
+            "type": "mcq",
+            "question": "Sông nào có lưu vực lớn nhất Việt Nam?",
+            "options": ["Sông Hồng", "Sông Cửu Long", "Sông Đà", "Sông Thái Bình"],
+            "correct": 1,
+            "explanation": "Sông Cửu Long có lưu vực lớn nhất Việt Nam với diện tích khoảng 39.000 km²."
+          },
+          {
+            "id": "dl-kho-7",
+            "type": "true-false",
+            "question": "Việt Nam có 5 thành phố trực thuộc trung ương.",
+            "correct": true,
+            "explanation": "Đúng, Việt Nam có 5 thành phố trực thuộc trung ương: Hà Nội, TP.HCM, Đà Nẵng, Hải Phòng và Cần Thơ."
+          },
+          {
+            "id": "dl-kho-8",
+            "type": "mcq",
+            "question": "Vùng nào có mật độ dân số cao nhất Việt Nam?",
+            "options": ["Đồng bằng sông Hồng", "Đồng bằng sông Cửu Long", "Duyên hải miền Trung", "Tây Nguyên"],
+            "correct": 0,
+            "explanation": "Đồng bằng sông Hồng có mật độ dân số cao nhất Việt Nam với hơn 1.000 người/km²."
+          },
+          {
+            "id": "dl-kho-9",
+            "type": "true-false",
+            "question": "Việt Nam có 2 vùng khí hậu chính.",
+            "correct": false,
+            "explanation": "Việt Nam có 3 vùng khí hậu chính: Bắc Bộ, Trung Bộ và Nam Bộ."
+          },
+          {
+            "id": "dl-kho-10",
+            "type": "mcq",
+            "question": "Tỉnh nào có diện tích lớn nhất Việt Nam?",
+            "options": ["Nghệ An", "Gia Lai", "Đắk Lắk", "Kon Tum"],
+            "correct": 0,
+            "explanation": "Nghệ An là tỉnh có diện tích lớn nhất Việt Nam với 16.487 km²."
           }
         ]
       }
@@ -119,6 +270,59 @@
             "options": ["Bà Triệu", "Trưng Trắc", "Lê Chân", "Nguyễn Thị Định"],
             "correct": 1,
             "explanation": "Hai Bà Trưng là Trưng Trắc và Trưng Nhị, lãnh đạo cuộc khởi nghĩa chống lại ách đô hộ của nhà Hán."
+          },
+          {
+            "id": "ls-de-4",
+            "type": "mcq",
+            "question": "Triều đại nào kéo dài lâu nhất trong lịch sử Việt Nam?",
+            "options": ["Nhà Lý", "Nhà Trần", "Nhà Lê", "Nhà Nguyễn"],
+            "correct": 2,
+            "explanation": "Nhà Lê kéo dài từ 1428-1789, tổng cộng 361 năm, là triều đại kéo dài lâu nhất."
+          },
+          {
+            "id": "ls-de-5",
+            "type": "true-false",
+            "question": "Việt Nam từng bị Trung Quốc đô hộ trong 1000 năm.",
+            "correct": true,
+            "explanation": "Đúng vậy, Việt Nam bị Trung Quốc đô hộ từ năm 111 TCN đến năm 938, tổng cộng hơn 1000 năm."
+          },
+          {
+            "id": "ls-de-6",
+            "type": "mcq",
+            "question": "Ai là người sáng lập ra nhà Lý?",
+            "options": ["Lý Thái Tổ", "Lý Thánh Tông", "Lý Nhân Tông", "Lý Cao Tông"],
+            "correct": 0,
+            "explanation": "Lý Thái Tổ (Lý Công Uẩn) là người sáng lập ra nhà Lý năm 1009."
+          },
+          {
+            "id": "ls-de-7",
+            "type": "true-false",
+            "question": "Hồ Chí Minh là tên thật của Bác Hồ.",
+            "correct": false,
+            "explanation": "Tên thật của Bác Hồ là Nguyễn Sinh Cung, sau đổi thành Nguyễn Tất Thành."
+          },
+          {
+            "id": "ls-de-8",
+            "type": "mcq",
+            "question": "Cuộc khởi nghĩa nào đã kết thúc 1000 năm Bắc thuộc?",
+            "options": ["Khởi nghĩa Hai Bà Trưng", "Khởi nghĩa Bà Triệu", "Khởi nghĩa Ngô Quyền", "Khởi nghĩa Lê Lợi"],
+            "correct": 2,
+            "explanation": "Chiến thắng Bạch Đằng năm 938 của Ngô Quyền đã kết thúc 1000 năm Bắc thuộc."
+          },
+          {
+            "id": "ls-de-9",
+            "type": "true-false",
+            "question": "Việt Nam giành độc lập năm 1945.",
+            "correct": true,
+            "explanation": "Đúng vậy, Việt Nam tuyên bố độc lập ngày 2/9/1945."
+          },
+          {
+            "id": "ls-de-10",
+            "type": "mcq",
+            "question": "Ai là người viết 'Nam quốc sơn hà'?",
+            "options": ["Lý Thường Kiệt", "Trần Hưng Đạo", "Nguyễn Trãi", "Lê Lợi"],
+            "correct": 0,
+            "explanation": "Lý Thường Kiệt là tác giả của bài thơ 'Nam quốc sơn hà', bản tuyên ngôn độc lập đầu tiên của Việt Nam."
           }
         ],
         "medium": [
@@ -144,6 +348,59 @@
             "options": ["Nguyễn Trãi", "Trần Hưng Đạo", "Lê Lợi", "Phạm Ngũ Lão"],
             "correct": 0,
             "explanation": "Nguyễn Trãi là tác giả của 'Bình Ngô đại cáo', bản tuyên ngôn độc lập thứ hai của Việt Nam."
+          },
+          {
+            "id": "ls-tb-4",
+            "type": "mcq",
+            "question": "Triều đại nào đã đánh bại quân Mông Cổ 3 lần?",
+            "options": ["Nhà Lý", "Nhà Trần", "Nhà Lê", "Nhà Nguyễn"],
+            "correct": 1,
+            "explanation": "Nhà Trần đã đánh bại quân Mông Cổ 3 lần (1258, 1285, 1288) dưới sự lãnh đạo của Trần Hưng Đạo."
+          },
+          {
+            "id": "ls-tb-5",
+            "type": "true-false",
+            "question": "Lê Lợi là người sáng lập ra nhà Lê.",
+            "correct": true,
+            "explanation": "Đúng vậy, Lê Lợi (Lê Thái Tổ) là người sáng lập ra nhà Lê sau khi đánh đuổi quân Minh."
+          },
+          {
+            "id": "ls-tb-6",
+            "type": "mcq",
+            "question": "Ai là người viết 'Hịch tướng sĩ'?",
+            "options": ["Trần Hưng Đạo", "Lý Thường Kiệt", "Nguyễn Trãi", "Lê Lợi"],
+            "correct": 0,
+            "explanation": "Trần Hưng Đạo là tác giả của 'Hịch tướng sĩ', một tác phẩm văn học yêu nước nổi tiếng."
+          },
+          {
+            "id": "ls-tb-7",
+            "type": "true-false",
+            "question": "Nhà Nguyễn là triều đại cuối cùng của Việt Nam.",
+            "correct": true,
+            "explanation": "Đúng vậy, nhà Nguyễn (1802-1945) là triều đại phong kiến cuối cùng của Việt Nam."
+          },
+          {
+            "id": "ls-tb-8",
+            "type": "mcq",
+            "question": "Ai là người lãnh đạo cuộc khởi nghĩa Lam Sơn?",
+            "options": ["Lê Lợi", "Nguyễn Trãi", "Trần Hưng Đạo", "Lý Thường Kiệt"],
+            "correct": 0,
+            "explanation": "Lê Lợi là người lãnh đạo cuộc khởi nghĩa Lam Sơn chống lại ách đô hộ của nhà Minh."
+          },
+          {
+            "id": "ls-tb-9",
+            "type": "true-false",
+            "question": "Việt Nam từng bị Pháp đô hộ trong 80 năm.",
+            "correct": true,
+            "explanation": "Đúng vậy, Việt Nam bị Pháp đô hộ từ 1884-1945, tổng cộng 61 năm."
+          },
+          {
+            "id": "ls-tb-10",
+            "type": "mcq",
+            "question": "Ai là người sáng lập ra Đảng Cộng sản Việt Nam?",
+            "options": ["Hồ Chí Minh", "Trường Chinh", "Lê Duẩn", "Phạm Văn Đồng"],
+            "correct": 0,
+            "explanation": "Hồ Chí Minh là người sáng lập ra Đảng Cộng sản Việt Nam ngày 3/2/1930."
           }
         ],
         "hard": [
@@ -169,6 +426,59 @@
             "options": ["Đinh Bộ Lĩnh", "Lê Đại Hành", "Lý Công Uẩn", "Trần Thái Tông"],
             "correct": 0,
             "explanation": "Đinh Bộ Lĩnh (Đinh Tiên Hoàng) là người đã dời đô về Hoa Lư và lập nên nhà Đinh."
+          },
+          {
+            "id": "ls-kho-4",
+            "type": "mcq",
+            "question": "Ai là người đã dời đô từ Hoa Lư về Thăng Long?",
+            "options": ["Lý Thái Tổ", "Lê Thái Tổ", "Trần Thái Tông", "Lê Đại Hành"],
+            "correct": 0,
+            "explanation": "Lý Thái Tổ (Lý Công Uẩn) đã dời đô từ Hoa Lư về Thăng Long năm 1010."
+          },
+          {
+            "id": "ls-kho-5",
+            "type": "true-false",
+            "question": "Nhà Trần đã đánh bại quân Mông Cổ 3 lần liên tiếp.",
+            "correct": true,
+            "explanation": "Đúng vậy, nhà Trần đã đánh bại quân Mông Cổ 3 lần: 1258, 1285, 1288."
+          },
+          {
+            "id": "ls-kho-6",
+            "type": "mcq",
+            "question": "Ai là người viết 'Đại Việt sử ký toàn thư'?",
+            "options": ["Lê Văn Hưu", "Ngô Sĩ Liên", "Phan Huy Chú", "Lê Quý Đôn"],
+            "correct": 1,
+            "explanation": "Ngô Sĩ Liên là tác giả chính của 'Đại Việt sử ký toàn thư', bộ sử lớn nhất của Việt Nam."
+          },
+          {
+            "id": "ls-kho-7",
+            "type": "true-false",
+            "question": "Việt Nam từng bị Nhật Bản đô hộ trong Thế chiến II.",
+            "correct": true,
+            "explanation": "Đúng vậy, Nhật Bản đã đô hộ Việt Nam từ 1940-1945 trong Thế chiến II."
+          },
+          {
+            "id": "ls-kho-8",
+            "type": "mcq",
+            "question": "Ai là người lãnh đạo cuộc khởi nghĩa Tây Sơn?",
+            "options": ["Nguyễn Huệ", "Nguyễn Nhạc", "Nguyễn Lữ", "Nguyễn Ánh"],
+            "correct": 0,
+            "explanation": "Nguyễn Huệ (vua Quang Trung) là người lãnh đạo chính của cuộc khởi nghĩa Tây Sơn."
+          },
+          {
+            "id": "ls-kho-9",
+            "type": "true-false",
+            "question": "Việt Nam giành độc lập hoàn toàn năm 1954.",
+            "correct": false,
+            "explanation": "Sai, Việt Nam giành độc lập năm 1945. Năm 1954 là chiến thắng Điện Biên Phủ."
+          },
+          {
+            "id": "ls-kho-10",
+            "type": "mcq",
+            "question": "Ai là người sáng lập ra nhà Hậu Lê?",
+            "options": ["Lê Lợi", "Lê Thánh Tông", "Lê Hiến Tông", "Lê Thái Tổ"],
+            "correct": 0,
+            "explanation": "Lê Lợi (Lê Thái Tổ) là người sáng lập ra nhà Hậu Lê sau khi đánh đuổi quân Minh."
           }
         ]
       }
@@ -201,6 +511,59 @@
             "options": ["Phở", "Bún bò Huế", "Cao lầu", "Bánh xèo"],
             "correct": 0,
             "explanation": "Phở là món ăn nổi tiếng của Hà Nội, được coi là 'quốc hồn quốc túy' của ẩm thực Việt Nam."
+          },
+          {
+            "id": "vh-de-4",
+            "type": "mcq",
+            "question": "Loại nhạc cụ nào phổ biến nhất ở Việt Nam?",
+            "options": ["Đàn bầu", "Đàn tranh", "Đàn nguyệt", "Đàn guitar"],
+            "correct": 0,
+            "explanation": "Đàn bầu là nhạc cụ truyền thống độc đáo và phổ biến nhất của Việt Nam."
+          },
+          {
+            "id": "vh-de-5",
+            "type": "true-false",
+            "question": "Bánh chưng là món ăn truyền thống trong dịp Tết.",
+            "correct": true,
+            "explanation": "Đúng vậy, bánh chưng là món ăn truyền thống không thể thiếu trong dịp Tết Nguyên Đán."
+          },
+          {
+            "id": "vh-de-6",
+            "type": "mcq",
+            "question": "Làng nào nổi tiếng với nghề làm gốm?",
+            "options": ["Bát Tràng", "Đồng Kỵ", "Làng Vạn Phúc", "Làng Đông Hồ"],
+            "correct": 0,
+            "explanation": "Làng gốm Bát Tràng ở Hà Nội nổi tiếng với nghề làm gốm sứ truyền thống."
+          },
+          {
+            "id": "vh-de-7",
+            "type": "true-false",
+            "question": "Nón lá là vật dụng truyền thống của người Việt Nam.",
+            "correct": true,
+            "explanation": "Đúng vậy, nón lá là vật dụng truyền thống gắn liền với hình ảnh người phụ nữ Việt Nam."
+          },
+          {
+            "id": "vh-de-8",
+            "type": "mcq",
+            "question": "Món ăn nào là đặc sản của miền Nam?",
+            "options": ["Bánh xèo", "Phở", "Bún bò Huế", "Nem nướng"],
+            "correct": 0,
+            "explanation": "Bánh xèo là món ăn đặc sản nổi tiếng của miền Nam Việt Nam."
+          },
+          {
+            "id": "vh-de-9",
+            "type": "true-false",
+            "question": "Chèo là loại hình nghệ thuật truyền thống của Việt Nam.",
+            "correct": true,
+            "explanation": "Đúng vậy, chèo là loại hình nghệ thuật sân khấu truyền thống của Việt Nam."
+          },
+          {
+            "id": "vh-de-10",
+            "type": "mcq",
+            "question": "Lễ hội nào được tổ chức vào mùa xuân?",
+            "options": ["Tết Nguyên Đán", "Tết Trung Thu", "Tết Đoan Ngọ", "Tết Thanh Minh"],
+            "correct": 0,
+            "explanation": "Tết Nguyên Đán được tổ chức vào mùa xuân, là lễ hội quan trọng nhất của người Việt Nam."
           }
         ],
         "medium": [
@@ -226,6 +589,59 @@
             "options": ["Lễ hội Đền Hùng", "Lễ hội Hai Bà Trưng", "Lễ hội Gióng", "Lễ hội Chùa Hương"],
             "correct": 1,
             "explanation": "Lễ hội Hai Bà Trưng được tổ chức để tưởng nhớ công ơn của Hai Bà Trưng - những nữ anh hùng dân tộc."
+          },
+          {
+            "id": "vh-tb-4",
+            "type": "mcq",
+            "question": "Tranh dân gian nào nổi tiếng nhất Việt Nam?",
+            "options": ["Tranh Đông Hồ", "Tranh Hàng Trống", "Tranh Kim Hoàng", "Tranh Làng Sình"],
+            "correct": 0,
+            "explanation": "Tranh Đông Hồ là loại tranh dân gian nổi tiếng nhất Việt Nam với những hình ảnh đặc trưng về cuộc sống nông thôn."
+          },
+          {
+            "id": "vh-tb-5",
+            "type": "true-false",
+            "question": "Quan họ Bắc Ninh là di sản văn hóa phi vật thể của UNESCO.",
+            "correct": true,
+            "explanation": "Đúng vậy, Quan họ Bắc Ninh được UNESCO công nhận là di sản văn hóa phi vật thể của nhân loại năm 2009."
+          },
+          {
+            "id": "vh-tb-6",
+            "type": "mcq",
+            "question": "Làng nào nổi tiếng với nghề dệt lụa?",
+            "options": ["Vạn Phúc", "Bát Tràng", "Đông Hồ", "Kim Sơn"],
+            "correct": 0,
+            "explanation": "Làng Vạn Phúc ở Hà Đông, Hà Nội nổi tiếng với nghề dệt lụa truyền thống."
+          },
+          {
+            "id": "vh-tb-7",
+            "type": "true-false",
+            "question": "Nhã nhạc cung đình Huế là di sản văn hóa phi vật thể của UNESCO.",
+            "correct": true,
+            "explanation": "Đúng vậy, Nhã nhạc cung đình Huế được UNESCO công nhận là di sản văn hóa phi vật thể năm 2003."
+          },
+          {
+            "id": "vh-tb-8",
+            "type": "mcq",
+            "question": "Món ăn nào là đặc sản của Huế?",
+            "options": ["Bún bò Huế", "Phở", "Bánh xèo", "Nem nướng"],
+            "correct": 0,
+            "explanation": "Bún bò Huế là món ăn đặc sản nổi tiếng của cố đô Huế."
+          },
+          {
+            "id": "vh-tb-9",
+            "type": "true-false",
+            "question": "Áo dài được UNESCO công nhận là di sản văn hóa phi vật thể.",
+            "correct": false,
+            "explanation": "Sai, áo dài chưa được UNESCO công nhận là di sản văn hóa phi vật thể, nhưng nó là biểu tượng văn hóa của Việt Nam."
+          },
+          {
+            "id": "vh-tb-10",
+            "type": "mcq",
+            "question": "Lễ hội nào được tổ chức vào mùa thu?",
+            "options": ["Tết Trung Thu", "Tết Nguyên Đán", "Tết Đoan Ngọ", "Tết Thanh Minh"],
+            "correct": 0,
+            "explanation": "Tết Trung Thu được tổ chức vào mùa thu (tháng 8 âm lịch), là lễ hội dành cho trẻ em."
           }
         ],
         "hard": [
@@ -251,6 +667,59 @@
             "options": ["Chùa Một Cột", "Nhà Rông", "Nhà sàn", "Tất cả các đáp án trên"],
             "correct": 3,
             "explanation": "Tất cả đều là những kiến trúc đặc trưng của Việt Nam: Chùa Một Cột (Hà Nội), Nhà Rông (Tây Nguyên), Nhà sàn (miền núi)."
+          },
+          {
+            "id": "vh-kho-4",
+            "type": "mcq",
+            "question": "Ai là tác giả của 'Truyện Kiều'?",
+            "options": ["Nguyễn Du", "Nguyễn Trãi", "Hồ Xuân Hương", "Nguyễn Bỉnh Khiêm"],
+            "correct": 0,
+            "explanation": "Nguyễn Du là tác giả của 'Truyện Kiều' - kiệt tác văn học của Việt Nam."
+          },
+          {
+            "id": "vh-kho-5",
+            "type": "true-false",
+            "question": "Hát Xoan Phú Thọ là di sản văn hóa phi vật thể của UNESCO.",
+            "correct": true,
+            "explanation": "Đúng vậy, Hát Xoan Phú Thọ được UNESCO công nhận là di sản văn hóa phi vật thể cần bảo vệ khẩn cấp năm 2011."
+          },
+          {
+            "id": "vh-kho-6",
+            "type": "mcq",
+            "question": "Làng nào nổi tiếng với nghề làm tranh dân gian?",
+            "options": ["Đông Hồ", "Bát Tràng", "Vạn Phúc", "Kim Sơn"],
+            "correct": 0,
+            "explanation": "Làng Đông Hồ ở Bắc Ninh nổi tiếng với nghề làm tranh dân gian truyền thống."
+          },
+          {
+            "id": "vh-kho-7",
+            "type": "true-false",
+            "question": "Tất cả các di sản văn hóa phi vật thể của Việt Nam đều được UNESCO công nhận.",
+            "correct": false,
+            "explanation": "Sai, chỉ một số loại hình nghệ thuật truyền thống của Việt Nam được UNESCO công nhận là di sản văn hóa phi vật thể."
+          },
+          {
+            "id": "vh-kho-8",
+            "type": "mcq",
+            "question": "Món ăn nào được coi là 'quốc hồn quốc túy' của ẩm thực Việt Nam?",
+            "options": ["Phở", "Bún bò Huế", "Bánh xèo", "Nem nướng"],
+            "correct": 0,
+            "explanation": "Phở được coi là 'quốc hồn quốc túy' của ẩm thực Việt Nam, đại diện cho tinh hoa ẩm thực dân tộc."
+          },
+          {
+            "id": "vh-kho-9",
+            "type": "true-false",
+            "question": "Nghệ thuật múa rối nước chỉ có ở Việt Nam.",
+            "correct": true,
+            "explanation": "Đúng vậy, múa rối nước là nghệ thuật truyền thống độc đáo chỉ có ở Việt Nam."
+          },
+          {
+            "id": "vh-kho-10",
+            "type": "mcq",
+            "question": "Lễ hội nào được tổ chức để tưởng nhớ Thánh Gióng?",
+            "options": ["Lễ hội Gióng", "Lễ hội Đền Hùng", "Lễ hội Hai Bà Trưng", "Lễ hội Chùa Hương"],
+            "correct": 0,
+            "explanation": "Lễ hội Gióng được tổ chức để tưởng nhớ Thánh Gióng - một trong những vị thánh bảo vệ đất nước trong truyền thuyết Việt Nam."
           }
         ]
       }

@@ -32,31 +32,135 @@
             "options": ["Gỗ", "Nhựa", "Đồng", "Cao su"],
             "correct": 2,
             "explanation": "Đồng là kim loại dẫn điện rất tốt, được sử dụng làm dây dẫn điện."
+          },
+          {
+            "id": "vl-de-4",
+            "type": "true-false",
+            "question": "Mặt trời là một ngôi sao.",
+            "correct": true,
+            "explanation": "Đúng vậy, Mặt trời là một ngôi sao gần Trái đất nhất, phát ra ánh sáng và nhiệt."
+          },
+          {
+            "id": "vl-de-5",
+            "type": "mcq",
+            "question": "Vật nào nặng hơn khi thả vào nước?",
+            "options": ["Gỗ", "Sắt", "Bọt xốp", "Lông vũ"],
+            "correct": 1,
+            "explanation": "Sắt có khối lượng riêng lớn hơn nước nên sẽ chìm xuống đáy."
+          },
+          {
+            "id": "vl-de-6",
+            "type": "true-false",
+            "question": "Khi trời nóng, đường sắt bị giãn nở.",
+            "correct": true,
+            "explanation": "Đúng vậy, kim loại giãn nở khi nóng và co lại khi lạnh."
+          },
+          {
+            "id": "vl-de-7",
+            "type": "mcq",
+            "question": "Âm thanh truyền qua môi trường nào nhanh nhất?",
+            "options": ["Không khí", "Nước", "Sắt thép", "Chân không"],
+            "correct": 2,
+            "explanation": "Âm thanh truyền nhanh nhất qua chất rắn như sắt thép, chậm nhất qua khí."
+          },
+          {
+            "id": "vl-de-8",
+            "type": "true-false",
+            "question": "Băng nặng hơn nước.",
+            "correct": false,
+            "explanation": "Sai, băng nhẹ hơn nước nên nổi trên mặt nước."
+          },
+          {
+            "id": "vl-de-9",
+            "type": "mcq",
+            "question": "Vật nào tạo ra bóng?",
+            "options": ["Vật trong suốt", "Vật không trong suốt", "Vật phát sáng", "Vật màu trắng"],
+            "correct": 1,
+            "explanation": "Vật không trong suốt (vật đục) chặn ánh sáng và tạo ra bóng."
+          },
+          {
+            "id": "vl-de-10",
+            "type": "true-false",
+            "question": "Nhiệt độ nước sôi ở núi cao thấp hơn ở đồng bằng.",
+            "correct": true,
+            "explanation": "Đúng vậy, áp suất khí quyển giảm theo độ cao nên nước sôi ở nhiệt độ thấp hơn."
           }
         ],
         "medium": [
           {
             "id": "vl-tb-1",
             "type": "mcq",
-            "question": "Tại sao bóng bay bay lên trời?",
-            "options": ["Vì khí bên trong nhẹ hơn không khí", "Vì gió thổi", "Vì bóng bay có cánh", "Vì bóng bay có động cơ"],
-            "correct": 0,
-            "explanation": "Bóng bay bay lên vì khí bên trong (thường là heli) nhẹ hơn không khí xung quanh."
+            "question": "Khi đặt một thìa kim loại vào cốc nước nóng, điều gì xảy ra?",
+            "options": ["Thìa trở nên lạnh", "Thìa trở nên nóng", "Thìa không thay đổi", "Thìa bị tan chảy"],
+            "correct": 1,
+            "explanation": "Kim loại dẫn nhiệt tốt, nên nhiệt từ nước nóng sẽ truyền lên thìa làm nó nóng lên."
           },
           {
             "id": "vl-tb-2",
             "type": "true-false",
-            "question": "Nam châm có thể hút sắt.",
+            "question": "Từ tính của nam châm có thể đi xuyên qua giấy.",
             "correct": true,
-            "explanation": "Đúng vậy, nam châm có từ tính và có thể hút các vật bằng sắt, thép."
+            "explanation": "Đúng vậy, từ trường có thể xuyên qua các vật liệu không từ tính như giấy, nhựa."
           },
           {
             "id": "vl-tb-3",
             "type": "mcq",
-            "question": "Khi nào chúng ta thấy cầu vồng?",
-            "options": ["Sau cơn mưa có nắng", "Khi trời mưa", "Khi trời nắng", "Khi trời âm u"],
+            "question": "Tại sao chúng ta thấy cầu vồng sau cơn mưa?",
+            "options": ["Vì không khí sạch", "Vì ánh sáng khúc xạ qua giọt nước", "Vì trời mát", "Vì gió thổi mạnh"],
+            "correct": 1,
+            "explanation": "Cầu vồng hình thành khi ánh sáng mặt trời khúc xạ và tán sắc qua các giọt nước trong không khí."
+          },
+          {
+            "id": "vl-tb-4",
+            "type": "true-false",
+            "question": "Điện có thể chuyển đổi thành nhiệt.",
+            "correct": true,
+            "explanation": "Đúng vậy, bàn ủi, bếp điện đều chuyển điện năng thành nhiệt năng."
+          },
+          {
+            "id": "vl-tb-5",
+            "type": "mcq",
+            "question": "Gương phẳng tạo ra ảnh như thế nào?",
+            "options": ["Ảnh thật, cùng kích thước", "Ảnh ảo, cùng kích thước", "Ảnh thật, lớn hơn", "Ảnh ảo, nhỏ hơn"],
+            "correct": 1,
+            "explanation": "Gương phẳng tạo ảnh ảo, cùng kích thước và đối xứng qua gương."
+          },
+          {
+            "id": "vl-tb-6",
+            "type": "true-false",
+            "question": "Âm thanh không thể truyền trong chân không.",
+            "correct": true,
+            "explanation": "Đúng vậy, âm thanh cần môi trường vật chất để truyền, không thể truyền trong chân không."
+          },
+          {
+            "id": "vl-tb-7",
+            "type": "mcq",
+            "question": "Khi xoa hai vật với nhau, điều gì có thể xảy ra?",
+            "options": ["Sinh ra điện tĩnh", "Sinh ra từ tính", "Sinh ra ánh sáng", "Không có gì xảy ra"],
             "correct": 0,
-            "explanation": "Cầu vồng xuất hiện khi có ánh sáng mặt trời chiếu qua những giọt nước mưa."
+            "explanation": "Ma sát có thể tạo ra điện tĩnh, như khi xoa thước nhựa vào tóc."
+          },
+          {
+            "id": "vl-tb-8",
+            "type": "true-false",
+            "question": "Nước có thể tồn tại ở cả ba trạng thái: rắn, lỏng, khí.",
+            "correct": true,
+            "explanation": "Đúng vậy, nước có thể là băng (rắn), nước lỏng, và hơi nước (khí)."
+          },
+          {
+            "id": "vl-tb-9",
+            "type": "mcq",
+            "question": "Lực hấp dẫn của Trái đất tác động như thế nào?",
+            "options": ["Chỉ với vật nặng", "Chỉ với vật gần mặt đất", "Với mọi vật có khối lượng", "Chỉ với kim loại"],
+            "correct": 2,
+            "explanation": "Lực hấp dẫn tác động lên mọi vật có khối lượng, không phân biệt chất liệu."
+          },
+          {
+            "id": "vl-tb-10",
+            "type": "true-false",
+            "question": "Màu sắc của vật thể phụ thuộc vào ánh sáng mà nó phản xạ.",
+            "correct": true,
+            "explanation": "Đúng vậy, chúng ta thấy màu sắc của vật là do ánh sáng nó phản xạ về mắt ta."
           }
         ],
         "hard": [
@@ -82,6 +186,58 @@
             "options": ["Năng lượng hóa học", "Năng lượng nhiệt", "Năng lượng ánh sáng", "Năng lượng gió"],
             "correct": 0,
             "explanation": "Pin hoạt động dựa trên phản ứng hóa học để tạo ra năng lượng điện."
+          },
+          {
+            "id": "vl-kho-4",
+            "type": "true-false",
+            "question": "Tần số và bước sóng của ánh sáng có mối quan hệ nghịch đảo.",
+            "correct": true,
+            "explanation": "Đúng vậy, khi tần số tăng thì bước sóng giảm và ngược lại."
+          },
+          {
+            "id": "vl-kho-5",
+            "type": "mcq",
+            "question": "Lực đàn hồi xuất hiện khi nào?",
+            "options": ["Khi vật chuyển động", "Khi vật bị biến dạng", "Khi vật nóng lên", "Khi vật lạnh đi"],
+            "correct": 1,
+            "explanation": "Lực đàn hồi xuất hiện khi vật bị biến dạng và có xu hướng trở về hình dạng ban đầu."
+          },
+          {
+            "id": "vl-kho-6",
+            "type": "true-false",
+            "question": "Điện trở của dây dẫn tăng khi nhiệt độ tăng.",
+            "correct": true,
+            "explanation": "Đúng vậy, đối với hầu hết kim loại, điện trở tăng khi nhiệt độ tăng."
+          },
+          {
+            "id": "vl-kho-7",
+            "type": "mcq",
+            "question": "Hiện tượng nào giải thích việc thấy vật trong nước cạn hơn thực tế?",
+            "options": ["Phản xạ toàn phần", "Khúc xạ ánh sáng", "Nhiễu xạ ánh sáng", "Giao thoa ánh sáng"],
+            "correct": 1,
+            "explanation": "Khúc xạ ánh sáng làm cho vật trong nước trở nên cạn hơn so với vị trí thực tế."
+          },
+          {
+            "id": "vl-kho-8",
+            "type": "true-false",
+            "question": "Công suất điện được tính bằng tích của điện áp và cường độ dòng điện.",
+            "correct": true,
+            "explanation": "Đúng vậy, công suất P = U × I (điện áp nhân với cường độ dòng điện)."
+          },
+          {
+            "id": "vl-kho-9",
+            "type": "mcq",
+            "question": "Tại sao kim loại dẫn điện tốt?",
+            "options": ["Có nhiều electron tự do", "Có cấu trúc rắn chắc", "Có độ nóng chảy cao", "Có tính từ tính"],
+            "correct": 0,
+            "explanation": "Kim loại có nhiều electron tự do có thể di chuyển dễ dàng, tạo nên dòng điện."
+          },
+          {
+            "id": "vl-kho-10",
+            "type": "true-false",
+            "question": "Năng lượng không thể được tạo ra hay tiêu hủy, chỉ có thể chuyển đổi từ dạng này sang dạng khác.",
+            "correct": true,
+            "explanation": "Đúng vậy, đây là định luật bảo toàn năng lượng - một trong những định luật cơ bản của vật lý."
           }
         ]
       }
@@ -114,6 +270,58 @@
             "options": ["Chó", "Mèo", "Gà", "Bò"],
             "correct": 2,
             "explanation": "Gà là loài chim và đẻ trứng. Chó, mèo, bò là động vật có vú và đẻ con."
+          },
+          {
+            "id": "sh-de-4",
+            "type": "true-false",
+            "question": "Cá có thể thở dưới nước.",
+            "correct": true,
+            "explanation": "Đúng vậy, cá có mang để hấp thụ oxy từ nước."
+          },
+          {
+            "id": "sh-de-5",
+            "type": "mcq",
+            "question": "Phần nào của cây hấp thụ nước?",
+            "options": ["Lá", "Thân", "Rễ", "Hoa"],
+            "correct": 2,
+            "explanation": "Rễ cây có chức năng hấp thụ nước và chất dinh dưỡng từ đất."
+          },
+          {
+            "id": "sh-de-6",
+            "type": "true-false",
+            "question": "Chim có răng để nhai thức ăn.",
+            "correct": false,
+            "explanation": "Sai, chim không có răng mà có mỏ để ăn thức ăn."
+          },
+          {
+            "id": "sh-de-7",
+            "type": "mcq",
+            "question": "Động vật nào sau đây là động vật có vú?",
+            "options": ["Ếch", "Rắn", "Chuột", "Cá"],
+            "correct": 2,
+            "explanation": "Chuột là động vật có vú, còn ếch là lưỡng cư, rắn là bò sát, cá là cá."
+          },
+          {
+            "id": "sh-de-8",
+            "type": "true-false",
+            "question": "Côn trùng có 6 chân.",
+            "correct": true,
+            "explanation": "Đúng vậy, tất cả côn trùng đều có 6 chân."
+          },
+          {
+            "id": "sh-de-9",
+            "type": "mcq",
+            "question": "Phần nào của cây làm thức ăn?",
+            "options": ["Rễ", "Thân", "Lá", "Hoa"],
+            "correct": 2,
+            "explanation": "Lá cây có chứa chất diệp lục để quang hợp, tạo ra thức ăn cho cây."
+          },
+          {
+            "id": "sh-de-10",
+            "type": "true-false",
+            "question": "Ếch nhỏ sống dưới nước và được gọi là nòng nọc.",
+            "correct": true,
+            "explanation": "Đúng vậy, nòng nọc là ếch con sống dưới nước trước khi biến thành ếch trưởng thành."
           }
         ],
         "medium": [
@@ -139,6 +347,58 @@
             "options": ["Lá", "Thân", "Rễ", "Hoa"],
             "correct": 2,
             "explanation": "Rễ cây có nhiệm vụ hút nước và chất dinh dưỡng từ đất để nuôi cây."
+          },
+          {
+            "id": "sh-tb-4",
+            "type": "true-false",
+            "question": "Động vật lưỡng cư có thể sống cả trên cạn và dưới nước.",
+            "correct": true,
+            "explanation": "Đúng vậy, động vật lưỡng cư như ếch, cóc có thể sống cả hai môi trường."
+          },
+          {
+            "id": "sh-tb-5",
+            "type": "mcq",
+            "question": "Chức năng chính của tim là gì?",
+            "options": ["Tiêu hóa thức ăn", "Bơm máu đi khắp cơ thể", "Lọc không khí", "Sản xuất hormone"],
+            "correct": 1,
+            "explanation": "Tim có chức năng bơm máu đi khắp cơ thể để cung cấp oxy và chất dinh dưỡng."
+          },
+          {
+            "id": "sh-tb-6",
+            "type": "true-false",
+            "question": "Tất cả cây đều cần ánh sáng mặt trời để sống.",
+            "correct": false,
+            "explanation": "Sai, một số cây có thể sống trong bóng tối như nấm, một số cây rừng sâu."
+          },
+          {
+            "id": "sh-tb-7",
+            "type": "mcq",
+            "question": "Loài động vật nào có khả năng tái sinh chân tay bị mất?",
+            "options": ["Chó", "Mèo", "Thằn lằn", "Thỏ"],
+            "correct": 2,
+            "explanation": "Thằn lằn có khả năng tái sinh đuôi và một phần chân tay khi bị mất."
+          },
+          {
+            "id": "sh-tb-8",
+            "type": "true-false",
+            "question": "Phổi của con người có hai lá phổi.",
+            "correct": true,
+            "explanation": "Đúng vậy, con người có hai lá phổi: phổi trái và phổi phải."
+          },
+          {
+            "id": "sh-tb-9",
+            "type": "mcq",
+            "question": "Côn trùng thở bằng gì?",
+            "options": ["Phổi", "Mang", "Ống khí", "Da"],
+            "correct": 2,
+            "explanation": "Côn trùng thở bằng hệ thống ống khí (khí quản) để vận chuyển oxy trực tiếp đến các tế bào."
+          },
+          {
+            "id": "sh-tb-10",
+            "type": "true-false",
+            "question": "Cây cần carbon dioxide để quang hợp.",
+            "correct": true,
+            "explanation": "Đúng vậy, cây hấp thụ CO2 từ không khí để thực hiện quá trình quang hợp."
           }
         ],
         "hard": [
@@ -164,6 +424,58 @@
             "options": ["Hệ tiêu hóa", "Hệ hô hấp", "Hệ tuần hoàn", "Hệ thần kinh"],
             "correct": 1,
             "explanation": "Hệ hô hấp giúp cơ thể lấy oxy từ không khí và thải ra khí CO2."
+          },
+          {
+            "id": "sh-kho-4",
+            "type": "true-false",
+            "question": "DNA chứa thông tin di truyền của sinh vật.",
+            "correct": true,
+            "explanation": "Đúng vậy, DNA (axit deoxyribonucleic) mang thông tin di truyền từ thế hệ này sang thế hệ khác."
+          },
+          {
+            "id": "sh-kho-5",
+            "type": "mcq",
+            "question": "Quá trình nào giúp cây thải bỏ nước thừa?",
+            "options": ["Quang hợp", "Hô hấp", "Thoát hơi nước", "Hấp thụ"],
+            "correct": 2,
+            "explanation": "Thoát hơi nước là quá trình cây thải nước thừa qua lá, giúp điều hòa nhiệt độ và vận chuyển chất."
+          },
+          {
+            "id": "sh-kho-6",
+            "type": "true-false",
+            "question": "Virus có thể sinh sản độc lập.",
+            "correct": false,
+            "explanation": "Sai, virus cần tế bào chủ để sinh sản, không thể tự nhân bản độc lập."
+          },
+          {
+            "id": "sh-kho-7",
+            "type": "mcq",
+            "question": "Cơ quan nào sản xuất enzyme tiêu hóa?",
+            "options": ["Tim", "Phổi", "Tụy", "Thận"],
+            "correct": 2,
+            "explanation": "Tụy sản xuất nhiều enzyme tiêu hóa quan trọng để phân hủy thức ăn."
+          },
+          {
+            "id": "sh-kho-8",
+            "type": "true-false",
+            "question": "Một số động vật có thể thay đổi màu da để ngụy trang.",
+            "correct": true,
+            "explanation": "Đúng vậy, như tắc kè hoa, bạch tuộc có thể thay đổi màu sắc để ngụy trang hoặc giao tiếp."
+          },
+          {
+            "id": "sh-kho-9",
+            "type": "mcq",
+            "question": "Hiện tượng gì xảy ra khi động vật ngủ đông?",
+            "options": ["Tăng nhịp tim", "Giảm tốc độ trao đổi chất", "Tăng thân nhiệt", "Tăng hoạt động não"],
+            "correct": 1,
+            "explanation": "Khi ngủ đông, động vật giảm tốc độ trao đổi chất để tiết kiệm năng lượng qua mùa đông."
+          },
+          {
+            "id": "sh-kho-10",
+            "type": "true-false",
+            "question": "Nấm là một loại thực vật.",
+            "correct": false,
+            "explanation": "Sai, nấm thuộc vương quốc riêng biệt, không phải thực vật vì không có chất diệp lục."
           }
         ]
       }
@@ -196,6 +508,58 @@
             "options": ["Ở 50 độ C", "Ở 80 độ C", "Ở 100 độ C", "Ở 120 độ C"],
             "correct": 2,
             "explanation": "Nước sôi ở 100 độ C (212 độ F) ở áp suất khí quyển tiêu chuẩn."
+          },
+          {
+            "id": "hh-de-4",
+            "type": "true-false",
+            "question": "Đường có vị ngọt.",
+            "correct": true,
+            "explanation": "Đúng vậy, đường (sucrose) có vị ngọt tự nhiên."
+          },
+          {
+            "id": "hh-de-5",
+            "type": "mcq",
+            "question": "Chất nào làm cho nước có thể đóng băng?",
+            "options": ["Muối", "Đường", "Lạnh", "Áp suất"],
+            "correct": 2,
+            "explanation": "Nhiệt độ lạnh làm cho nước đóng băng thành rắn ở 0 độ C."
+          },
+          {
+            "id": "hh-de-6",
+            "type": "true-false",
+            "question": "Oxy cần thiết để đốt cháy.",
+            "correct": true,
+            "explanation": "Đúng vậy, oxy là chất cần thiết cho quá trình cháy của hầu hết các chất."
+          },
+          {
+            "id": "hh-de-7",
+            "type": "mcq",
+            "question": "Màu gì xuất hiện khi trộn màu xanh và màu vàng?",
+            "options": ["Màu đỏ", "Màu tím", "Màu xanh lá", "Màu cam"],
+            "correct": 2,
+            "explanation": "Khi trộn màu xanh dương và màu vàng, ta được màu xanh lá cây."
+          },
+          {
+            "id": "hh-de-8",
+            "type": "true-false",
+            "question": "Nước mưa là nước tinh khiết.",
+            "correct": false,
+            "explanation": "Sai, nước mưa có thể chứa các tạp chất từ không khí như bụi, khí..."
+          },
+          {
+            "id": "hh-de-9",
+            "type": "mcq",
+            "question": "Chất nào sau đây hòa tan trong nước?",
+            "options": ["Dầu ăn", "Muối", "Cát", "Nhựa"],
+            "correct": 1,
+            "explanation": "Muối hòa tan tốt trong nước, tạo thành dung dịch trong suốt."
+          },
+          {
+            "id": "hh-de-10",
+            "type": "true-false",
+            "question": "Sắt có thể bị gỉ khi tiếp xúc với nước và không khí.",
+            "correct": true,
+            "explanation": "Đúng vậy, sắt bị oxi hóa (gỉ) khi tiếp xúc với oxy và nước trong không khí."
           }
         ],
         "medium": [
@@ -221,6 +585,58 @@
             "options": ["Muối", "Đường", "Men", "Bột mì"],
             "correct": 2,
             "explanation": "Men (yeast) là vi sinh vật tạo ra khí CO2 làm cho bánh mì nở phồng khi nướng."
+          },
+          {
+            "id": "hh-tb-4",
+            "type": "true-false",
+            "question": "Axit và bazơ trung hòa lẫn nhau.",
+            "correct": true,
+            "explanation": "Đúng vậy, khi axit và bazơ phản ứng với nhau sẽ tạo ra muối và nước (phản ứng trung hòa)."
+          },
+          {
+            "id": "hh-tb-5",
+            "type": "mcq",
+            "question": "Chất nào được dùng để khử trùng nước?",
+            "options": ["Đường", "Clo", "Muối", "Giấm"],
+            "correct": 1,
+            "explanation": "Clo (chlorine) được sử dụng để khử trùng nước máy, tiêu diệt vi khuẩn có hại."
+          },
+          {
+            "id": "hh-tb-6",
+            "type": "true-false",
+            "question": "Kim cương và than chì đều được tạo thành từ carbon.",
+            "correct": true,
+            "explanation": "Đúng vậy, kim cương và than chì đều là các dạng thù hình khác nhau của nguyên tố carbon."
+          },
+          {
+            "id": "hh-tb-7",
+            "type": "mcq",
+            "question": "pH của nước tinh khiết là bao nhiêu?",
+            "options": ["5", "7", "9", "11"],
+            "correct": 1,
+            "explanation": "Nước tinh khiết có pH = 7, là trung tính (không axit, không bazơ)."
+          },
+          {
+            "id": "hh-tb-8",
+            "type": "true-false",
+            "question": "Dầu ăn và nước không hòa tan vào nhau.",
+            "correct": true,
+            "explanation": "Đúng vậy, dầu không hòa tan trong nước do tính chất phân cực khác nhau."
+          },
+          {
+            "id": "hh-tb-9",
+            "type": "mcq",
+            "question": "Chất nào làm cho nước có độ cứng?",
+            "options": ["Muối natri", "Muối canxi và magiê", "Đường", "Clo"],
+            "correct": 1,
+            "explanation": "Muối canxi và magiê là nguyên nhân chính gây độ cứng của nước."
+          },
+          {
+            "id": "hh-tb-10",
+            "type": "true-false",
+            "question": "Phản ứng hóa học luôn cần nhiệt độ cao mới xảy ra.",
+            "correct": false,
+            "explanation": "Sai, nhiều phản ứng hóa học có thể xảy ra ở nhiệt độ thường, như tan trong nước."
           }
         ],
         "hard": [
@@ -246,6 +662,58 @@
             "options": ["Muối", "Đường", "Clo", "Dầu ăn"],
             "correct": 2,
             "explanation": "Clo được sử dụng để khử trùng nước, tiêu diệt vi khuẩn và vi sinh vật có hại."
+          },
+          {
+            "id": "hh-kho-4",
+            "type": "true-false",
+            "question": "Tốc độ phản ứng hóa học phụ thuộc vào nhiệt độ.",
+            "correct": true,
+            "explanation": "Đúng vậy, nhiệt độ cao thường làm tăng tốc độ phản ứng hóa học."
+          },
+          {
+            "id": "hh-kho-5",
+            "type": "mcq",
+            "question": "Chất xúc tác có tác dụng gì trong phản ứng hóa học?",
+            "options": ["Làm chậm phản ứng", "Tăng tốc độ phản ứng", "Dừng phản ứng", "Không ảnh hưởng"],
+            "correct": 1,
+            "explanation": "Chất xúc tác làm tăng tốc độ phản ứng mà bản thân không bị tiêu hao."
+          },
+          {
+            "id": "hh-kho-6",
+            "type": "true-false",
+            "question": "Ozon bảo vệ Trái đất khỏi tia cực tím.",
+            "correct": true,
+            "explanation": "Đúng vậy, tầng ozon trong khí quyển hấp thụ tia cực tím có hại từ mặt trời."
+          },
+          {
+            "id": "hh-kho-7",
+            "type": "mcq",
+            "question": "Nguyên tố nào là thành phần chính của thép?",
+            "options": ["Đồng", "Nhôm", "Sắt", "Kẽm"],
+            "correct": 2,
+            "explanation": "Thép là hợp kim có thành phần chính là sắt, kết hợp với carbon và các nguyên tố khác."
+          },
+          {
+            "id": "hh-kho-8",
+            "type": "true-false",
+            "question": "Phân tử nước có hình dạng thẳng.",
+            "correct": false,
+            "explanation": "Sai, phân tử nước có hình dạng gấp khúc với góc liên kết khoảng 104.5 độ."
+          },
+          {
+            "id": "hh-kho-9",
+            "type": "mcq",
+            "question": "Quá trình nào biến CO2 thành oxygen trong tự nhiên?",
+            "options": ["Hô hấp", "Quang hợp", "Cháy", "Lên men"],
+            "correct": 1,
+            "explanation": "Quang hợp của thực vật chuyển CO2 và nước thành glucose và oxygen bằng năng lượng ánh sáng."
+          },
+          {
+            "id": "hh-kho-10",
+            "type": "true-false",
+            "question": "Tất cả phản ứng hóa học đều thuận nghịch.",
+            "correct": false,
+            "explanation": "Sai, có nhiều phản ứng hóa học là phản ứng một chiều không thể đảo ngược."
           }
         ]
       }

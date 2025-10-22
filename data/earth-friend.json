@@ -32,6 +32,58 @@
             "options": ["Rác thải thực phẩm", "Chai nhựa", "Giấy vệ sinh", "Tro than"],
             "correct": 1,
             "explanation": "Chai nhựa có thể tái chế thành các sản phẩm mới, giúp giảm rác thải."
+          },
+          {
+            "id": "mt-de-4",
+            "type": "true-false",
+            "question": "Đốt rác trong sân nhà là cách xử lý rác tốt.",
+            "correct": false,
+            "explanation": "Sai, đốt rác tạo ra khói độc và gây ô nhiễm không khí. Nên phân loại và xử lý rác đúng cách."
+          },
+          {
+            "id": "mt-de-5",
+            "type": "mcq",
+            "question": "Con vật nào giúp thụ phấn cho hoa?",
+            "options": ["Chuột", "Ong", "Rắn", "Cá"],
+            "correct": 1,
+            "explanation": "Ong bay từ hoa này sang hoa khác để hút mật, đồng thời giúp thụ phấn cho cây."
+          },
+          {
+            "id": "mt-de-6",
+            "type": "true-false",
+            "question": "Cây xanh tạo ra khí oxy cho con người.",
+            "correct": true,
+            "explanation": "Đúng vậy, cây xanh hấp thụ CO2 và tạo ra khí oxy qua quá trình quang hợp."
+          },
+          {
+            "id": "mt-de-7",
+            "type": "mcq",
+            "question": "Khi đi dạo trong công viên, chúng ta không nên làm gì?",
+            "options": ["Ngắm hoa", "Hái hoa", "Chụp ảnh", "Hít thở không khí trong lành"],
+            "correct": 1,
+            "explanation": "Không nên hái hoa vì hoa là của chung, để mọi người cùng ngắm và giúp cây sinh sản."
+          },
+          {
+            "id": "mt-de-8",
+            "type": "true-false",
+            "question": "Nước mưa có thể uống ngay được.",
+            "correct": false,
+            "explanation": "Sai, nước mưa cần được lọc và xử lý trước khi uống vì có thể chứa vi khuẩn và chất bẩn."
+          },
+          {
+            "id": "mt-de-9",
+            "type": "mcq",
+            "question": "Loại năng lượng nào không gây ô nhiễm?",
+            "options": ["Xăng dầu", "Điện gió", "Than đá", "Khí gas"],
+            "correct": 1,
+            "explanation": "Điện gió là năng lượng tái tạo, sạch và không gây ô nhiễm môi trường."
+          },
+          {
+            "id": "mt-de-10",
+            "type": "true-false",
+            "question": "Động vật hoang dã cần được bảo vệ.",
+            "correct": true,
+            "explanation": "Đúng vậy, động vật hoang dã là một phần quan trọng của hệ sinh thái và cần được bảo vệ."
           }
         ],
         "medium": [
@@ -57,6 +109,58 @@
             "options": ["Than đá", "Dầu mỏ", "Năng lượng mặt trời", "Khí đốt"],
             "correct": 2,
             "explanation": "Năng lượng mặt trời là nguồn năng lượng sạch, không gây ô nhiễm môi trường."
+          },
+          {
+            "id": "mt-tb-4",
+            "type": "true-false",
+            "question": "Xe đạp gây ô nhiễm môi trường nhiều hơn xe máy.",
+            "correct": false,
+            "explanation": "Sai, xe đạp không sử dụng nhiên liệu hóa thạch nên không gây ô nhiễm môi trường."
+          },
+          {
+            "id": "mt-tb-5",
+            "type": "mcq",
+            "question": "Cách nào giúp tiết kiệm điện năng?",
+            "options": ["Bật đèn cả ngày", "Tắt thiết bị điện khi không dùng", "Mở tủ lạnh liên tục", "Để máy tính luôn bật"],
+            "correct": 1,
+            "explanation": "Tắt thiết bị điện khi không sử dụng giúp tiết kiệm điện năng và bảo vệ môi trường."
+          },
+          {
+            "id": "mt-tb-6",
+            "type": "true-false",
+            "question": "Nước thải từ nhà máy có thể làm ô nhiễm sông suối.",
+            "correct": true,
+            "explanation": "Đúng vậy, nước thải công nghiệp chứa hóa chất độc hại có thể gây ô nhiễm nguồn nước."
+          },
+          {
+            "id": "mt-tb-7",
+            "type": "mcq",
+            "question": "Rác hữu cơ (vỏ trái cây, lá cây) có thể làm gì?",
+            "options": ["Đốt đi", "Vứt xuống cống", "Làm phân compost", "Chôn dưới đất"],
+            "correct": 2,
+            "explanation": "Rác hữu cơ có thể phân hủy thành phân compost bổ sung dinh dưỡng cho đất."
+          },
+          {
+            "id": "mt-tb-8",
+            "type": "true-false",
+            "question": "Sử dụng phương tiện giao thông công cộng giúp giảm ô nhiễm không khí.",
+            "correct": true,
+            "explanation": "Đúng vậy, giao thông công cộng giảm số lượng xe cá nhân, từ đó giảm khí thải."
+          },
+          {
+            "id": "mt-tb-9",
+            "type": "mcq",
+            "question": "Tác động của việc phá rừng là gì?",
+            "options": ["Tăng lượng mưa", "Giảm khí CO2", "Tăng khí oxy", "Giảm khí oxy và tăng CO2"],
+            "correct": 3,
+            "explanation": "Phá rừng làm giảm lượng cây hấp thụ CO2 và sản xuất oxy, gây mất cân bằng sinh thái."
+          },
+          {
+            "id": "mt-tb-10",
+            "type": "true-false",
+            "question": "Mưa axit là hiện tượng tự nhiên bình thường.",
+            "correct": false,
+            "explanation": "Sai, mưa axit chủ yếu do ô nhiễm từ khí thải công nghiệp và xe cộ gây ra."
           }
         ],
         "hard": [
@@ -82,6 +186,58 @@
             "options": ["Cây xanh", "Khói xe", "Mưa", "Gió"],
             "correct": 1,
             "explanation": "Khói xe chứa nhiều khí độc hại như CO, NOx, bụi mịn gây ô nhiễm không khí."
+          },
+          {
+            "id": "mt-kho-4",
+            "type": "true-false",
+            "question": "Tầng ozon bảo vệ Trái đất khỏi tia cực tím có hại.",
+            "correct": true,
+            "explanation": "Đúng vậy, tầng ozon ở tầng bình lưu hấp thụ phần lớn tia UV-B có hại từ mặt trời."
+          },
+          {
+            "id": "mt-kho-5",
+            "type": "mcq",
+            "question": "Hiện tượng nào đang làm tan băng ở hai cực?",
+            "options": ["Trái đất quay nhanh hơn", "Nóng lên toàn cầu", "Mặt trời gần Trái đất hơn", "Núi lửa phun trào"],
+            "correct": 1,
+            "explanation": "Nóng lên toàn cầu do hiệu ứng nhà kính làm tăng nhiệt độ Trái đất, tan băng ở hai cực."
+          },
+          {
+            "id": "mt-kho-6",
+            "type": "true-false",
+            "question": "Phá rừng là nguyên nhân chính gây xói mòn đất.",
+            "correct": true,
+            "explanation": "Đúng vậy, rễ cây giữ đất, khi phá rừng, đất dễ bị xói mòn bởi mưa và gió."
+          },
+          {
+            "id": "mt-kho-7",
+            "type": "mcq",
+            "question": "Chất nào trong khói thuốc gây hại cho sức khỏe?",
+            "options": ["Oxy", "Nước", "Nicotin và tar", "Carbon dioxide"],
+            "correct": 2,
+            "explanation": "Nicotin và tar trong khói thuốc gây ung thư phổi và nhiều bệnh nguy hiểm khác."
+          },
+          {
+            "id": "mt-kho-8",
+            "type": "true-false",
+            "question": "Ô nhiễm tiếng ồn có thể ảnh hưởng đến sức khỏe con người.",
+            "correct": true,
+            "explanation": "Đúng vậy, tiếng ồn quá mức gây stress, mất ngủ và các vấn đề sức khỏe khác."
+          },
+          {
+            "id": "mt-kho-9",
+            "type": "mcq",
+            "question": "Loại ô nhiễm nào có thể làm cá chết hàng loạt?",
+            "options": ["Ô nhiễm ánh sáng", "Ô nhiễm nước", "Ô nhiễm tiếng ồn", "Ô nhiễm đất"],
+            "correct": 1,
+            "explanation": "Ô nhiễm nước do hóa chất độc hại làm giảm oxy trong nước, gây chết cá hàng loạt."
+          },
+          {
+            "id": "mt-kho-10",
+            "type": "true-false",
+            "question": "Năng lượng tái tạo có thể thay thế hoàn toàn nhiên liệu hóa thạch.",
+            "correct": true,
+            "explanation": "Đúng vậy, với công nghệ phát triển, năng lượng tái tạo như gió, mặt trời có thể thay thế nhiên liệu hóa thạch."
           }
         ]
       }
@@ -114,6 +270,58 @@
             "options": ["Đổ lỗi cho người khác", "Giấu diếm", "Xin lỗi và sửa lỗi", "Bỏ qua"],
             "correct": 2,
             "explanation": "Dũng cảm nhận lỗi, xin lỗi và cố gắng sửa chữa là hành động của người có trách nhiệm."
+          },
+          {
+            "id": "dd-de-4",
+            "type": "true-false",
+            "question": "Nói dối là việc không tốt.",
+            "correct": true,
+            "explanation": "Đúng vậy, nói dối làm mất lòng tin và có thể gây tổn hại cho mối quan hệ."
+          },
+          {
+            "id": "dd-de-5",
+            "type": "mcq",
+            "question": "Khi thấy bạn làm mất đồ, chúng ta nên làm gì?",
+            "options": ["Cười nhạo", "An ủi và giúp tìm", "Bỏ mặc", "Kể cho mọi người nghe"],
+            "correct": 1,
+            "explanation": "An ủi và giúp bạn tìm lại đồ thất lạc thể hiện lòng tốt và tình bạn."
+          },
+          {
+            "id": "dd-de-6",
+            "type": "true-false",
+            "question": "Chúng ta nên chia sẻ đồ ăn với bạn bè.",
+            "correct": true,
+            "explanation": "Đúng vậy, chia sẻ thể hiện lòng hào phóng và tạo dựng tình bạn tốt đẹp."
+          },
+          {
+            "id": "dd-de-7",
+            "type": "mcq",
+            "question": "Hành động nào thể hiện sự lịch sự?",
+            "options": ["Xen hàng", "Nói 'xin chào' và 'cảm ơn'", "La hét", "Không nghe lời"],
+            "correct": 1,
+            "explanation": "Sử dụng lời chào hỏi và cảm ơn thể hiện sự lịch sự và tôn trọng người khác."
+          },
+          {
+            "id": "dd-de-8",
+            "type": "true-false",
+            "question": "Khi ăn cơm, chúng ta nên chờ người lớn ăn trước.",
+            "correct": true,
+            "explanation": "Đúng vậy, chờ người lớn ăn trước thể hiện sự tôn trọng và phép lịch sự."
+          },
+          {
+            "id": "dd-de-9",
+            "type": "mcq",
+            "question": "Khi mượn đồ của bạn, chúng ta nên làm gì?",
+            "options": ["Lấy không hỏi", "Xin phép trước khi mượn", "Mượn rồi không trả", "Làm hỏng rồi giấu"],
+            "correct": 1,
+            "explanation": "Xin phép trước khi mượn đồ thể hiện sự tôn trọng quyền sở hữu của người khác."
+          },
+          {
+            "id": "dd-de-10",
+            "type": "true-false",
+            "question": "Chúng ta nên nghe lời cha mẹ và thầy cô.",
+            "correct": true,
+            "explanation": "Đúng vậy, nghe lời cha mẹ và thầy cô giúp chúng ta học hỏi và phát triển tốt."
           }
         ],
         "medium": [
@@ -139,6 +347,58 @@
             "options": ["Mặc kệ", "Tham gia bắt nạt", "Báo cho người lớn", "Cổ vũ"],
             "correct": 2,
             "explanation": "Báo cho thầy cô giáo hoặc người lớn là cách tốt nhất để bảo vệ bạn và ngăn chặn hành vi bắt nạt."
+          },
+          {
+            "id": "dd-tb-4",
+            "type": "true-false",
+            "question": "Làm việc nhóm giúp chúng ta học được nhiều điều.",
+            "correct": true,
+            "explanation": "Đúng vậy, làm việc nhóm giúp học cách hợp tác, chia sẻ ý kiến và học hỏi từ người khác."
+          },
+          {
+            "id": "dd-tb-5",
+            "type": "mcq",
+            "question": "Khi có xung đột với bạn, cách giải quyết tốt nhất là gì?",
+            "options": ["Đánh nhau", "Tránh mặt", "Nói chuyện và tìm hiểu nguyên nhân", "Kể xấu bạn ấy"],
+            "correct": 2,
+            "explanation": "Nói chuyện thẳng thắn và tìm hiểu nguyên nhân giúp giải quyết xung đột một cách hòa bình."
+          },
+          {
+            "id": "dd-tb-6",
+            "type": "true-false",
+            "question": "Chúng ta nên tôn trọng ý kiến khác của người khác.",
+            "correct": true,
+            "explanation": "Đúng vậy, tôn trọng ý kiến khác biệt giúp tạo môi trường hòa hợp và học hỏi lẫn nhau."
+          },
+          {
+            "id": "dd-tb-7",
+            "type": "mcq",
+            "question": "Hành động nào thể hiện trách nhiệm của học sinh?",
+            "options": ["Bỏ học", "Làm bài tập đầy đủ", "Đến lớp muộn", "Không nghe giảng"],
+            "correct": 1,
+            "explanation": "Làm bài tập đầy đủ và đúng hạn thể hiện tinh thần trách nhiệm trong học tập."
+          },
+          {
+            "id": "dd-tb-8",
+            "type": "true-false",
+            "question": "Chúng ta chỉ nên chơi với những bạn giỏi như mình.",
+            "correct": false,
+            "explanation": "Sai, chúng ta nên chơi với tất cả bạn bè, không phân biệt giỏi hay kém, giàu hay nghèo."
+          },
+          {
+            "id": "dd-tb-9",
+            "type": "mcq",
+            "question": "Khi thấy người khuyết tật, thái độ đúng là gì?",
+            "options": ["Trỏ tay và cười", "Tránh xa", "Bình thường và sẵn sàng giúp đỡ", "Nói to để mọi người chú ý"],
+            "correct": 2,
+            "explanation": "Đối xử bình thường và sẵn sàng giúp đỡ người khuyết tật thể hiện lòng nhân ái và tôn trọng."
+          },
+          {
+            "id": "dd-tb-10",
+            "type": "true-false",
+            "question": "Khen ngợi và động viên bạn bè khi họ làm tốt là điều nên làm.",
+            "correct": true,
+            "explanation": "Đúng vậy, khen ngợi và động viên giúp bạn bè tự tin hơn và tiếp tục cố gắng."
           }
         ],
         "hard": [
@@ -164,6 +424,58 @@
             "options": ["Giữ làm của riêng", "Vứt đi", "Trả lại người mất hoặc báo cho người lớn", "Bán đi"],
             "correct": 2,
             "explanation": "Trả lại của rơi cho người mất hoặc báo cho người lớn là hành động trung thực và có trách nhiệm."
+          },
+          {
+            "id": "dd-kho-4",
+            "type": "true-false",
+            "question": "Công bằng có nghĩa là đối xử như nhau với mọi người.",
+            "correct": true,
+            "explanation": "Đúng vậy, công bằng là không thiên vị, đối xử bình đẳng với mọi người bất kể họ là ai."
+          },
+          {
+            "id": "dd-kho-5",
+            "type": "mcq",
+            "question": "Hành động nào thể hiện lòng can đảm đạo đức?",
+            "options": ["Đứng về phía kẻ mạnh", "Bảo vệ người yếu thế", "Né tránh trách nhiệm", "Làm theo đám đông"],
+            "correct": 1,
+            "explanation": "Bảo vệ người yếu thế và làm điều đúng dù khó khăn thể hiện lòng can đảm đạo đức."
+          },
+          {
+            "id": "dd-kho-6",
+            "type": "true-false",
+            "question": "Chúng ta có trách nhiệm bảo vệ những người không thể tự bảo vệ mình.",
+            "correct": true,
+            "explanation": "Đúng vậy, bảo vệ trẻ nhỏ, người già, người khuyết tật là trách nhiệm của mọi người trong xã hội."
+          },
+          {
+            "id": "dd-kho-7",
+            "type": "mcq",
+            "question": "Khái niệm 'quyền riêng tư' có nghĩa là gì?",
+            "options": ["Được làm bất cứ gì", "Không ai có quyền xâm phạm không gian cá nhân", "Chỉ sống một mình", "Không cần quan tâm người khác"],
+            "correct": 1,
+            "explanation": "Quyền riêng tư là quyền được bảo vệ thông tin và không gian cá nhân khỏi sự xâm phạm."
+          },
+          {
+            "id": "dd-kho-8",
+            "type": "true-false",
+            "question": "Mọi người đều có quyền được đối xử công bằng bất kể xuất thân.",
+            "correct": true,
+            "explanation": "Đúng vậy, đây là nguyên tắc cơ bản của nhân quyền và dân chủ."
+          },
+          {
+            "id": "dd-kho-9",
+            "type": "mcq",
+            "question": "Khi chứng kiến việc làm sai trái, hành động đúng đắn là gì?",
+            "options": ["Làm ngơ", "Tham gia", "Lên tiếng ngăn chặn hoặc báo cáo", "Quay phim để đăng mạng"],
+            "correct": 2,
+            "explanation": "Lên tiếng ngăn chặn hành vi sai trái hoặc báo cáo cho cơ quan có thẩm quyền là trách nhiệm công dân."
+          },
+          {
+            "id": "dd-kho-10",
+            "type": "true-false",
+            "question": "Lòng thương người là phẩm chất quan trọng trong xã hội văn minh.",
+            "correct": true,
+            "explanation": "Đúng vậy, lòng thương người, biết chia sẻ và giúp đỡ lẫn nhau là nền tảng của xã hội văn minh."
           }
         ]
       }
@@ -196,6 +508,58 @@
             "options": ["Chơi đùa", "Nghỉ ngơi và uống nhiều nước", "Ăn kem", "Đi học"],
             "correct": 1,
             "explanation": "Khi bị sốt, cần nghỉ ngơi, uống nhiều nước và có thể dùng thuốc hạ sốt theo chỉ dẫn của người lớn."
+          },
+          {
+            "id": "sk-de-4",
+            "type": "true-false",
+            "question": "Rửa tay bằng xà phòng giúp diệt vi khuẩn.",
+            "correct": true,
+            "explanation": "Đúng vậy, rửa tay bằng xà phòng trong ít nhất 20 giây giúp loại bỏ vi khuẩn và virus."
+          },
+          {
+            "id": "sk-de-5",
+            "type": "mcq",
+            "question": "Khi qua đường, chúng ta nên làm gì?",
+            "options": ["Chạy nhanh", "Quan sát kỹ và đi đúng vạch", "Vừa đi vừa chơi điện thoại", "Đi bất cứ chỗ nào"],
+            "correct": 1,
+            "explanation": "Quan sát kỹ và đi đúng vạch qua đường, tuân thủ đèn giao thông để đảm bảo an toàn."
+          },
+          {
+            "id": "sk-de-6",
+            "type": "true-false",
+            "question": "Uống đủ nước mỗi ngày rất quan trọng.",
+            "correct": true,
+            "explanation": "Đúng vậy, nước giúp cơ thể hoạt động tốt, điều hòa nhiệt độ và thải độc tố."
+          },
+          {
+            "id": "sk-de-7",
+            "type": "mcq",
+            "question": "Khi chơi thể thao, chúng ta nên mặc gì?",
+            "options": ["Quần áo bình thường", "Quần áo thể thao và giày phù hợp", "Quần áo dày", "Không cần thay đồ"],
+            "correct": 1,
+            "explanation": "Quần áo thể thao và giày phù hợp giúp vận động thoải mái và tránh chấn thương."
+          },
+          {
+            "id": "sk-de-8",
+            "type": "true-false",
+            "question": "Ngủ đủ giấc giúp cơ thể phát triển tốt.",
+            "correct": true,
+            "explanation": "Đúng vậy, ngủ đủ giấc giúp cơ thể nghỉ ngơi, phục hồi và phát triển khỏe mạnh."
+          },
+          {
+            "id": "sk-de-9",
+            "type": "mcq",
+            "question": "Khi cắt móng tay, chúng ta nên dùng gì?",
+            "options": ["Răng", "Kéo cắt móng sạch sẽ", "Dao", "Đá"],
+            "correct": 1,
+            "explanation": "Dùng kéo cắt móng sạch sẽ để tránh nhiễm khuẩn và cắt móng đúng cách."
+          },
+          {
+            "id": "sk-de-10",
+            "type": "true-false",
+            "question": "Ăn quá nhiều kẹo có thể làm hỏng răng.",
+            "correct": true,
+            "explanation": "Đúng vậy, đường trong kẹo nuôi vi khuẩn gây sâu răng, nên hạn chế ăn kẹo."
           }
         ],
         "medium": [
@@ -221,6 +585,58 @@
             "options": ["Băng bó ngay lập tức", "Rửa sạch vết thương bằng nước và xà phòng", "Để yên", "Bôi thuốc mỡ"],
             "correct": 1,
             "explanation": "Rửa sạch vết thương bằng nước và xà phòng là bước đầu tiên quan trọng để ngăn ngừa nhiễm trùng."
+          },
+          {
+            "id": "sk-tb-4",
+            "type": "true-false",
+            "question": "Đọc sách trong ánh sáng yếu có thể làm hỏng mắt.",
+            "correct": true,
+            "explanation": "Đúng vậy, đọc sách trong ánh sáng không đủ khiến mắt phải cố gắng nhiều hơn, có thể gây mỏi mắt và cận thị."
+          },
+          {
+            "id": "sk-tb-5",
+            "type": "mcq",
+            "question": "Khi đi xe đạp, chúng ta bắt buộc phải đội gì?",
+            "options": ["Mũ lưỡi trai", "Mũ bảo hiểm", "Không cần đội gì", "Khăn"],
+            "correct": 1,
+            "explanation": "Mũ bảo hiểm bảo vệ đầu khỏi chấn thương nghiêm trọng khi gặp tai nạn."
+          },
+          {
+            "id": "sk-tb-6",
+            "type": "true-false",
+            "question": "Ăn sáng là bữa ăn quan trọng nhất trong ngày.",
+            "correct": true,
+            "explanation": "Đúng vậy, bữa sáng cung cấp năng lượng cho cả ngày học tập và hoạt động."
+          },
+          {
+            "id": "sk-tb-7",
+            "type": "mcq",
+            "question": "Để bảo vệ da khỏi nắng, chúng ta nên làm gì?",
+            "options": ["Tắm nắng cả ngày", "Bôi kem chống nắng và đội mũ", "Không ra ngoài", "Mặc quần áo đen"],
+            "correct": 1,
+            "explanation": "Bôi kem chống nắng, đội mũ và mặc quần áo che kín giúp bảo vệ da khỏi tia UV có hại."
+          },
+          {
+            "id": "sk-tb-8",
+            "type": "true-false",
+            "question": "Hút thuốc thụ động cũng có hại cho sức khỏe.",
+            "correct": true,
+            "explanation": "Đúng vậy, khói thuốc từ người khác cũng chứa các chất độc hại ảnh hưởng đến sức khỏe."
+          },
+          {
+            "id": "sk-tb-9",
+            "type": "mcq",
+            "question": "Khi nào chúng ta cần rửa tay?",
+            "options": ["Chỉ khi tay bẩn", "Trước khi ăn và sau khi đi vệ sinh", "Một lần một ngày", "Không cần rửa tay"],
+            "correct": 1,
+            "explanation": "Rửa tay trước khi ăn, sau khi đi vệ sinh, sau khi ho hắt hơi để ngăn ngừa bệnh tật."
+          },
+          {
+            "id": "sk-tb-10",
+            "type": "true-false",
+            "question": "Căng thẳng quá mức có thể ảnh hưởng đến sức khỏe.",
+            "correct": true,
+            "explanation": "Đúng vậy, căng thẳng kéo dài có thể gây ra nhiều vấn đề sức khỏe về thể chất và tinh thần."
           }
         ],
         "hard": [
@@ -251,6 +667,58 @@
             ],
             "correct": 2,
             "explanation": "Quy tắc 20-20-20: Cứ sau 20 phút nhìn màn hình, hãy nhìn vào vật gì đó cách xa 20 feet (khoảng 6 mét) trong 20 giây."
+          },
+          {
+            "id": "sk-kho-4",
+            "type": "true-false",
+            "question": "Hệ miễn dịch giúp cơ thể chống lại bệnh tật.",
+            "correct": true,
+            "explanation": "Đúng vậy, hệ miễn dịch là hệ thống phòng thủ tự nhiên của cơ thể chống lại vi khuẩn, virus và bệnh tật."
+          },
+          {
+            "id": "sk-kho-5",
+            "type": "mcq",
+            "question": "Vitamin nào giúp cơ thể hấp thụ canxi tốt hơn?",
+            "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+            "correct": 3,
+            "explanation": "Vitamin D giúp cơ thể hấp thụ canxi hiệu quả, có thể tổng hợp từ ánh sáng mặt trời."
+          },
+          {
+            "id": "sk-kho-6",
+            "type": "true-false",
+            "question": "Tư thế ngồi không đúng có thể gây cong vẹo cột sống.",
+            "correct": true,
+            "explanation": "Đúng vậy, ngồi sai tư thế trong thời gian dài có thể gây đau lưng và cong vẹo cột sống."
+          },
+          {
+            "id": "sk-kho-7",
+            "type": "mcq",
+            "question": "Thực phẩm nào giúp tăng cường trí nhớ?",
+            "options": ["Kẹo ngọt", "Cá và các loại hạt", "Nước ngọt", "Thức ăn nhanh"],
+            "correct": 1,
+            "explanation": "Cá giàu omega-3 và các loại hạt chứa chất béo tốt giúp phát triển não bộ và tăng cường trí nhớ."
+          },
+          {
+            "id": "sk-kho-8",
+            "type": "true-false",
+            "question": "Kháng sinh chỉ nên sử dụng khi có chỉ định của bác sĩ.",
+            "correct": true,
+            "explanation": "Đúng vậy, sử dụng kháng sinh tùy tiện có thể gây kháng thuốc và tác dụng phụ nguy hiểm."
+          },
+          {
+            "id": "sk-kho-9",
+            "type": "mcq",
+            "question": "Bệnh nào có thể phòng ngừa bằng cách tiêm vắc-xin?",
+            "options": ["Gãy xương", "Cảm lạnh thông thường", "Sởi, quai bị, rubella", "Đau đầu"],
+            "correct": 2,
+            "explanation": "Sởi, quai bị, rubella là những bệnh truyền nhiễm nguy hiểm có thể phòng ngừa hiệu quả bằng vắc-xin."
+          },
+          {
+            "id": "sk-kho-10",
+            "type": "true-false",
+            "question": "Sức khỏe tinh thần cũng quan trọng như sức khỏe thể chất.",
+            "correct": true,
+            "explanation": "Đúng vậy, sức khỏe tinh thần tốt giúp con người hạnh phúc, tự tin và có chất lượng cuộc sống cao."
           }
         ]
       }

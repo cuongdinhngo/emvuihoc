@@ -187,7 +187,7 @@ const levels = [
 ]
 
 // Get sectors from question bank
-const { getAllSectors } = useQuestions()
+const { getAllSectors, getAllSubjects } = useQuestions()
 const sectors = getAllSectors()
 
 // i18n
@@ -219,6 +219,10 @@ watch(savedProgress, (progress) => {
     gameProgress.value = parsed
     collectedPieces.value = parsed.collectedPieces || 0
     currentLevel.value = (parsed.currentLevel as string) || DIFFICULTY_LEVELS.EASY
+    // Use nextTick to ensure currentLevel is updated before calling updateTotalPieces
+    nextTick(() => {
+      updateTotalPieces()
+    })
   }
 }, { immediate: true })
 
@@ -238,9 +242,10 @@ const getSectorProgress = (sectorId: string) => {
 }
 
 const getSectorTotalQuestions = (sectorId: string) => {
-  // Return different question counts based on level
-  const baseQuestions = currentLevel.value === DIFFICULTY_LEVELS.EASY ? 3 : currentLevel.value === DIFFICULTY_LEVELS.MEDIUM ? 4 : 5
-  return baseQuestions
+  // Return the actual number of subjects in the sector
+  const sectorSubjects = getAllSubjects(sectorId)
+  console.log('getSectorTotalQuestions for', sectorId, ':', sectorSubjects.length, sectorSubjects)
+  return sectorSubjects.length
 }
 
 const selectSector = (sectorId: string) => {

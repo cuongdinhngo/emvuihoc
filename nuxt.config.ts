@@ -8,7 +8,19 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ['/']
+    },
+    output: {
+      publicDir: 'dist'
     }
+  },
+  router: {
+    options: {
+      hashMode: false
+    }
+  },
+  app: {
+    baseURL: '/emvuihoc/',
+    buildAssetsDir: '/assets/'
   },
   experimental: {
     payloadExtraction: false

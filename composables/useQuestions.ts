@@ -1,53 +1,112 @@
+import { ref, readonly } from 'vue'
+import exploreVietnamData from '~/data/explore-vietnam.json'
+import scienceAroundUsData from '~/data/science-around-us.json'
+import mathChallengeData from '~/data/math-challenge.json'
+import earthFriendData from '~/data/earth-friend.json'
+
 export interface Question {
   id: string
-  type: 'mcq' | 'true-false'
+  type: string
   question: string
   options?: string[]
   correct: number | boolean
   explanation?: string
-  points: number
+}
+
+export interface Subject {
+  name: string
+  icon: string
+  color: string
+  difficulties: {
+    [key: string]: Question[]
+  }
+}
+
+export interface Sector {
+  name: string
+  description: string
+  icon: string
+  color: string
+  subjects: {
+    [key: string]: Subject
+  }
 }
 
 export interface QuestionBank {
-  subjects: {
-    [key: string]: {
-      name: string
-      icon: string
-      color: string
-      difficulties: {
-        [key: string]: Question[]
-      }
-    }
-  }
+  [key: string]: Sector
 }
 
-// Import questions directly from JSON file
-import questionBankData from '~/data/questions.json'
-
 export const useQuestions = () => {
-  const questionBank = ref<QuestionBank>(questionBankData as QuestionBank)
+  const questionBank = ref<QuestionBank>({
+    'explore-vietnam': exploreVietnamData,
+    'science-around-us': scienceAroundUsData,
+    'math-challenge': mathChallengeData,
+    'earth-friend': earthFriendData
+  })
 
-  const getQuestionsBySubject = (subject: string, difficulty: string) => {
+  const getQuestionsBySubject = (sector: string, subject: string, difficulty: string) => {
     if (!questionBank.value) return []
-    return questionBank.value.subjects[subject]?.difficulties[difficulty] || []
+    return questionBank.value[sector]?.subjects[subject]?.difficulties[difficulty] || []
   }
 
-  const getRandomQuestions = (subject: string, difficulty: string, count: number) => {
-    const subjectQuestions = getQuestionsBySubject(subject, difficulty)
+  const getRandomQuestions = (sector: string, subject: string, difficulty: string, count: number) => {
+    const subjectQuestions = getQuestionsBySubject(sector, subject, difficulty)
     return subjectQuestions.sort(() => 0.5 - Math.random()).slice(0, count)
   }
 
-  const getSubjectInfo = (subject: string) => {
-    if (!questionBank.value) return null
-    return questionBank.value.subjects[subject] || null
+  const getSubjectInfo = (sector: string, subject: string) => {
+    if (!questionBank.value || !questionBank.value[sector]) return null
+    return questionBank.value[sector].subjects[subject] || null
   }
 
-  const getAllSubjects = () => {
+  const getSectorInfo = (sector: string) => {
+    if (!questionBank.value) return null
+    return questionBank.value[sector] || null
+  }
+
+  const getAllSectors = () => {
     if (!questionBank.value) return []
-    return Object.keys(questionBank.value.subjects).map(key => ({
-      id: key,
-      ...questionBank.value!.subjects[key]
-    }))
+    const sectors = []
+    for (const id in questionBank.value) {
+      sectors.push({
+        id,
+        ...questionBank.value[id]
+      })
+    }
+    return sectors
+  }
+
+  const getAllSubjects = (sector: string) => {
+    if (!questionBank.value || !questionBank.value[sector]) return []
+    const sectorData = questionBank.value[sector]
+    const subjects = []
+    for (const id in sectorData.subjects) {
+      subjects.push({
+        id,
+        ...sectorData.subjects[id]
+      })
+    }
+    return subjects
+  }
+
+  const getAllSubjectsFromAllSectors = () => {
+    if (!questionBank.value) return []
+    const allSubjects = []
+    for (const sectorId in questionBank.value) {
+      const sector = questionBank.value[sectorId]
+      if (sector) {
+        for (const subjectId in sector.subjects) {
+          const subject = sector.subjects[subjectId]
+          allSubjects.push({
+            id: `${sectorId}-${subjectId}`,
+            sectorId,
+            sectorName: sector.name,
+            ...subject
+          })
+        }
+      }
+    }
+    return allSubjects
   }
 
   return {
@@ -55,6 +114,9 @@ export const useQuestions = () => {
     getQuestionsBySubject,
     getRandomQuestions,
     getSubjectInfo,
-    getAllSubjects
+    getSectorInfo,
+    getAllSectors,
+    getAllSubjects,
+    getAllSubjectsFromAllSectors
   }
 }

@@ -1,0 +1,259 @@
+{
+  "name": "Khám phá Việt Nam",
+  "description": "Giúp học sinh hiểu về địa danh, đặc sản, truyền thống và biểu tượng từng vùng",
+  "icon": "🇻🇳",
+  "color": "bg-red-100 text-red-600",
+  "subjects": {
+    "dia-ly": {
+      "name": "Địa lý Việt Nam",
+      "icon": "🌍",
+      "color": "bg-green-100 text-green-600",
+      "difficulties": {
+        "easy": [
+          {
+            "id": "dl-de-1",
+            "type": "mcq",
+            "question": "Thủ đô của Việt Nam là thành phố nào?",
+            "options": ["Hồ Chí Minh", "Đà Nẵng", "Hà Nội", "Huế"],
+            "correct": 2,
+            "explanation": "Hà Nội là thủ đô ngàn năm văn hiến của Việt Nam."
+          },
+          {
+            "id": "dl-de-2",
+            "type": "true-false",
+            "question": "Việt Nam có đường bờ biển dài.",
+            "correct": true,
+            "explanation": "Đúng vậy, Việt Nam có đường bờ biển dài hơn 3.260 km."
+          },
+          {
+            "id": "dl-de-3",
+            "type": "mcq",
+            "question": "Sông nào dài nhất Việt Nam?",
+            "options": ["Sông Hồng", "Sông Đồng Nai", "Sông Cửu Long", "Sông Mã"],
+            "correct": 2,
+            "explanation": "Sông Cửu Long (phần chảy qua Việt Nam) là hệ thống sông lớn nhất và dài nhất Việt Nam."
+          }
+        ],
+        "medium": [
+          {
+            "id": "dl-tb-1",
+            "type": "mcq",
+            "question": "Đỉnh núi cao nhất Việt Nam là gì?",
+            "options": ["Fansipan", "Pu Si Lung", "Ngọc Linh", "Chư Yang Sin"],
+            "correct": 0,
+            "explanation": "Fansipan, thuộc dãy Hoàng Liên Sơn, là 'Nóc nhà Đông Dương' với độ cao 3.143 mét."
+          },
+          {
+            "id": "dl-tb-2",
+            "type": "true-false",
+            "question": "Việt Nam nằm hoàn toàn trong vùng khí hậu nhiệt đới gió mùa.",
+            "correct": true,
+            "explanation": "Đúng vậy, Việt Nam có khí hậu nhiệt đới gió mùa ẩm, chịu ảnh hưởng của gió mùa."
+          },
+          {
+            "id": "dl-tb-3",
+            "type": "mcq",
+            "question": "Tỉnh nào ở Việt Nam có nhiều đảo nhất?",
+            "options": ["Quảng Ninh", "Khánh Hòa", "Kiên Giang", "Bà Rịa - Vũng Tàu"],
+            "correct": 2,
+            "explanation": "Kiên Giang là tỉnh có nhiều đảo nhất Việt Nam, nổi bật là quần đảo Bà Lụa, Nam Du và Phú Quốc."
+          }
+        ],
+        "hard": [
+          {
+            "id": "dl-kho-1",
+            "type": "mcq",
+            "question": "Eo biển nào nối liền Biển Đông với Thái Bình Dương?",
+            "options": ["Eo biển Malacca", "Eo biển Đài Loan", "Eo biển Luzon", "Eo biển Sunda"],
+            "correct": 2,
+            "explanation": "Eo biển Luzon nằm giữa Đài Loan và Luzon (Philippines), nối Biển Đông với Thái Bình Dương."
+          },
+          {
+            "id": "dl-kho-2",
+            "type": "true-false",
+            "question": "Hoàng Sa và Trường Sa là hai quần đảo thuộc chủ quyền của Việt Nam.",
+            "correct": true,
+            "explanation": "Đúng vậy, Hoàng Sa và Trường Sa là hai quần đảo thiêng liêng thuộc chủ quyền không thể tranh cãi của Việt Nam."
+          },
+          {
+            "id": "dl-kho-3",
+            "type": "mcq",
+            "question": "Vùng kinh tế trọng điểm phía Nam bao gồm những tỉnh/thành phố nào?",
+            "options": [
+              "TP.HCM, Đồng Nai, Bình Dương, Bà Rịa - Vũng Tàu, Long An, Tiền Giang, Tây Ninh",
+              "TP.HCM, Đồng Nai, Bình Dương, Bà Rịa - Vũng Tàu, Long An, Tiền Giang, Bình Phước",
+              "TP.HCM, Đồng Nai, Bình Dương, Bà Rịa - Vũng Tàu, Long An, Tây Ninh, Bình Phước",
+              "TP.HCM, Đồng Nai, Bình Dương, Bà Rịa - Vũng Tàu, Long An, Tiền Giang, Cần Thơ"
+            ],
+            "correct": 0,
+            "explanation": "Vùng kinh tế trọng điểm phía Nam bao gồm TP.HCM, Đồng Nai, Bình Dương, Bà Rịa - Vũng Tàu, Long An, Tiền Giang, Tây Ninh."
+          }
+        ]
+      }
+    },
+    "lich-su": {
+      "name": "Lịch sử Việt Nam",
+      "icon": "🏛️",
+      "color": "bg-blue-100 text-blue-600",
+      "difficulties": {
+        "easy": [
+          {
+            "id": "ls-de-1",
+            "type": "mcq",
+            "question": "Ai là vị vua đầu tiên của Việt Nam?",
+            "options": ["Lý Thái Tổ", "Lê Lợi", "Quang Trung", "Hùng Vương"],
+            "correct": 3,
+            "explanation": "Hùng Vương là vị vua đầu tiên của nước Văn Lang, nhà nước sơ khai của Việt Nam."
+          },
+          {
+            "id": "ls-de-2",
+            "type": "true-false",
+            "question": "Thăng Long là tên gọi cũ của Hà Nội.",
+            "correct": true,
+            "explanation": "Đúng vậy, Thăng Long là tên gọi của Hà Nội dưới thời Lý, Trần, Lê."
+          },
+          {
+            "id": "ls-de-3",
+            "type": "mcq",
+            "question": "Ai là người đã lãnh đạo cuộc khởi nghĩa Hai Bà Trưng?",
+            "options": ["Bà Triệu", "Trưng Trắc", "Lê Chân", "Nguyễn Thị Định"],
+            "correct": 1,
+            "explanation": "Hai Bà Trưng là Trưng Trắc và Trưng Nhị, lãnh đạo cuộc khởi nghĩa chống lại ách đô hộ của nhà Hán."
+          }
+        ],
+        "medium": [
+          {
+            "id": "ls-tb-1",
+            "type": "mcq",
+            "question": "Chiến thắng Bạch Đằng năm 938 gắn liền với tên tuổi của vị anh hùng nào?",
+            "options": ["Ngô Quyền", "Lý Thường Kiệt", "Trần Hưng Đạo", "Lê Hoàn"],
+            "correct": 0,
+            "explanation": "Ngô Quyền đã lãnh đạo quân dân ta đánh tan quân Nam Hán trên sông Bạch Đằng, mở ra kỷ nguyên độc lập lâu dài."
+          },
+          {
+            "id": "ls-tb-2",
+            "type": "true-false",
+            "question": "Vua Quang Trung tên thật là Nguyễn Huệ.",
+            "correct": true,
+            "explanation": "Đúng vậy, Nguyễn Huệ là tên thật của vua Quang Trung, người anh hùng áo vải."
+          },
+          {
+            "id": "ls-tb-3",
+            "type": "mcq",
+            "question": "Ai là người viết 'Bình Ngô đại cáo'?",
+            "options": ["Nguyễn Trãi", "Trần Hưng Đạo", "Lê Lợi", "Phạm Ngũ Lão"],
+            "correct": 0,
+            "explanation": "Nguyễn Trãi là tác giả của 'Bình Ngô đại cáo', bản tuyên ngôn độc lập thứ hai của Việt Nam."
+          }
+        ],
+        "hard": [
+          {
+            "id": "ls-kho-1",
+            "type": "mcq",
+            "question": "Triều đại nào đã ban hành bộ luật Hồng Đức?",
+            "options": ["Nhà Lý", "Nhà Trần", "Nhà Lê sơ", "Nhà Nguyễn"],
+            "correct": 2,
+            "explanation": "Bộ luật Hồng Đức là bộ luật tiến bộ được ban hành dưới thời vua Lê Thánh Tông của nhà Lê sơ."
+          },
+          {
+            "id": "ls-kho-2",
+            "type": "true-false",
+            "question": "Cuộc kháng chiến chống quân Nguyên Mông lần thứ ba diễn ra vào thế kỷ 14.",
+            "correct": false,
+            "explanation": "Sai, cuộc kháng chiến chống quân Nguyên Mông lần thứ ba diễn ra vào năm 1288, thuộc thế kỷ 13."
+          },
+          {
+            "id": "ls-kho-3",
+            "type": "mcq",
+            "question": "Ai là người đã dời đô về Hoa Lư?",
+            "options": ["Đinh Bộ Lĩnh", "Lê Đại Hành", "Lý Công Uẩn", "Trần Thái Tông"],
+            "correct": 0,
+            "explanation": "Đinh Bộ Lĩnh (Đinh Tiên Hoàng) là người đã dời đô về Hoa Lư và lập nên nhà Đinh."
+          }
+        ]
+      }
+    },
+    "van-hoa": {
+      "name": "Văn hóa Việt Nam",
+      "icon": "🎭",
+      "color": "bg-purple-100 text-purple-600",
+      "difficulties": {
+        "easy": [
+          {
+            "id": "vh-de-1",
+            "type": "mcq",
+            "question": "Tết Nguyên Đán là lễ hội quan trọng nhất của người Việt Nam.",
+            "options": ["Đúng", "Sai"],
+            "correct": 0,
+            "explanation": "Đúng vậy, Tết Nguyên Đán là lễ hội truyền thống quan trọng nhất của người Việt Nam."
+          },
+          {
+            "id": "vh-de-2",
+            "type": "true-false",
+            "question": "Áo dài là trang phục truyền thống của phụ nữ Việt Nam.",
+            "correct": true,
+            "explanation": "Đúng vậy, áo dài là trang phục truyền thống đẹp đẽ của phụ nữ Việt Nam."
+          },
+          {
+            "id": "vh-de-3",
+            "type": "mcq",
+            "question": "Món ăn nào là đặc sản của Hà Nội?",
+            "options": ["Phở", "Bún bò Huế", "Cao lầu", "Bánh xèo"],
+            "correct": 0,
+            "explanation": "Phở là món ăn nổi tiếng của Hà Nội, được coi là 'quốc hồn quốc túy' của ẩm thực Việt Nam."
+          }
+        ],
+        "medium": [
+          {
+            "id": "vh-tb-1",
+            "type": "mcq",
+            "question": "Loại hình nghệ thuật nào là di sản văn hóa phi vật thể của UNESCO?",
+            "options": ["Cải lương", "Tuồng", "Chèo", "Ca trù"],
+            "correct": 3,
+            "explanation": "Ca trù là loại hình nghệ thuật truyền thống của Việt Nam được UNESCO công nhận là di sản văn hóa phi vật thể."
+          },
+          {
+            "id": "vh-tb-2",
+            "type": "true-false",
+            "question": "Làng gốm Bát Tràng nổi tiếng với nghề làm gốm sứ.",
+            "correct": true,
+            "explanation": "Đúng vậy, làng gốm Bát Tràng ở Hà Nội nổi tiếng với nghề làm gốm sứ truyền thống từ hàng trăm năm."
+          },
+          {
+            "id": "vh-tb-3",
+            "type": "mcq",
+            "question": "Lễ hội nào được tổ chức để tưởng nhớ Hai Bà Trưng?",
+            "options": ["Lễ hội Đền Hùng", "Lễ hội Hai Bà Trưng", "Lễ hội Gióng", "Lễ hội Chùa Hương"],
+            "correct": 1,
+            "explanation": "Lễ hội Hai Bà Trưng được tổ chức để tưởng nhớ công ơn của Hai Bà Trưng - những nữ anh hùng dân tộc."
+          }
+        ],
+        "hard": [
+          {
+            "id": "vh-kho-1",
+            "type": "mcq",
+            "question": "Tác phẩm nào được coi là 'Thiên cổ hùng văn' của Việt Nam?",
+            "options": ["Truyện Kiều", "Bình Ngô đại cáo", "Chinh phụ ngâm", "Cung oán ngâm khúc"],
+            "correct": 1,
+            "explanation": "Bình Ngô đại cáo của Nguyễn Trãi được coi là 'Thiên cổ hùng văn' - áng văn bất hủ của dân tộc."
+          },
+          {
+            "id": "vh-kho-2",
+            "type": "true-false",
+            "question": "Nghệ thuật múa rối nước là di sản văn hóa phi vật thể của UNESCO.",
+            "correct": true,
+            "explanation": "Đúng vậy, múa rối nước là nghệ thuật truyền thống độc đáo của Việt Nam được UNESCO công nhận là di sản văn hóa phi vật thể."
+          },
+          {
+            "id": "vh-kho-3",
+            "type": "mcq",
+            "question": "Kiến trúc nào là biểu tượng của kiến trúc Việt Nam truyền thống?",
+            "options": ["Chùa Một Cột", "Nhà Rông", "Nhà sàn", "Tất cả các đáp án trên"],
+            "correct": 3,
+            "explanation": "Tất cả đều là những kiến trúc đặc trưng của Việt Nam: Chùa Một Cột (Hà Nội), Nhà Rông (Tây Nguyên), Nhà sàn (miền núi)."
+          }
+        ]
+      }
+    }
+  }
+}

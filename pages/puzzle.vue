@@ -1,23 +1,29 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-    <!-- Header -->
-    <header class="bg-white shadow-lg">
-      <div class="max-w-4xl mx-auto px-4 py-4">
-        <div class="flex items-center justify-between">
-          <button @click="goBack" class="flex items-center space-x-2 text-gray-600 hover:text-gray-900">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
-            <span>{{ t('app.back') }}</span>
-          </button>
-          <div class="text-center">
-            <h1 class="text-xl font-bold text-gray-900">{{ t('puzzle.title') }}</h1>
-            <div class="text-sm text-gray-600">{{ placedPieces }}/{{ totalPieces }} {{ t('game.pieces_collected') }}</div>
+        <!-- Header -->
+        <header class="bg-white shadow-lg">
+          <div class="max-w-4xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+              <button @click="goBack" class="flex items-center space-x-2 text-gray-600 hover:text-gray-900">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span>{{ t('app.back') }}</span>
+              </button>
+              <div class="text-center">
+                <h1 class="text-xl font-bold text-gray-900">{{ t('puzzle.title') }}</h1>
+                <div class="text-sm text-gray-600">{{ placedPieces }}/{{ totalPieces }} {{ t('game.pieces_collected') }}</div>
+              </div>
+              <button 
+                @click="resetGame"
+                class="px-3 py-1 text-xs rounded bg-green-500 text-white hover:bg-green-600 transition-colors"
+                title="Reset Game"
+              >
+                🔄 {{ t('app.reset') }}
+              </button>
+            </div>
           </div>
-          <div class="w-20"></div>
-        </div>
-      </div>
-    </header>
+        </header>
 
     <!-- Puzzle Assembly Area -->
     <main class="p-4">
@@ -100,6 +106,10 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useI18n } from '#imports'
+
 const router = useRouter()
 
 // i18n
@@ -107,18 +117,32 @@ const { t } = useI18n()
 
 // Puzzle state
 const totalPieces = ref(12)
-const puzzleSlots = ref(Array.from({ length: 12 }, (_, i) => ({ id: i, piece: null })))
+const puzzleSlots = ref(Array.from({ length: 12 }, (_, i) => ({ id: i, piece: null as number | null })))
 const availablePieces = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
 const placedPieces = ref(0)
 const puzzleCompleted = ref(false)
-const draggedPiece = ref(null)
+const draggedPiece = ref<number | null>(null)
 
-// Load progress from localStorage
-onMounted(() => {
-  const savedProgress = localStorage.getItem('vui-hoc-progress')
-  if (savedProgress) {
-    const progress = JSON.parse(savedProgress)
-    const collectedPieces = progress.collectedPieces || 0
+// Load progress from localStorage using useAsyncData
+const { data: savedProgress } = await useAsyncData(
+  'puzzle-progress',
+  async () => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('vui-hoc-progress')
+    }
+    return null
+  },
+  {
+    default: () => null,
+    server: false
+  }
+)
+
+// Update puzzle state when data loads
+watch(savedProgress, (progress) => {
+  if (progress) {
+    const parsed = JSON.parse(progress)
+    const collectedPieces = parsed.collectedPieces || 0
     
     // Only show pieces that have been collected
     availablePieces.value = Array.from({ length: collectedPieces }, (_, i) => i + 1)
@@ -131,7 +155,7 @@ onMounted(() => {
   } else {
     router.push('/')
   }
-})
+}, { immediate: true })
 
 // Methods
 const dragStart = (event: DragEvent, piece: number) => {
@@ -149,10 +173,12 @@ const dropPiece = (event: DragEvent, slotIndex: number) => {
   const slot = puzzleSlots.value[slotIndex]
   
   // If slot is already occupied, don't place piece
-  if (slot.piece) return
+  if (slot?.piece) return
   
   // Place the piece
-  slot.piece = draggedPiece.value
+  if (slot && draggedPiece.value !== null) {
+    slot.piece = draggedPiece.value
+  }
   
   // Remove piece from available pieces
   const pieceIndex = availablePieces.value.indexOf(draggedPiece.value)
@@ -179,6 +205,23 @@ const playAgain = () => {
   placedPieces.value = 0
   puzzleCompleted.value = false
   draggedPiece.value = null
+}
+
+const resetGame = () => {
+  if (confirm(t('app.reset_confirm'))) {
+    // Clear all progress
+    localStorage.removeItem('vui-hoc-progress')
+    
+    // Reset puzzle state
+    puzzleSlots.value = Array.from({ length: 12 }, (_, i) => ({ id: i, piece: null }))
+    availablePieces.value = []
+    placedPieces.value = 0
+    puzzleCompleted.value = false
+    draggedPiece.value = null
+    
+    // Redirect to home page
+    router.push('/')
+  }
 }
 
 const goBack = () => {

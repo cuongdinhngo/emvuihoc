@@ -1,0 +1,254 @@
+{
+  "name": "Khoa học quanh em",
+  "description": "Giúp trẻ hiểu hiện tượng khoa học đời sống",
+  "icon": "🔬",
+  "color": "bg-purple-100 text-purple-600",
+  "subjects": {
+    "vat-ly": {
+      "name": "Vật lý cơ bản",
+      "icon": "⚡",
+      "color": "bg-yellow-100 text-yellow-600",
+      "difficulties": {
+        "easy": [
+          {
+            "id": "vl-de-1",
+            "type": "mcq",
+            "question": "Khi nào chúng ta thấy tia chớp trước khi nghe tiếng sấm?",
+            "options": ["Vì ánh sáng nhanh hơn âm thanh", "Vì âm thanh nhanh hơn ánh sáng", "Vì chúng xảy ra cùng lúc", "Vì mắt nhìn nhanh hơn tai nghe"],
+            "correct": 0,
+            "explanation": "Ánh sáng truyền đi nhanh hơn âm thanh rất nhiều, nên chúng ta thấy tia chớp trước khi nghe tiếng sấm."
+          },
+          {
+            "id": "vl-de-2",
+            "type": "true-false",
+            "question": "Nước đóng băng ở 0 độ C.",
+            "correct": true,
+            "explanation": "Đúng vậy, nước tinh khiết đóng băng ở 0 độ C (32 độ F) ở áp suất khí quyển tiêu chuẩn."
+          },
+          {
+            "id": "vl-de-3",
+            "type": "mcq",
+            "question": "Vật nào dẫn điện tốt nhất?",
+            "options": ["Gỗ", "Nhựa", "Đồng", "Cao su"],
+            "correct": 2,
+            "explanation": "Đồng là kim loại dẫn điện rất tốt, được sử dụng làm dây dẫn điện."
+          }
+        ],
+        "medium": [
+          {
+            "id": "vl-tb-1",
+            "type": "mcq",
+            "question": "Tại sao bóng bay bay lên trời?",
+            "options": ["Vì khí bên trong nhẹ hơn không khí", "Vì gió thổi", "Vì bóng bay có cánh", "Vì bóng bay có động cơ"],
+            "correct": 0,
+            "explanation": "Bóng bay bay lên vì khí bên trong (thường là heli) nhẹ hơn không khí xung quanh."
+          },
+          {
+            "id": "vl-tb-2",
+            "type": "true-false",
+            "question": "Nam châm có thể hút sắt.",
+            "correct": true,
+            "explanation": "Đúng vậy, nam châm có từ tính và có thể hút các vật bằng sắt, thép."
+          },
+          {
+            "id": "vl-tb-3",
+            "type": "mcq",
+            "question": "Khi nào chúng ta thấy cầu vồng?",
+            "options": ["Sau cơn mưa có nắng", "Khi trời mưa", "Khi trời nắng", "Khi trời âm u"],
+            "correct": 0,
+            "explanation": "Cầu vồng xuất hiện khi có ánh sáng mặt trời chiếu qua những giọt nước mưa."
+          }
+        ],
+        "hard": [
+          {
+            "id": "vl-kho-1",
+            "type": "mcq",
+            "question": "Hiện tượng nào xảy ra khi ánh sáng đi từ không khí vào nước?",
+            "options": ["Phản xạ", "Khúc xạ", "Hấp thụ", "Tán xạ"],
+            "correct": 1,
+            "explanation": "Khúc xạ là hiện tượng ánh sáng bị bẻ cong khi đi từ môi trường này sang môi trường khác."
+          },
+          {
+            "id": "vl-kho-2",
+            "type": "true-false",
+            "question": "Trọng lực làm cho mọi vật rơi xuống đất.",
+            "correct": true,
+            "explanation": "Đúng vậy, trọng lực là lực hút của Trái Đất làm cho mọi vật có khối lượng đều rơi xuống."
+          },
+          {
+            "id": "vl-kho-3",
+            "type": "mcq",
+            "question": "Năng lượng nào được sử dụng trong pin?",
+            "options": ["Năng lượng hóa học", "Năng lượng nhiệt", "Năng lượng ánh sáng", "Năng lượng gió"],
+            "correct": 0,
+            "explanation": "Pin hoạt động dựa trên phản ứng hóa học để tạo ra năng lượng điện."
+          }
+        ]
+      }
+    },
+    "sinh-hoc": {
+      "name": "Sinh học cơ bản",
+      "icon": "🌱",
+      "color": "bg-green-100 text-green-600",
+      "difficulties": {
+        "easy": [
+          {
+            "id": "sh-de-1",
+            "type": "mcq",
+            "question": "Cây xanh cần gì để sống?",
+            "options": ["Chỉ cần nước", "Chỉ cần ánh sáng", "Nước, ánh sáng và đất", "Chỉ cần đất"],
+            "correct": 2,
+            "explanation": "Cây xanh cần nước, ánh sáng mặt trời và chất dinh dưỡng từ đất để phát triển."
+          },
+          {
+            "id": "sh-de-2",
+            "type": "true-false",
+            "question": "Tất cả động vật đều có xương sống.",
+            "correct": false,
+            "explanation": "Sai, nhiều động vật như côn trùng, nhện, sứa không có xương sống."
+          },
+          {
+            "id": "sh-de-3",
+            "type": "mcq",
+            "question": "Con gì đẻ trứng?",
+            "options": ["Chó", "Mèo", "Gà", "Bò"],
+            "correct": 2,
+            "explanation": "Gà là loài chim và đẻ trứng. Chó, mèo, bò là động vật có vú và đẻ con."
+          }
+        ],
+        "medium": [
+          {
+            "id": "sh-tb-1",
+            "type": "mcq",
+            "question": "Quá trình cây xanh tạo ra thức ăn bằng ánh sáng mặt trời gọi là gì?",
+            "options": ["Hô hấp", "Quang hợp", "Thoát hơi nước", "Hấp thụ"],
+            "correct": 1,
+            "explanation": "Quang hợp là quá trình cây xanh sử dụng ánh sáng mặt trời để tổng hợp chất hữu cơ từ CO2 và nước."
+          },
+          {
+            "id": "sh-tb-2",
+            "type": "true-false",
+            "question": "Con người là động vật có vú.",
+            "correct": true,
+            "explanation": "Đúng vậy, con người thuộc lớp động vật có vú, có lông, nuôi con bằng sữa mẹ."
+          },
+          {
+            "id": "sh-tb-3",
+            "type": "mcq",
+            "question": "Bộ phận nào của cây giúp hút nước từ đất?",
+            "options": ["Lá", "Thân", "Rễ", "Hoa"],
+            "correct": 2,
+            "explanation": "Rễ cây có nhiệm vụ hút nước và chất dinh dưỡng từ đất để nuôi cây."
+          }
+        ],
+        "hard": [
+          {
+            "id": "sh-kho-1",
+            "type": "mcq",
+            "question": "Đơn vị cơ bản của sự sống là gì?",
+            "options": ["Nguyên tử", "Phân tử", "Tế bào", "Mô"],
+            "correct": 2,
+            "explanation": "Tế bào là đơn vị cấu trúc và chức năng cơ bản của mọi sinh vật sống."
+          },
+          {
+            "id": "sh-kho-2",
+            "type": "true-false",
+            "question": "Tất cả thực vật đều có hoa.",
+            "correct": false,
+            "explanation": "Sai, nhiều thực vật như dương xỉ, rêu không có hoa, chúng sinh sản bằng bào tử."
+          },
+          {
+            "id": "sh-kho-3",
+            "type": "mcq",
+            "question": "Hệ cơ quan nào giúp cơ thể trao đổi khí với môi trường?",
+            "options": ["Hệ tiêu hóa", "Hệ hô hấp", "Hệ tuần hoàn", "Hệ thần kinh"],
+            "correct": 1,
+            "explanation": "Hệ hô hấp giúp cơ thể lấy oxy từ không khí và thải ra khí CO2."
+          }
+        ]
+      }
+    },
+    "hoa-hoc": {
+      "name": "Hóa học cơ bản",
+      "icon": "🧪",
+      "color": "bg-blue-100 text-blue-600",
+      "difficulties": {
+        "easy": [
+          {
+            "id": "hh-de-1",
+            "type": "mcq",
+            "question": "Nước được tạo thành từ những nguyên tố nào?",
+            "options": ["Cacbon và Oxy", "Hydro và Oxy", "Nitơ và Oxy", "Sắt và Oxy"],
+            "correct": 1,
+            "explanation": "Nước (H2O) được tạo thành từ 2 nguyên tử Hydro và 1 nguyên tử Oxy."
+          },
+          {
+            "id": "hh-de-2",
+            "type": "true-false",
+            "question": "Muối ăn có vị mặn.",
+            "correct": true,
+            "explanation": "Đúng vậy, muối ăn (NaCl) có vị mặn đặc trưng."
+          },
+          {
+            "id": "hh-de-3",
+            "type": "mcq",
+            "question": "Khi nào nước sôi?",
+            "options": ["Ở 50 độ C", "Ở 80 độ C", "Ở 100 độ C", "Ở 120 độ C"],
+            "correct": 2,
+            "explanation": "Nước sôi ở 100 độ C (212 độ F) ở áp suất khí quyển tiêu chuẩn."
+          }
+        ],
+        "medium": [
+          {
+            "id": "hh-tb-1",
+            "type": "mcq",
+            "question": "Nguyên tố nào chiếm phần lớn trong không khí?",
+            "options": ["Oxy", "Hydro", "Nitơ", "Carbon dioxide"],
+            "correct": 2,
+            "explanation": "Nitơ chiếm khoảng 78% thể tích không khí, là thành phần chính."
+          },
+          {
+            "id": "hh-tb-2",
+            "type": "true-false",
+            "question": "Khi trộn giấm với baking soda sẽ tạo ra bọt khí.",
+            "correct": true,
+            "explanation": "Đúng vậy, phản ứng giữa axit (giấm) và bazơ (baking soda) tạo ra khí CO2 và bọt khí."
+          },
+          {
+            "id": "hh-tb-3",
+            "type": "mcq",
+            "question": "Chất nào làm cho bánh mì nở phồng?",
+            "options": ["Muối", "Đường", "Men", "Bột mì"],
+            "correct": 2,
+            "explanation": "Men (yeast) là vi sinh vật tạo ra khí CO2 làm cho bánh mì nở phồng khi nướng."
+          }
+        ],
+        "hard": [
+          {
+            "id": "hh-kho-1",
+            "type": "mcq",
+            "question": "Hiện tượng nào xảy ra khi sắt bị gỉ?",
+            "options": ["Hòa tan", "Oxy hóa", "Bay hơi", "Đông đặc"],
+            "correct": 1,
+            "explanation": "Sắt bị gỉ là quá trình oxy hóa, sắt kết hợp với oxy trong không khí tạo thành oxit sắt."
+          },
+          {
+            "id": "hh-kho-2",
+            "type": "true-false",
+            "question": "Tất cả kim loại đều dẫn điện.",
+            "correct": true,
+            "explanation": "Đúng vậy, kim loại có tính dẫn điện tốt do có các electron tự do."
+          },
+          {
+            "id": "hh-kho-3",
+            "type": "mcq",
+            "question": "Chất nào được sử dụng để làm sạch nước?",
+            "options": ["Muối", "Đường", "Clo", "Dầu ăn"],
+            "correct": 2,
+            "explanation": "Clo được sử dụng để khử trùng nước, tiêu diệt vi khuẩn và vi sinh vật có hại."
+          }
+        ]
+      }
+    }
+  }
+}

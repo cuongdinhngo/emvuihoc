@@ -1,0 +1,261 @@
+{
+  "name": "Đấu Trí Toán Học",
+  "description": "Toán lớp 3 - Phát triển tư duy logic và kỹ năng tính toán",
+  "icon": "🧮",
+  "color": "bg-orange-100 text-orange-600",
+  "subjects": {
+    "phep-tinh": {
+      "name": "Phép tính cơ bản",
+      "icon": "➕",
+      "color": "bg-green-100 text-green-600",
+      "difficulties": {
+        "easy": [
+          {
+            "id": "pt-de-1",
+            "type": "mcq",
+            "question": "15 + 7 = ?",
+            "options": ["20", "21", "22", "23"],
+            "correct": 2,
+            "explanation": "15 + 7 = 22. Ta có thể tính: 15 + 5 = 20, rồi cộng thêm 2 nữa = 22."
+          },
+          {
+            "id": "pt-de-2",
+            "type": "mcq",
+            "question": "24 - 8 = ?",
+            "options": ["14", "15", "16", "17"],
+            "correct": 2,
+            "explanation": "24 - 8 = 16. Ta có thể tính: 24 - 4 = 20, rồi trừ thêm 4 nữa = 16."
+          },
+          {
+            "id": "pt-de-3",
+            "type": "mcq",
+            "question": "6 × 4 = ?",
+            "options": ["20", "22", "24", "26"],
+            "correct": 2,
+            "explanation": "6 × 4 = 24. Ta có thể tính: 6 + 6 + 6 + 6 = 24."
+          }
+        ],
+        "medium": [
+          {
+            "id": "pt-tb-1",
+            "type": "mcq",
+            "question": "36 ÷ 6 = ?",
+            "options": ["5", "6", "7", "8"],
+            "correct": 1,
+            "explanation": "36 ÷ 6 = 6. Ta có thể kiểm tra: 6 × 6 = 36."
+          },
+          {
+            "id": "pt-tb-2",
+            "type": "mcq",
+            "question": "45 + 28 = ?",
+            "options": ["71", "72", "73", "74"],
+            "correct": 2,
+            "explanation": "45 + 28 = 73. Ta có thể tính: 45 + 20 = 65, rồi cộng thêm 8 = 73."
+          },
+          {
+            "id": "pt-tb-3",
+            "type": "mcq",
+            "question": "72 - 35 = ?",
+            "options": ["35", "36", "37", "38"],
+            "correct": 2,
+            "explanation": "72 - 35 = 37. Ta có thể tính: 72 - 30 = 42, rồi trừ thêm 5 = 37."
+          }
+        ],
+        "hard": [
+          {
+            "id": "pt-kho-1",
+            "type": "mcq",
+            "question": "8 × 7 = ?",
+            "options": ["54", "55", "56", "57"],
+            "correct": 2,
+            "explanation": "8 × 7 = 56. Ta có thể tính: 8 × 5 = 40, rồi cộng thêm 8 × 2 = 16, tổng = 56."
+          },
+          {
+            "id": "pt-kho-2",
+            "type": "mcq",
+            "question": "84 ÷ 7 = ?",
+            "options": ["11", "12", "13", "14"],
+            "correct": 1,
+            "explanation": "84 ÷ 7 = 12. Ta có thể kiểm tra: 12 × 7 = 84."
+          },
+          {
+            "id": "pt-kho-3",
+            "type": "mcq",
+            "question": "156 + 89 = ?",
+            "options": ["243", "244", "245", "246"],
+            "correct": 2,
+            "explanation": "156 + 89 = 245. Ta có thể tính: 156 + 90 = 246, rồi trừ đi 1 = 245."
+          }
+        ]
+      }
+    },
+    "hinh-hoc": {
+      "name": "Hình học cơ bản",
+      "icon": "📐",
+      "color": "bg-blue-100 text-blue-600",
+      "difficulties": {
+        "easy": [
+          {
+            "id": "hh-de-1",
+            "type": "mcq",
+            "question": "Hình nào có 3 cạnh?",
+            "options": ["Hình vuông", "Hình tam giác", "Hình chữ nhật", "Hình tròn"],
+            "correct": 1,
+            "explanation": "Hình tam giác có 3 cạnh và 3 góc."
+          },
+          {
+            "id": "hh-de-2",
+            "type": "true-false",
+            "question": "Hình vuông có 4 cạnh bằng nhau.",
+            "correct": true,
+            "explanation": "Đúng vậy, hình vuông có 4 cạnh bằng nhau và 4 góc vuông."
+          },
+          {
+            "id": "hh-de-3",
+            "type": "mcq",
+            "question": "Hình nào có 4 cạnh nhưng không phải hình vuông?",
+            "options": ["Hình tam giác", "Hình chữ nhật", "Hình tròn", "Hình lục giác"],
+            "correct": 1,
+            "explanation": "Hình chữ nhật có 4 cạnh nhưng các cạnh đối diện bằng nhau, không phải tất cả cạnh đều bằng nhau."
+          }
+        ],
+        "medium": [
+          {
+            "id": "hh-tb-1",
+            "type": "mcq",
+            "question": "Chu vi hình vuông có cạnh 5cm là bao nhiêu?",
+            "options": ["15cm", "20cm", "25cm", "30cm"],
+            "correct": 1,
+            "explanation": "Chu vi hình vuông = 4 × cạnh = 4 × 5 = 20cm."
+          },
+          {
+            "id": "hh-tb-2",
+            "type": "mcq",
+            "question": "Diện tích hình chữ nhật có chiều dài 6cm, chiều rộng 4cm là bao nhiêu?",
+            "options": ["20cm²", "22cm²", "24cm²", "26cm²"],
+            "correct": 2,
+            "explanation": "Diện tích hình chữ nhật = chiều dài × chiều rộng = 6 × 4 = 24cm²."
+          },
+          {
+            "id": "hh-tb-3",
+            "type": "true-false",
+            "question": "Hình tròn có tâm là điểm ở giữa.",
+            "correct": true,
+            "explanation": "Đúng vậy, tâm của hình tròn là điểm ở giữa, cách đều mọi điểm trên đường tròn."
+          }
+        ],
+        "hard": [
+          {
+            "id": "hh-kho-1",
+            "type": "mcq",
+            "question": "Chu vi hình chữ nhật có chiều dài 8cm, chiều rộng 5cm là bao nhiêu?",
+            "options": ["24cm", "26cm", "28cm", "30cm"],
+            "correct": 1,
+            "explanation": "Chu vi hình chữ nhật = 2 × (chiều dài + chiều rộng) = 2 × (8 + 5) = 2 × 13 = 26cm."
+          },
+          {
+            "id": "hh-kho-2",
+            "type": "mcq",
+            "question": "Hình nào có nhiều cạnh nhất?",
+            "options": ["Hình tam giác", "Hình vuông", "Hình lục giác", "Hình tròn"],
+            "correct": 2,
+            "explanation": "Hình lục giác có 6 cạnh, nhiều hơn hình tam giác (3 cạnh) và hình vuông (4 cạnh)."
+          },
+          {
+            "id": "hh-kho-3",
+            "type": "mcq",
+            "question": "Diện tích hình vuông có cạnh 7cm là bao nhiêu?",
+            "options": ["45cm²", "47cm²", "49cm²", "51cm²"],
+            "correct": 2,
+            "explanation": "Diện tích hình vuông = cạnh × cạnh = 7 × 7 = 49cm²."
+          }
+        ]
+      }
+    },
+    "giai-toan": {
+      "name": "Giải toán có lời văn",
+      "icon": "📝",
+      "color": "bg-purple-100 text-purple-600",
+      "difficulties": {
+        "easy": [
+          {
+            "id": "gt-de-1",
+            "type": "mcq",
+            "question": "Mẹ có 15 quả cam, mẹ cho em 7 quả. Hỏi mẹ còn lại bao nhiêu quả cam?",
+            "options": ["6 quả", "7 quả", "8 quả", "9 quả"],
+            "correct": 2,
+            "explanation": "Mẹ còn lại: 15 - 7 = 8 quả cam."
+          },
+          {
+            "id": "gt-de-2",
+            "type": "mcq",
+            "question": "Mỗi hộp có 6 cái bút. Hỏi 4 hộp có bao nhiêu cái bút?",
+            "options": ["20 cái", "22 cái", "24 cái", "26 cái"],
+            "correct": 2,
+            "explanation": "4 hộp có: 6 × 4 = 24 cái bút."
+          },
+          {
+            "id": "gt-de-3",
+            "type": "mcq",
+            "question": "Lớp 3A có 32 học sinh, lớp 3B có 28 học sinh. Hỏi cả hai lớp có bao nhiêu học sinh?",
+            "options": ["58 học sinh", "59 học sinh", "60 học sinh", "61 học sinh"],
+            "correct": 2,
+            "explanation": "Cả hai lớp có: 32 + 28 = 60 học sinh."
+          }
+        ],
+        "medium": [
+          {
+            "id": "gt-tb-1",
+            "type": "mcq",
+            "question": "Một cửa hàng có 48 quyển vở. Họ bán được 1/3 số vở. Hỏi còn lại bao nhiêu quyển vở?",
+            "options": ["30 quyển", "32 quyển", "34 quyển", "36 quyển"],
+            "correct": 1,
+            "explanation": "Đã bán: 48 ÷ 3 = 16 quyển. Còn lại: 48 - 16 = 32 quyển."
+          },
+          {
+            "id": "gt-tb-2",
+            "type": "mcq",
+            "question": "Mỗi ngày An đọc 8 trang sách. Hỏi 1 tuần An đọc được bao nhiêu trang?",
+            "options": ["54 trang", "56 trang", "58 trang", "60 trang"],
+            "correct": 1,
+            "explanation": "1 tuần = 7 ngày. An đọc được: 8 × 7 = 56 trang."
+          },
+          {
+            "id": "gt-tb-3",
+            "type": "mcq",
+            "question": "Một đoạn dây dài 72cm được cắt thành 8 đoạn bằng nhau. Hỏi mỗi đoạn dài bao nhiêu cm?",
+            "options": ["8cm", "9cm", "10cm", "11cm"],
+            "correct": 1,
+            "explanation": "Mỗi đoạn dài: 72 ÷ 8 = 9cm."
+          }
+        ],
+        "hard": [
+          {
+            "id": "gt-kho-1",
+            "type": "mcq",
+            "question": "Một trường có 240 học sinh. Số học sinh nam bằng 3/5 tổng số học sinh. Hỏi có bao nhiêu học sinh nữ?",
+            "options": ["90 học sinh", "94 học sinh", "96 học sinh", "98 học sinh"],
+            "correct": 2,
+            "explanation": "Số học sinh nam: 240 × 3/5 = 144. Số học sinh nữ: 240 - 144 = 96."
+          },
+          {
+            "id": "gt-kho-2",
+            "type": "mcq",
+            "question": "Một cửa hàng bán 1/4 số gạo trong ngày đầu, 1/3 số gạo còn lại trong ngày thứ hai. Hỏi còn lại bao nhiêu phần số gạo?",
+            "options": ["1/2", "1/3", "1/4", "1/6"],
+            "correct": 0,
+            "explanation": "Ngày đầu bán 1/4, còn lại 3/4. Ngày thứ hai bán 1/3 của 3/4 = 1/4. Còn lại: 3/4 - 1/4 = 2/4 = 1/2."
+          },
+          {
+            "id": "gt-kho-3",
+            "type": "mcq",
+            "question": "Một hình chữ nhật có chu vi 30cm, chiều rộng 5cm. Hỏi chiều dài là bao nhiêu?",
+            "options": ["8cm", "9cm", "10cm", "11cm"],
+            "correct": 2,
+            "explanation": "Chu vi = 2 × (chiều dài + chiều rộng). 30 = 2 × (chiều dài + 5). Chiều dài + 5 = 15. Chiều dài = 10cm."
+          }
+        ]
+      }
+    }
+  }
+}

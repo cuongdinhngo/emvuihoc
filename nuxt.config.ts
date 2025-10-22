@@ -2,9 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
   css: ['~/assets/css/main.css'],
-  ssr: true, // Temporarily enable SSR for testing
+  ssr: true,
   nitro: {
     prerender: {
       routes: ['/']
@@ -15,5 +15,12 @@ export default defineNuxtConfig({
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  i18n: {
+    locales: [
+      { code: 'vi', file: 'vi.json' },
+      { code: 'en', file: 'en.json' }
+    ],
+    defaultLocale: 'vi'
   },
 })

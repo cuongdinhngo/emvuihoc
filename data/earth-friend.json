@@ -1,0 +1,259 @@
+{
+  "name": "Người bạn Trái Đất",
+  "description": "Giáo dục ý thức bảo vệ môi trường, hành vi xanh",
+  "icon": "🌍",
+  "color": "bg-green-100 text-green-600",
+  "subjects": {
+    "moi-truong": {
+      "name": "Bảo vệ môi trường",
+      "icon": "🌱",
+      "color": "bg-green-100 text-green-600",
+      "difficulties": {
+        "easy": [
+          {
+            "id": "mt-de-1",
+            "type": "mcq",
+            "question": "Chúng ta nên làm gì để bảo vệ môi trường?",
+            "options": ["Vứt rác bừa bãi", "Trồng cây xanh", "Đốt rác", "Sử dụng túi nilon"],
+            "correct": 1,
+            "explanation": "Trồng cây xanh giúp làm sạch không khí và tạo bóng mát cho môi trường."
+          },
+          {
+            "id": "mt-de-2",
+            "type": "true-false",
+            "question": "Tiết kiệm nước là cách bảo vệ môi trường.",
+            "correct": true,
+            "explanation": "Đúng vậy, tiết kiệm nước giúp bảo vệ nguồn tài nguyên quý giá và giảm lãng phí."
+          },
+          {
+            "id": "mt-de-3",
+            "type": "mcq",
+            "question": "Rác nào có thể tái chế?",
+            "options": ["Rác thải thực phẩm", "Chai nhựa", "Giấy vệ sinh", "Tro than"],
+            "correct": 1,
+            "explanation": "Chai nhựa có thể tái chế thành các sản phẩm mới, giúp giảm rác thải."
+          }
+        ],
+        "medium": [
+          {
+            "id": "mt-tb-1",
+            "type": "mcq",
+            "question": "Tại sao chúng ta nên sử dụng túi vải thay vì túi nilon?",
+            "options": ["Túi vải đẹp hơn", "Túi vải có thể tái sử dụng nhiều lần", "Túi vải rẻ hơn", "Túi vải nhẹ hơn"],
+            "correct": 1,
+            "explanation": "Túi vải có thể tái sử dụng nhiều lần, giúp giảm rác thải nhựa và bảo vệ môi trường."
+          },
+          {
+            "id": "mt-tb-2",
+            "type": "true-false",
+            "question": "Phân loại rác giúp tái chế dễ dàng hơn.",
+            "correct": true,
+            "explanation": "Đúng vậy, phân loại rác giúp các loại rác có thể tái chế được xử lý riêng biệt."
+          },
+          {
+            "id": "mt-tb-3",
+            "type": "mcq",
+            "question": "Năng lượng nào thân thiện với môi trường?",
+            "options": ["Than đá", "Dầu mỏ", "Năng lượng mặt trời", "Khí đốt"],
+            "correct": 2,
+            "explanation": "Năng lượng mặt trời là nguồn năng lượng sạch, không gây ô nhiễm môi trường."
+          }
+        ],
+        "hard": [
+          {
+            "id": "mt-kho-1",
+            "type": "mcq",
+            "question": "Hiệu ứng nhà kính là gì?",
+            "options": ["Nhà làm bằng kính", "Khí CO2 giữ nhiệt trong khí quyển", "Mặt trời nóng hơn", "Trái đất quay nhanh hơn"],
+            "correct": 1,
+            "explanation": "Hiệu ứng nhà kính là hiện tượng khí CO2 và các khí khác giữ nhiệt trong khí quyển Trái đất."
+          },
+          {
+            "id": "mt-kho-2",
+            "type": "true-false",
+            "question": "Rừng Amazon được coi là 'lá phổi xanh' của Trái đất.",
+            "correct": true,
+            "explanation": "Đúng vậy, rừng Amazon sản xuất 20% lượng oxy của Trái đất và hấp thụ CO2."
+          },
+          {
+            "id": "mt-kho-3",
+            "type": "mcq",
+            "question": "Nguyên nhân chính gây ô nhiễm không khí ở thành phố là gì?",
+            "options": ["Cây xanh", "Khói xe", "Mưa", "Gió"],
+            "correct": 1,
+            "explanation": "Khói xe chứa nhiều khí độc hại như CO, NOx, bụi mịn gây ô nhiễm không khí."
+          }
+        ]
+      }
+    },
+    "dao-duc": {
+      "name": "Đạo đức xã hội",
+      "icon": "❤️",
+      "color": "bg-pink-100 text-pink-600",
+      "difficulties": {
+        "easy": [
+          {
+            "id": "dd-de-1",
+            "type": "mcq",
+            "question": "Khi gặp người lớn tuổi, chúng ta nên làm gì?",
+            "options": ["Chạy đi", "Chào hỏi", "Im lặng", "Trêu chọc"],
+            "correct": 1,
+            "explanation": "Chào hỏi người lớn tuổi là thể hiện sự lễ phép và tôn trọng."
+          },
+          {
+            "id": "dd-de-2",
+            "type": "true-false",
+            "question": "Nên giúp đỡ bạn bè khi họ gặp khó khăn.",
+            "correct": true,
+            "explanation": "Đúng vậy, giúp đỡ bạn bè là một hành động tốt, thể hiện tình bạn."
+          },
+          {
+            "id": "dd-de-3",
+            "type": "mcq",
+            "question": "Khi mắc lỗi, chúng ta nên làm gì?",
+            "options": ["Đổ lỗi cho người khác", "Giấu diếm", "Xin lỗi và sửa lỗi", "Bỏ qua"],
+            "correct": 2,
+            "explanation": "Dũng cảm nhận lỗi, xin lỗi và cố gắng sửa chữa là hành động của người có trách nhiệm."
+          }
+        ],
+        "medium": [
+          {
+            "id": "dd-tb-1",
+            "type": "mcq",
+            "question": "Hành động nào thể hiện sự tiết kiệm?",
+            "options": ["Mua nhiều đồ chơi", "Tắt đèn khi ra khỏi phòng", "Để nước chảy liên tục", "Vứt bỏ thức ăn thừa"],
+            "correct": 1,
+            "explanation": "Tắt đèn khi không sử dụng giúp tiết kiệm điện năng."
+          },
+          {
+            "id": "dd-tb-2",
+            "type": "true-false",
+            "question": "Nên giữ lời hứa với mọi người.",
+            "correct": true,
+            "explanation": "Đúng vậy, giữ lời hứa thể hiện sự đáng tin cậy và tôn trọng người khác."
+          },
+          {
+            "id": "dd-tb-3",
+            "type": "mcq",
+            "question": "Khi thấy bạn bị bắt nạt, chúng ta nên làm gì?",
+            "options": ["Mặc kệ", "Tham gia bắt nạt", "Báo cho người lớn", "Cổ vũ"],
+            "correct": 2,
+            "explanation": "Báo cho thầy cô giáo hoặc người lớn là cách tốt nhất để bảo vệ bạn và ngăn chặn hành vi bắt nạt."
+          }
+        ],
+        "hard": [
+          {
+            "id": "dd-kho-1",
+            "type": "mcq",
+            "question": "Hành động nào thể hiện lòng biết ơn?",
+            "options": ["Không nghe lời cha mẹ", "Giúp đỡ việc nhà", "Phàn nàn về mọi thứ", "Chỉ lo cho bản thân"],
+            "correct": 1,
+            "explanation": "Giúp đỡ việc nhà là một cách thể hiện lòng biết ơn đối với cha mẹ và người thân."
+          },
+          {
+            "id": "dd-kho-2",
+            "type": "true-false",
+            "question": "Nên tôn trọng sự khác biệt của người khác.",
+            "correct": true,
+            "explanation": "Đúng vậy, mỗi người là một cá thể độc đáo, tôn trọng sự khác biệt giúp xây dựng một xã hội hòa bình."
+          },
+          {
+            "id": "dd-kho-3",
+            "type": "mcq",
+            "question": "Khi nhặt được của rơi, chúng ta nên làm gì?",
+            "options": ["Giữ làm của riêng", "Vứt đi", "Trả lại người mất hoặc báo cho người lớn", "Bán đi"],
+            "correct": 2,
+            "explanation": "Trả lại của rơi cho người mất hoặc báo cho người lớn là hành động trung thực và có trách nhiệm."
+          }
+        ]
+      }
+    },
+    "suc-khoe": {
+      "name": "Sức khỏe & An toàn",
+      "icon": "🏥",
+      "color": "bg-red-100 text-red-600",
+      "difficulties": {
+        "easy": [
+          {
+            "id": "sk-de-1",
+            "type": "mcq",
+            "question": "Chúng ta nên đánh răng mấy lần một ngày?",
+            "options": ["1 lần", "2 lần", "3 lần", "Không cần đánh"],
+            "correct": 1,
+            "explanation": "Đánh răng ít nhất 2 lần một ngày (sáng và tối) giúp răng chắc khỏe và hơi thở thơm mát."
+          },
+          {
+            "id": "sk-de-2",
+            "type": "true-false",
+            "question": "Ăn nhiều rau xanh và trái cây rất tốt cho sức khỏe.",
+            "correct": true,
+            "explanation": "Đúng vậy, rau xanh và trái cây cung cấp vitamin, khoáng chất và chất xơ cần thiết cho cơ thể."
+          },
+          {
+            "id": "sk-de-3",
+            "type": "mcq",
+            "question": "Khi bị sốt, chúng ta nên làm gì?",
+            "options": ["Chơi đùa", "Nghỉ ngơi và uống nhiều nước", "Ăn kem", "Đi học"],
+            "correct": 1,
+            "explanation": "Khi bị sốt, cần nghỉ ngơi, uống nhiều nước và có thể dùng thuốc hạ sốt theo chỉ dẫn của người lớn."
+          }
+        ],
+        "medium": [
+          {
+            "id": "sk-tb-1",
+            "type": "mcq",
+            "question": "Để có một giấc ngủ ngon, chúng ta nên đi ngủ vào giờ nào?",
+            "options": ["Rất muộn", "Trước 9 giờ tối", "Bất cứ lúc nào", "Sau 12 giờ đêm"],
+            "correct": 1,
+            "explanation": "Đi ngủ sớm, đặc biệt là trước 9 giờ tối, giúp cơ thể phát triển tốt và có đủ năng lượng cho ngày hôm sau."
+          },
+          {
+            "id": "sk-tb-2",
+            "type": "true-false",
+            "question": "Tập thể dục thường xuyên không quan trọng đối với sức khỏe.",
+            "correct": false,
+            "explanation": "Sai, tập thể dục thường xuyên giúp cơ thể khỏe mạnh, tăng cường sức đề kháng và tinh thần sảng khoái."
+          },
+          {
+            "id": "sk-tb-3",
+            "type": "mcq",
+            "question": "Khi bị thương nhẹ, chúng ta nên làm gì đầu tiên?",
+            "options": ["Băng bó ngay lập tức", "Rửa sạch vết thương bằng nước và xà phòng", "Để yên", "Bôi thuốc mỡ"],
+            "correct": 1,
+            "explanation": "Rửa sạch vết thương bằng nước và xà phòng là bước đầu tiên quan trọng để ngăn ngừa nhiễm trùng."
+          }
+        ],
+        "hard": [
+          {
+            "id": "sk-kho-1",
+            "type": "mcq",
+            "question": "Chất dinh dưỡng nào giúp xương và răng chắc khỏe?",
+            "options": ["Vitamin C", "Sắt", "Canxi", "Protein"],
+            "correct": 2,
+            "explanation": "Canxi là khoáng chất thiết yếu giúp xây dựng và duy trì xương, răng chắc khỏe."
+          },
+          {
+            "id": "sk-kho-2",
+            "type": "true-false",
+            "question": "Tiêm vắc-xin giúp phòng ngừa nhiều bệnh truyền nhiễm nguy hiểm.",
+            "correct": true,
+            "explanation": "Đúng vậy, vắc-xin giúp cơ thể tạo ra kháng thể, bảo vệ chúng ta khỏi các bệnh truyền nhiễm."
+          },
+          {
+            "id": "sk-kho-3",
+            "type": "mcq",
+            "question": "Hành động nào giúp bảo vệ mắt khỏi tác hại của màn hình điện tử?",
+            "options": [
+              "Nhìn màn hình liên tục trong thời gian dài",
+              "Ngồi quá gần màn hình",
+              "Nghỉ ngơi sau mỗi 20 phút nhìn màn hình (quy tắc 20-20-20)",
+              "Tắt hết đèn khi sử dụng thiết bị điện tử"
+            ],
+            "correct": 2,
+            "explanation": "Quy tắc 20-20-20: Cứ sau 20 phút nhìn màn hình, hãy nhìn vào vật gì đó cách xa 20 feet (khoảng 6 mét) trong 20 giây."
+          }
+        ]
+      }
+    }
+  }
+}

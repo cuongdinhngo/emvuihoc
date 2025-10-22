@@ -1,43 +1,46 @@
 <template>
   <div class="min-h-screen flex flex-col">
-    <!-- Header -->
-    <header class="bg-white shadow-lg">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center space-x-3">
-            <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span class="text-white font-bold text-xl">V</span>
+        <!-- Header -->
+        <header class="bg-white shadow-lg">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <span class="text-white font-bold text-xl">V</span>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-900">{{ t('app.title') }}</h1>
+              </div>
+              <div class="flex items-center space-x-4">
+                <!-- Desktop: Level and Pieces on same line -->
+                <div class="hidden md:flex items-center space-x-4">
+                  <div class="text-sm text-gray-600">
+                    <span class="font-semibold">{{ t('ui.level') }}:</span> {{ t(`levels.${currentLevel}`) }}
+                  </div>
+                  <div class="text-sm text-gray-600">
+                    <span class="font-semibold">{{ t('ui.pieces') }}:</span> {{ collectedPieces }}/{{ totalPieces }}
+                  </div>
+                </div>
+                <!-- Mobile: Level and Pieces stacked -->
+                <div class="md:hidden flex flex-col items-end space-y-1">
+                  <div class="text-sm text-gray-600">
+                    <span class="font-semibold">{{ t('ui.level') }}:</span> {{ t(`levels.${currentLevel}`) }}
+                  </div>
+                  <div class="text-sm text-gray-600">
+                    <span class="font-semibold">{{ t('ui.pieces') }}:</span> {{ collectedPieces }}/{{ totalPieces }}
+                  </div>
+                </div>
+                <!-- Reset Button -->
+                <button 
+                  @click="resetGame"
+                  class="px-3 py-1 text-xs rounded bg-green-500 text-white hover:bg-green-600 transition-colors"
+                  title="Reset Game"
+                >
+                  🔄 {{ t('app.reset') }}
+                </button>
+              </div>
             </div>
-            <h1 class="text-2xl font-bold text-gray-900">{{ t('app.title') }}</h1>
           </div>
-          <div class="flex items-center space-x-4">
-            <div class="text-sm text-gray-600">
-              <span class="font-semibold">{{ t('ui.level') }}:</span> {{ currentLevel }}
-            </div>
-            <div class="text-sm text-gray-600">
-              <span class="font-semibold">{{ t('ui.pieces') }}:</span> {{ collectedPieces }}/{{ totalPieces }}
-            </div>
-            <!-- Language Switcher -->
-            <div class="flex items-center space-x-2">
-              <button 
-                @click="switchLanguage('vi')"
-                class="px-2 py-1 text-xs rounded"
-                :class="locale === 'vi' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'"
-              >
-                VI
-              </button>
-              <button 
-                @click="switchLanguage('en')"
-                class="px-2 py-1 text-xs rounded"
-                :class="locale === 'en' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'"
-              >
-                EN
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+        </header>
 
     <!-- Main Content -->
     <main class="flex-1 p-4">
@@ -68,8 +71,8 @@
                    :class="level.color">
                 {{ level.icon }}
               </div>
-              <h3 class="text-xl font-semibold mb-2">{{ t(`levels.${level.id === 'dễ' ? 'easy' : level.id === 'trung bình' ? 'medium' : 'hard'}`) }}</h3>
-              <p class="text-gray-600 text-sm mb-4">{{ t(`levels.${level.id === 'dễ' ? 'easy' : level.id === 'trung bình' ? 'medium' : 'hard'}_desc`) }}</p>
+              <h3 class="text-xl font-semibold mb-2">{{ t(`levels.${level.id}`) }}</h3>
+              <p class="text-gray-600 text-sm mb-4">{{ t(`levels.${level.id}_desc`) }}</p>
               <div class="text-sm text-gray-500">
                 {{ level.piecesRequired }} {{ t('levels.pieces_required') }}
               </div>
@@ -77,26 +80,27 @@
           </div>
         </div>
 
-        <!-- Subject Categories -->
+        <!-- Sector Categories -->
         <div class="mb-8">
           <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
-            {{ t('subjects.select_subject') }}
+            {{ t('sectors.select_sector') }}
           </h3>
-          <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div 
-              v-for="subject in subjects" 
-              :key="subject.id"
-              class="game-card subject-card cursor-pointer"
-              @click="startGame(subject.id)"
+              v-for="sector in sectors" 
+              :key="sector.id"
+              class="game-card sector-card cursor-pointer"
+              @click="selectSector(sector.id)"
             >
               <div class="text-center">
-                <div class="w-12 h-12 mx-auto mb-3 rounded-lg flex items-center justify-center text-xl"
-                     :class="subject.color">
-                  {{ subject.icon }}
+                <div class="w-16 h-16 mx-auto mb-4 rounded-lg flex items-center justify-center text-2xl"
+                     :class="sector.color">
+                  {{ sector.icon }}
                 </div>
-                <h4 class="font-semibold text-sm">{{ subject.name }}</h4>
-                <div class="text-xs text-gray-500 mt-1">
-                  {{ getSubjectProgress(subject.id) }}/{{ getTotalQuestions(subject.id) }} {{ t('subjects.questions_count') }}
+                <h4 class="font-semibold text-lg mb-2">{{ sector.name }}</h4>
+                <p class="text-sm text-gray-600 mb-4">{{ sector.description }}</p>
+                <div class="text-xs text-gray-500">
+                  {{ getSectorProgress(sector.id) }}/{{ getSectorTotalQuestions(sector.id) }} {{ t('sectors.subjects_count') }}
                 </div>
               </div>
             </div>
@@ -136,63 +140,87 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue'
+import { useRouter } from 'vue-router'
+import { useQuestions } from '~/composables/useQuestions'
+import { useI18n } from '#imports'
+import { 
+  DIFFICULTY_LEVELS, 
+  DIFFICULTY_LABELS, 
+  DIFFICULTY_DESCRIPTIONS, 
+  DIFFICULTY_ICONS, 
+  DIFFICULTY_COLORS, 
+  DIFFICULTY_PIECES_REQUIRED 
+} from '~/constants/difficulty'
+
 // Game state
-const currentLevel = ref('dễ')
+const currentLevel = ref<string>(DIFFICULTY_LEVELS.EASY)
 const collectedPieces = ref(0)
-const totalPieces = ref(12) // 4 pieces per subject × 3 subjects for easy level
+const totalPieces = ref<number>(DIFFICULTY_PIECES_REQUIRED[DIFFICULTY_LEVELS.EASY])
 
 // Game levels
 const levels = [
   {
-    id: 'dễ',
-    name: 'Dễ',
-    description: 'Câu hỏi cơ bản',
-    icon: '🌟',
-    color: 'bg-green-100 text-green-600',
-    piecesRequired: 12
+    id: DIFFICULTY_LEVELS.EASY,
+    name: DIFFICULTY_LABELS[DIFFICULTY_LEVELS.EASY],
+    description: DIFFICULTY_DESCRIPTIONS[DIFFICULTY_LEVELS.EASY],
+    icon: DIFFICULTY_ICONS[DIFFICULTY_LEVELS.EASY],
+    color: DIFFICULTY_COLORS[DIFFICULTY_LEVELS.EASY],
+    piecesRequired: DIFFICULTY_PIECES_REQUIRED[DIFFICULTY_LEVELS.EASY]
   },
   {
-    id: 'trung bình',
-    name: 'Trung bình',
-    description: 'Câu hỏi nâng cao',
-    icon: '⭐',
-    color: 'bg-yellow-100 text-yellow-600',
-    piecesRequired: 15
+    id: DIFFICULTY_LEVELS.MEDIUM,
+    name: DIFFICULTY_LABELS[DIFFICULTY_LEVELS.MEDIUM],
+    description: DIFFICULTY_DESCRIPTIONS[DIFFICULTY_LEVELS.MEDIUM],
+    icon: DIFFICULTY_ICONS[DIFFICULTY_LEVELS.MEDIUM],
+    color: DIFFICULTY_COLORS[DIFFICULTY_LEVELS.MEDIUM],
+    piecesRequired: DIFFICULTY_PIECES_REQUIRED[DIFFICULTY_LEVELS.MEDIUM]
   },
   {
-    id: 'khó',
-    name: 'Khó',
-    description: 'Câu hỏi thử thách',
-    icon: '💎',
-    color: 'bg-red-100 text-red-600',
-    piecesRequired: 18
+    id: DIFFICULTY_LEVELS.HARD,
+    name: DIFFICULTY_LABELS[DIFFICULTY_LEVELS.HARD],
+    description: DIFFICULTY_DESCRIPTIONS[DIFFICULTY_LEVELS.HARD],
+    icon: DIFFICULTY_ICONS[DIFFICULTY_LEVELS.HARD],
+    color: DIFFICULTY_COLORS[DIFFICULTY_LEVELS.HARD],
+    piecesRequired: DIFFICULTY_PIECES_REQUIRED[DIFFICULTY_LEVELS.HARD]
   }
 ]
 
-// Get subjects from question bank
-const { getAllSubjects } = useQuestions()
-const subjects = getAllSubjects()
+// Get sectors from question bank
+const { getAllSectors } = useQuestions()
+const sectors = getAllSectors()
 
 // i18n
-const { locale, t, setLocale } = useI18n()
-
-const switchLanguage = (lang: string) => {
-  setLocale(lang)
-}
+const { t } = useI18n()
 
 
 // Game progress tracking
-const gameProgress = ref({})
+const gameProgress = ref<Record<string, any>>({})
 
-// Load progress from localStorage
-onMounted(() => {
-  const savedProgress = localStorage.getItem('vui-hoc-progress')
-  if (savedProgress) {
-    gameProgress.value = JSON.parse(savedProgress)
-    collectedPieces.value = gameProgress.value.collectedPieces || 0
-    currentLevel.value = gameProgress.value.currentLevel || 'dễ'
+// Load progress from localStorage using useAsyncData
+const { data: savedProgress } = await useAsyncData(
+  'game-progress',
+  async () => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('vui-hoc-progress')
+    }
+    return null
+  },
+  {
+    default: () => null,
+    server: false
   }
-})
+)
+
+// Update reactive values when data loads
+watch(savedProgress, (progress) => {
+  if (progress) {
+    const parsed = JSON.parse(progress)
+    gameProgress.value = parsed
+    collectedPieces.value = parsed.collectedPieces || 0
+    currentLevel.value = (parsed.currentLevel as string) || DIFFICULTY_LEVELS.EASY
+  }
+}, { immediate: true })
 
 // Methods
 const selectLevel = (levelId: string) => {
@@ -202,22 +230,21 @@ const selectLevel = (levelId: string) => {
 }
 
 const updateTotalPieces = () => {
-  const level = levels.find(l => l.id === currentLevel.value)
-  totalPieces.value = level?.piecesRequired || 12
+  totalPieces.value = DIFFICULTY_PIECES_REQUIRED[currentLevel.value as keyof typeof DIFFICULTY_PIECES_REQUIRED] || DIFFICULTY_PIECES_REQUIRED[DIFFICULTY_LEVELS.EASY]
 }
 
-const getSubjectProgress = (subjectId: string) => {
-  return gameProgress.value[subjectId]?.completed || 0
+const getSectorProgress = (sectorId: string) => {
+  return gameProgress.value[sectorId]?.completed || 0
 }
 
-const getTotalQuestions = (subjectId: string) => {
+const getSectorTotalQuestions = (sectorId: string) => {
   // Return different question counts based on level
-  const baseQuestions = currentLevel.value === 'dễ' ? 3 : currentLevel.value === 'trung bình' ? 4 : 5
+  const baseQuestions = currentLevel.value === DIFFICULTY_LEVELS.EASY ? 3 : currentLevel.value === DIFFICULTY_LEVELS.MEDIUM ? 4 : 5
   return baseQuestions
 }
 
-const startGame = (subjectId: string) => {
-  navigateTo(`/game/${subjectId}`)
+const selectSector = (sectorId: string) => {
+  navigateTo(`/sector/${sectorId}`)
 }
 
 const startPuzzleAssembly = () => {
@@ -228,6 +255,22 @@ const saveProgress = () => {
   gameProgress.value.collectedPieces = collectedPieces.value
   gameProgress.value.currentLevel = currentLevel.value
   localStorage.setItem('vui-hoc-progress', JSON.stringify(gameProgress.value))
+}
+
+const resetGame = () => {
+  if (confirm(t('app.reset_confirm'))) {
+    // Clear all progress
+    gameProgress.value = {}
+    collectedPieces.value = 0
+    currentLevel.value = DIFFICULTY_LEVELS.EASY
+    updateTotalPieces()
+    
+    // Clear localStorage
+    localStorage.removeItem('vui-hoc-progress')
+    
+    // Refresh the page to reset everything
+    window.location.reload()
+  }
 }
 
 // Update total pieces when level changes

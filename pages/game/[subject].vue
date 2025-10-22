@@ -12,7 +12,7 @@
           </button>
           <div class="text-center">
             <h1 class="text-xl font-bold text-gray-900">{{ subjectInfo?.name || t('app.loading') }}</h1>
-            <div class="text-sm text-gray-600">{{ t('game.question') }} {{ currentQuestion + 1 }}/{{ questions.length }}</div>
+            <div class="text-sm text-gray-600">{{ t('game.question') }} {{ currentQuestion + 1 }}/{{ questions?.length || 0 }}</div>
           </div>
           <div class="w-20"></div>
         </div>
@@ -23,7 +23,7 @@
     <main class="p-4">
       <div class="max-w-2xl mx-auto">
         <!-- Loading State -->
-        <div v-if="!currentQuestionData && !gameCompleted" class="question-card mb-6">
+        <div v-if="status === 'pending'" class="question-card mb-6">
           <div class="text-center">
             <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gray-200 animate-pulse"></div>
             <h2 class="text-xl font-bold text-gray-900 mb-4">{{ t('ui.loading_questions') }}</h2>
@@ -77,18 +77,18 @@
               @click="selectAnswer(index)"
               class="w-full p-4 text-left rounded-xl border-2 transition-all duration-300 transform"
               :class="{
-                'border-green-500 bg-green-50 scale-105 shadow-lg': selectedAnswer === index && !isProcessing,
-                'border-red-500 bg-red-50': showCorrectAnswer && index === currentQuestionData.correct,
-                'border-gray-200 bg-white hover:border-gray-300 hover:scale-105': selectedAnswer !== index && !isProcessing,
-                'border-gray-300 bg-gray-100 cursor-not-allowed': isProcessing
+                'border-blue-500 bg-blue-50 scale-105 shadow-lg': selectedAnswer === index && !isProcessing,
+                'border-green-500 bg-green-50': showCorrectAnswer && index === currentQuestionData.correct,
+                'border-gray-200 bg-white hover:border-gray-300 hover:scale-105': selectedAnswer !== index && !isProcessing && !showCorrectAnswer,
+                'border-gray-300 bg-gray-100 cursor-not-allowed opacity-50': isProcessing || (showCorrectAnswer && index !== currentQuestionData.correct)
               }"
               :disabled="isProcessing"
             >
               <div class="flex items-center space-x-3">
                 <div class="w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-semibold transition-all duration-300"
                      :class="{
-                       'border-green-500 bg-green-500 text-white scale-110': selectedAnswer === index && !isProcessing,
-                       'border-red-500 bg-red-500 text-white': showCorrectAnswer && index === currentQuestionData.correct,
+                       'border-blue-500 bg-blue-500 text-white scale-110': selectedAnswer === index && !isProcessing,
+                       'border-green-500 bg-green-500 text-white': showCorrectAnswer && index === currentQuestionData.correct,
                        'border-gray-300': selectedAnswer !== index && !showCorrectAnswer
                      }">
                   {{ String.fromCharCode(65 + index) }}
@@ -104,18 +104,18 @@
               @click="selectAnswer(true)"
               class="w-full p-4 text-left rounded-xl border-2 transition-all duration-300 transform"
               :class="{
-                'border-green-500 bg-green-50 scale-105 shadow-lg': selectedAnswer === true && !isProcessing,
-                'border-red-500 bg-red-50': showCorrectAnswer && currentQuestionData.correct === true,
-                'border-gray-200 bg-white hover:border-gray-300 hover:scale-105': selectedAnswer !== true && !isProcessing,
-                'border-gray-300 bg-gray-100 cursor-not-allowed': isProcessing
+                'border-blue-500 bg-blue-50 scale-105 shadow-lg': selectedAnswer === true && !isProcessing,
+                'border-green-500 bg-green-50': showCorrectAnswer && currentQuestionData.correct === true,
+                'border-gray-200 bg-white hover:border-gray-300 hover:scale-105': selectedAnswer !== true && !isProcessing && !showCorrectAnswer,
+                'border-gray-300 bg-gray-100 cursor-not-allowed opacity-50': isProcessing || (showCorrectAnswer && currentQuestionData.correct !== true)
               }"
               :disabled="isProcessing"
             >
               <div class="flex items-center space-x-3">
                 <div class="w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-semibold transition-all duration-300"
                      :class="{
-                       'border-green-500 bg-green-500 text-white scale-110': selectedAnswer === true && !isProcessing,
-                       'border-red-500 bg-red-500 text-white': showCorrectAnswer && currentQuestionData.correct === true,
+                       'border-blue-500 bg-blue-500 text-white scale-110': selectedAnswer === true && !isProcessing,
+                       'border-green-500 bg-green-500 text-white': showCorrectAnswer && currentQuestionData.correct === true,
                        'border-gray-300': selectedAnswer !== true && !showCorrectAnswer
                      }">
                   ✓
@@ -127,17 +127,17 @@
               @click="selectAnswer(false)"
               class="w-full p-4 text-left rounded-xl border-2 transition-all duration-300 transform"
               :class="{
-                'border-red-500 bg-red-50 scale-105 shadow-lg': selectedAnswer === false && !isProcessing,
+                'border-blue-500 bg-blue-50 scale-105 shadow-lg': selectedAnswer === false && !isProcessing,
                 'border-green-500 bg-green-50': showCorrectAnswer && currentQuestionData.correct === false,
-                'border-gray-200 bg-white hover:border-gray-300 hover:scale-105': selectedAnswer !== false && !isProcessing,
-                'border-gray-300 bg-gray-100 cursor-not-allowed': isProcessing
+                'border-gray-200 bg-white hover:border-gray-300 hover:scale-105': selectedAnswer !== false && !isProcessing && !showCorrectAnswer,
+                'border-gray-300 bg-gray-100 cursor-not-allowed opacity-50': isProcessing || (showCorrectAnswer && currentQuestionData.correct !== false)
               }"
               :disabled="isProcessing"
             >
               <div class="flex items-center space-x-3">
                 <div class="w-8 h-8 rounded-full border-2 flex items-center justify-center text-sm font-semibold transition-all duration-300"
                      :class="{
-                       'border-red-500 bg-red-500 text-white scale-110': selectedAnswer === false && !isProcessing,
+                       'border-blue-500 bg-blue-500 text-white scale-110': selectedAnswer === false && !isProcessing,
                        'border-green-500 bg-green-500 text-white': showCorrectAnswer && currentQuestionData.correct === false,
                        'border-gray-300': selectedAnswer !== false && !showCorrectAnswer
                      }">
@@ -172,23 +172,37 @@
         </div>
 
         <!-- Game Completed -->
-        <div v-else class="text-center">
+        <div v-else-if="gameCompleted" class="text-center">
           <div class="question-card">
-            <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center text-4xl">
-              🎉
+            <!-- Success case: All answers correct -->
+            <div v-if="correctAnswers === (questions?.length || 0)">
+              <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center text-4xl">
+                🎉
+              </div>
+              <h2 class="text-2xl font-bold text-gray-900 mb-4">
+                {{ t('game.congratulations') }}
+              </h2>
             </div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">
-              {{ t('game.congratulations') }}
-            </h2>
+            <!-- Failure case: Not all answers correct -->
+            <div v-else>
+              <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gray-300 flex items-center justify-center text-4xl">
+                😔
+              </div>
+            </div>
             <p class="text-gray-600 mb-6">
-              {{ t('game.score') }} {{ correctAnswers }}/{{ questions.length }} {{ t('game.question') }}
+              {{ t('game.score') }} {{ correctAnswers }}/{{ questions?.length || 0 }} {{ t('game.question') }}
             </p>
-            <div class="mb-6">
+            <div v-if="correctAnswers === (questions?.length || 0)" class="mb-6">
               <div class="w-16 h-16 mx-auto mb-4 rounded-lg bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-2xl">
                 🧩
               </div>
               <p class="text-lg font-semibold text-gray-900">
                 {{ t('game.puzzle_piece') }}
+              </p>
+            </div>
+            <div v-else class="mb-6">
+              <p class="text-lg font-semibold text-gray-600">
+                Bạn cần trả lời đúng tất cả câu hỏi để nhận mảnh ghép!
               </p>
             </div>
             <div class="space-y-3">
@@ -202,12 +216,30 @@
           </div>
         </div>
 
+        <!-- No Questions Available -->
+        <div v-else class="text-center">
+          <div class="question-card">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-gray-200 flex items-center justify-center text-4xl">
+              ❌
+            </div>
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">
+              {{ t('ui.loading_questions') }}
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Không có câu hỏi nào được tìm thấy cho môn học này.
+            </p>
+            <button @click="goBack" class="btn-secondary w-full">
+              {{ t('app.go_home') }}
+            </button>
+          </div>
+        </div>
+
         <!-- Progress Bar -->
         <div class="mt-6">
           <div class="bg-gray-200 rounded-full h-3">
             <div 
               class="bg-gradient-to-r from-blue-500 to-purple-600 h-3 rounded-full transition-all duration-500"
-              :style="{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }"
+              :style="{ width: `${((currentQuestion + 1) / (questions?.length || 1)) * 100}%` }"
             ></div>
           </div>
         </div>
@@ -217,9 +249,21 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { useQuestions, type Question } from '~/composables/useQuestions'
+import { DIFFICULTY_LEVELS, DIFFICULTY_QUESTION_COUNTS } from '~/constants/difficulty'
+import { useI18n } from '#imports'
+
 const route = useRoute()
 const router = useRouter()
-const subjectId = route.params.subject as string
+
+// Get sector from the path and subject from query parameter
+const sectorId = route.params.subject as string
+const subjectId = route.query.subject as string
+
+// i18n
+const { t } = useI18n()
 
 // Game state
 const currentQuestion = ref(0)
@@ -230,45 +274,31 @@ const showResult = ref(false)
 const isProcessing = ref(false)
 const showCorrectAnswer = ref(false)
 
-// i18n
-const { t } = useI18n()
-
 // Get subject info from question bank
 const { getSubjectInfo } = useQuestions()
-const subjectInfo = getSubjectInfo(subjectId)
+const subjectInfo = getSubjectInfo(sectorId, subjectId)
 
 // Get questions from the composable
 const { getRandomQuestions } = useQuestions()
 
 // Get current level from localStorage
-const currentLevel = ref('dễ')
-const questions = ref([])
+const currentLevel = ref(DIFFICULTY_LEVELS.EASY)
 
-// Load questions based on subject and level
-onMounted(() => {
-  const savedProgress = localStorage.getItem('vui-hoc-progress')
-  if (savedProgress) {
-    const progress = JSON.parse(savedProgress)
-    currentLevel.value = progress.currentLevel || 'dễ'
+// Use useAsyncData to load questions
+const { data: questions, status, error, refresh } = await useAsyncData(
+  `questions-${sectorId}-${subjectId}`,
+  async () => {
+    const questionCount = DIFFICULTY_QUESTION_COUNTS[currentLevel.value] || DIFFICULTY_QUESTION_COUNTS[DIFFICULTY_LEVELS.EASY]
+    return getRandomQuestions(sectorId, subjectId, currentLevel.value, questionCount)
+  },
+  {
+    default: () => [],
+    server: false
   }
-  
-  // Get 3-5 questions based on level
-  const questionCount = currentLevel.value === 'dễ' ? 3 : currentLevel.value === 'trung bình' ? 4 : 5
-  questions.value = getRandomQuestions(subjectId, currentLevel.value, questionCount)
-})
+)
 
-// Also load questions immediately for SSR
-const savedProgress = process.client ? localStorage.getItem('vui-hoc-progress') : null
-if (savedProgress) {
-  const progress = JSON.parse(savedProgress)
-  currentLevel.value = progress.currentLevel || 'dễ'
-}
 
-// Get 3-5 questions based on level
-const questionCount = currentLevel.value === 'dễ' ? 3 : currentLevel.value === 'trung bình' ? 4 : 5
-questions.value = getRandomQuestions(subjectId, currentLevel.value, questionCount)
-
-const currentQuestionData = computed(() => questions.value[currentQuestion.value])
+const currentQuestionData = computed(() => questions.value?.[currentQuestion.value])
 
 // Methods
 const selectAnswer = (answer: any) => {
@@ -282,25 +312,35 @@ const submitAnswer = () => {
   
   // Show processing animation for 1 second
   setTimeout(() => {
-    const isCorrect = selectedAnswer.value === currentQuestionData.value.correct
+        const isCorrect = selectedAnswer.value === currentQuestionData.value?.correct
+    console.log('Answer check:', { selected: selectedAnswer.value, correct: currentQuestionData.value?.correct, isCorrect })
     if (isCorrect) {
       correctAnswers.value++
+      console.log('Correct answer! Total correct:', correctAnswers.value)
+    } else {
+      console.log('Wrong answer! Total correct:', correctAnswers.value)
     }
     
     // Show correct answer for 1.5 seconds
     showCorrectAnswer.value = true
     
     setTimeout(() => {
-      if (currentQuestion.value < questions.value.length - 1) {
+        if (currentQuestion.value < (questions.value?.length || 0) - 1) {
         // Move to next question
         currentQuestion.value++
         selectedAnswer.value = null
         showCorrectAnswer.value = false
         isProcessing.value = false
       } else {
-        // Game completed
+        // Game completed - only award piece if all answers were correct
         gameCompleted.value = true
-        awardPuzzlePiece()
+        console.log('Game completed. Correct answers:', correctAnswers.value, 'Total questions:', questions.value?.length)
+        if (correctAnswers.value === (questions.value?.length || 0)) {
+          console.log('All answers correct - awarding puzzle piece')
+          awardPuzzlePiece()
+        } else {
+          console.log('Not all answers correct - no puzzle piece')
+        }
       }
     }, 1500)
   }, 1000)
@@ -308,18 +348,36 @@ const submitAnswer = () => {
 
 const awardPuzzlePiece = () => {
   // Update localStorage with new puzzle piece
-  const savedProgress = localStorage.getItem('vui-hoc-progress')
-  const progress = savedProgress ? JSON.parse(savedProgress) : {}
-  progress.collectedPieces = (progress.collectedPieces || 0) + 1
-  localStorage.setItem('vui-hoc-progress', JSON.stringify(progress))
+  if (typeof window !== 'undefined') {
+    const savedProgress = localStorage.getItem('vui-hoc-progress')
+    const progress = savedProgress ? JSON.parse(savedProgress) : {}
+    
+    // Mark this subject as completed
+    const fullSubjectKey = `${sectorId}-${subjectId}`
+    if (!progress[fullSubjectKey]) {
+      progress[fullSubjectKey] = { completed: false, pieces: 0 }
+    }
+    
+    // Always award piece when completing all questions correctly
+    progress[fullSubjectKey].completed = true
+    progress[fullSubjectKey].pieces = (progress[fullSubjectKey].pieces || 0) + 1
+    progress.collectedPieces = (progress.collectedPieces || 0) + 1
+    
+    localStorage.setItem('vui-hoc-progress', JSON.stringify(progress))
+    console.log('Puzzle piece awarded! Total pieces:', progress.collectedPieces)
+  }
 }
 
-const playAgain = () => {
+const playAgain = async () => {
   currentQuestion.value = 0
   selectedAnswer.value = null
   gameCompleted.value = false
   correctAnswers.value = 0
   showResult.value = false
+  isProcessing.value = false
+  showCorrectAnswer.value = false
+  // Refresh questions
+  await refresh()
 }
 
 const goBack = () => {

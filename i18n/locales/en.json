@@ -6,7 +6,9 @@
     "loading": "Loading...",
     "back": "Back",
     "play_again": "Play Again",
-    "go_home": "Go Home"
+    "go_home": "Go Home",
+    "reset": "Reset",
+    "reset_confirm": "Are you sure you want to reset all progress? This action cannot be undone."
   },
   "levels": {
     "easy": "Easy",
@@ -25,6 +27,10 @@
     "ethics": "Ethics",
     "health": "Health",
     "questions_count": "questions"
+  },
+  "sectors": {
+    "select_sector": "Choose Learning Sector",
+    "subjects_count": "subjects"
   },
   "game": {
     "question": "Question",
@@ -61,6 +67,7 @@
     "true": "True",
     "false": "False",
     "loading_questions": "Loading questions...",
+    "loading_subjects": "Loading subjects...",
     "processing": "Processing...",
     "submit": "Submit",
     "select_answer": "Select Answer",

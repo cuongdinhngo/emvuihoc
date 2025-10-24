@@ -319,7 +319,7 @@ const { data: puzzleImagesData } = await useAsyncData(
   async () => {
     try {
       console.log('Loading puzzle images from JSON...')
-      const response = await fetch('./puzzle-images.json').then(r => r.json())
+      const response = await fetch('/emvuihoc/puzzle-images.json').then(r => r.json())
       console.log('Puzzle data:', response)
       
       const images = response?.images || []

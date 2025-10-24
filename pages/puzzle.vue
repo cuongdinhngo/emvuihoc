@@ -4,12 +4,12 @@
         <header class="bg-white shadow-lg">
           <div class="max-w-4xl mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
-              <button @click="goBack" class="flex items-center space-x-2 text-gray-600 hover:text-gray-900">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-                <span>{{ t('app.back') }}</span>
-              </button>
+          <button @click="goBack" class="flex items-center space-x-2 text-gray-600 hover:text-gray-900">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            <span class="hidden sm:inline">{{ t('app.back') }}</span>
+          </button>
               <div class="text-center">
                 <h1 class="text-xl font-bold text-gray-900">{{ t('puzzle.title') }}</h1>
                 <div class="text-sm text-gray-600">{{ placedPieces }}/{{ totalPieces }} {{ t('game.pieces_collected') }}</div>
@@ -159,17 +159,8 @@ const { t } = useI18n()
 // Get base URL for assets
 const baseURL = $config.app.baseURL || '/'
 
-// Available puzzle images
-const puzzleImages = [
-  'doremon.webp',
-  'elsa.webp', 
-  'frozen.webp',
-  'nobita.webp',
-  'pikachu.webp',
-  'pokemon-2.webp',
-  'pokemon.webp',
-  'xuka.webp'
-]
+// Available puzzle images - dynamically loaded from public/puzzles folder
+const puzzleImages = ref<string[]>([])
 
 // Randomly select a puzzle image
 const currentImage = ref('pokemon.webp') // Default fallback
@@ -322,10 +313,45 @@ const { data: savedProgress } = await useAsyncData(
   }
 )
 
-// Select random image on client side
+// Load puzzle images from generated JSON file
+const { data: puzzleImagesData } = await useAsyncData(
+  'puzzle-images',
+  async () => {
+    try {
+      console.log('Loading puzzle images from JSON...')
+      
+      // Fetch the generated puzzle images JSON file from public directory
+      const response = await $fetch('/puzzle-images.json')
+      console.log('Puzzle data:', response)
+      
+      const images = response?.images || []
+      console.log(`Found ${images.length} puzzle images:`, images)
+      
+      return images.length > 0 ? images : ['pokemon.webp'] // Fallback
+    } catch (error) {
+      console.error('Error loading puzzle images from JSON:', error)
+      // Fallback to hardcoded list if JSON doesn't exist
+      return ['pokemon.webp', 'xuka.webp', 'pokemon-3.webp']
+    }
+  },
+  {
+    default: () => ['pokemon.webp'],
+    server: false // Only run on client side
+  }
+)
+
+// Update puzzleImages ref when data loads
+watch(puzzleImagesData, (images) => {
+  if (images && images.length > 0) {
+    puzzleImages.value = images
+    // Select random image
+    currentImage.value = images[Math.floor(Math.random() * images.length)]
+  }
+}, { immediate: true })
+
+// Set client flag
 onMounted(() => {
   isClient.value = true
-  currentImage.value = puzzleImages[Math.floor(Math.random() * puzzleImages.length)]
 })
 
 // Update puzzle state when data loads
@@ -423,7 +449,9 @@ const dropPiece = (event: DragEvent, slotIndex: number) => {
 
 const playAgain = () => {
   // Select a new random image
-  currentImage.value = puzzleImages[Math.floor(Math.random() * puzzleImages.length)]
+  if (puzzleImages.value.length > 0) {
+    currentImage.value = puzzleImages.value[Math.floor(Math.random() * puzzleImages.value.length)]
+  }
   
   // Reset puzzle using the correct number of pieces
   puzzleSlots.value = Array.from({ length: totalPieces.value }, (_, i) => ({ id: i, piece: null }))

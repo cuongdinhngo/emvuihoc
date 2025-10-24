@@ -3,18 +3,17 @@
     <!-- Header -->
     <header class="bg-white shadow-lg">
       <div class="max-w-4xl mx-auto px-4 py-4">
-        <div class="flex items-center justify-between">
-          <button @click="goBack" class="flex items-center space-x-2 text-gray-600 hover:text-gray-900">
+        <div class="relative flex items-center justify-center">
+          <button @click="goBack" class="absolute left-0 flex items-center space-x-2 text-gray-600 hover:text-gray-900">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
-            <span>{{ t('app.back') }}</span>
+            <span class="hidden sm:inline">{{ t('app.back') }}</span>
           </button>
           <div class="text-center">
             <h1 class="text-xl font-bold text-gray-900">{{ subjectInfo?.name || t('app.loading') }}</h1>
             <div class="text-sm text-gray-600">{{ t('game.question') }} {{ currentQuestion + 1 }}/{{ questions?.length || 0 }}</div>
           </div>
-          <div class="w-20"></div>
         </div>
       </div>
     </header>

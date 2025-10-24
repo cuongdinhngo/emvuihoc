@@ -58,22 +58,21 @@
         </div>
 
         <!-- Level Selection -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="grid grid-cols-3 gap-2 md:gap-6 mb-8">
           <div 
             v-for="level in levels" 
             :key="level.id"
             class="game-card level-card cursor-pointer"
-            :class="{ 'ring-4 ring-pink-500 shadow-2xl': currentLevel === level.id }"
+            :class="{ 'selected': currentLevel === level.id }"
             @click="selectLevel(level.id)"
           >
             <div class="text-center">
-              <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center text-2xl"
+              <div class="w-12 h-12 md:w-16 md:h-16 mx-auto mb-2 md:mb-4 rounded-full flex items-center justify-center text-xl md:text-2xl"
                    :class="level.color">
                 {{ level.icon }}
               </div>
-              <h3 class="text-xl font-semibold mb-2">{{ t(`levels.${level.id}`) }}</h3>
-              <p class="text-gray-600 text-sm mb-4">{{ t(`levels.${level.id}_desc`) }}</p>
-              <div class="text-sm text-gray-500">
+              <h3 class="text-sm md:text-xl font-semibold mb-1 md:mb-2">{{ t(`levels.${level.id}`) }}</h3>
+              <div class="text-xs md:text-sm text-gray-500">
                 {{ level.piecesRequired }} {{ t('levels.pieces_required') }}
               </div>
             </div>

@@ -8,7 +8,7 @@
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
-            <span>{{ t('app.back') }}</span>
+            <span class="hidden sm:inline">{{ t('app.back') }}</span>
           </button>
           <div class="text-center">
             <h1 class="text-xl font-bold text-gray-900">{{ sectorInfo?.name || t('app.loading') }}</h1>

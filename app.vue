@@ -3,3 +3,7 @@
     <NuxtPage />
   </div>
 </template>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap');
+</style>

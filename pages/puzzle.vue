@@ -319,9 +319,6 @@ const { data: puzzleImagesData } = await useAsyncData(
   async () => {
     try {
       console.log('Loading puzzle images from JSON...')
-      
-      // Fetch the generated puzzle images JSON file from public directory
-      // Use relative path that works both locally and on GitHub Pages
       const response = await fetch('./puzzle-images.json').then(r => r.json())
       console.log('Puzzle data:', response)
       
@@ -330,8 +327,8 @@ const { data: puzzleImagesData } = await useAsyncData(
       
       return images.length > 0 ? images : ['pokemon.webp'] // Fallback
     } catch (error) {
-      console.error('Error loading puzzle images from JSON:', error)
-      // Fallback to hardcoded list if JSON doesn't exist
+      console.error('Error loading puzzle images from JSON:', error);
+
       return ['pokemon.webp', 'xuka.webp', 'pokemon-3.webp']
     }
   },

@@ -36,9 +36,12 @@ export default defineNuxtConfig({
   },
   i18n: {
     locales: [
-      { code: 'vi', file: 'vi.json' },
-      { code: 'en', file: 'en.json' }
+      { code: 'vi', file: 'vi.json', name: 'Tiếng Việt' },
+      { code: 'en', file: 'en.json', name: 'English' }
     ],
-    defaultLocale: 'vi'
+    defaultLocale: 'vi',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: false,
+    langDir: 'locales/'
   },
 })

@@ -321,7 +321,8 @@ const { data: puzzleImagesData } = await useAsyncData(
       console.log('Loading puzzle images from JSON...')
       
       // Fetch the generated puzzle images JSON file from public directory
-      const response = await $fetch('/puzzle-images.json')
+      // Use relative path that works both locally and on GitHub Pages
+      const response = await fetch('./puzzle-images.json').then(r => r.json())
       console.log('Puzzle data:', response)
       
       const images = response?.images || []

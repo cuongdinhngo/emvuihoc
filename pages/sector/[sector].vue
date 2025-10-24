@@ -23,7 +23,7 @@
     <main class="p-4">
       <div class="max-w-4xl mx-auto">
         <!-- Sector Description -->
-        <div v-if="sectorInfo" class="game-card mb-6">
+        <div v-if="sectorInfo" class="mb-6">
           <div class="text-center">
             <div class="w-20 h-20 mx-auto mb-4 rounded-lg flex items-center justify-center text-3xl"
                  :class="sectorInfo.color">
